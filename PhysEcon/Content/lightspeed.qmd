@@ -1,0 +1,48 @@
+---
+toc: false
+number-sections: false
+notebook-view:
+  - notebook: refraction.qmd
+    title: "Refraction, Radiation Angle"
+    url: /refraction.html
+---
+
+
+**Velocity - Movement of Matter in Space and Time**
+
+**Matter and Vacuum - Refraction, max. phase velocity, max. group velocity:**
+
+Lightspeed, group velocity max.:    \index{Lightspeed} \index{group velocity} \index{phase velocity}
+
+$$\begin{split} &
+c = 
+\frac{1}{ { \sqrt{\epsilon_0 \mu_0} } } = 
+\frac{|\mathscr{E}|}{|\mathscr{B}|} =   
+\sqrt{v_{phase} \cdot v_{matter}} =
+\eta \sqrt{\varepsilon\mu} = 
+\eta \sqrt{\varepsilon_0\varepsilon_r\mu_0\mu_r} =   \\&
+\eta \cdot c_{ph} = 
+\frac{\omega}{k} =\frac{\lambda}{\mathcal{T}} = 
+\nu \lambda =      \\&
+- \frac{d\lambda}{d\nu} \nu^2 = 
+\lambda^2 \frac{\mathscr{J}_{\lambda}}{\mathscr{J}_{\nu}} = 
+\frac{\langle|\mathscr{S}|\rangle}{\langle \textnormal{w}_{EM}\rangle}  = 
+v_{gr}^{max}      \\&
+\le v_{ph} - \lambda \frac{d}{d\lambda}v_{ph} = 
+\frac{d}{dk}\omega = 
+v_{gr}
+\end{split}$${#eq-lightspeed}
+
+where:
+
+$\mathscr{J} \equiv$ Flux Density flow ^[Flux Density]     \index{Flux Density}
+
+$\mathscr{S} \equiv$ Poyinting-Vector intensity
+
+$\textnormal{w}_{EM} \equiv$ Energy Density electromagnetic 
+
+
+Refraction Index: 
+
+{{< embed refraction.qmd#eq-refraction >}}
+
