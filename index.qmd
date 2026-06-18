@@ -1,0 +1,64 @@
+---
+title: Physics Concepts as Indicative Framework to Model Systems of Economies Ex-ante
+
+# draft: true 
+
+subtitle: Coincise Notes and Conjectures Explorations of Natural Laws as Approach to Preliminarly Structure Economies - A Distillation of Corroboration of Mathematical Models
+
+author:
+  - name: Eugenio Net
+    email: eugenionetweb@gmail.com
+    # affiliation:
+    #   name: eugenionet.github.io
+    #   url: www.eugenionet.github.io/physecon
+
+date: today
+
+keywords:
+  - Physics
+  - Economy
+
+copyright: 
+  holder: Author
+  year: 2026
+
+license: "CC BY"
+
+bibliography: references.bib  
+csl: diabetologia.csl
+
+nocite: |
+  @*  
+
+
+# https://quarto.org/docs/authoring/front-matter.html#abstract
+abstract: |
+    An exploratory attempt ...
+    Interconnection network between movement, force, momentum, energy, and work.
+    Describing systems with Lagrangian and Hamltonian when constraints and starting conditions exist.
+    Modeling systems and optimisation with constraints and conditions.
+    Interwoven system of macro- and microeconomie under constraints, limitations, and conditions.
+
+---
+
+
+
+---
+
+
+\
+\
+<p style="text-align: center; color: slategray;">
+*WORKING NOTES DRAFT* <br>
+</p>
+\
+\
+
+
+
+
+# POTENTIALS {#sec-potential}
+
+{{< include C:/Users/erine/Desktop/Physics-Explorations/GitHub-Physics/Potentials/Potentials.qmd >}}
+\
+\
