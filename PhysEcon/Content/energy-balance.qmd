@@ -1,0 +1,36 @@
+
+### Mechanical
+...
+
+### Electromagnectic energy transfer
+
+{{< include C:/Users/erine/Desktop/Physics-Explorations/GitHub-Physics/PhysEcon/Content/Continuity.qmd >}}
+
+$\boldsymbol{j} = \sigma \left( \mathscr{E} + v \times \mathscr{B} \right) = \nabla \times \mathscr{H} - \frac{\partial}{\partial t}\mathscr{D} \hat{=}$ elecectric current density
+
+$\boldsymbol{j} \cdot \mathscr{E} \hat{=}$ energy gain
+
+$\mathscr{S} = \mathscr{E} \times \mathscr{H} \hat{=}$ energy transport density (Intensity)
+
+
+
+Energy conservation for (large extended) conductive medium:
+
+$$\begin{split} &   
+\int    \left(
+\frac{\partial}{\partial t} \left( we + w_m \right) + \mathbf{\nabla} \cdot \mathbf{\mathscr{S}} + \boldsymbol{j} \cdot \mathscr{E} 
+\right) \, dr
+= \frac{d}{dt}W_e + \frac{d}{dt}W_m + D_S + \int \left( \boldsymbol{j} \cdot \mathscr{E} \right) \, dr 
+\newline & 
+\stackrel{\textnormal{low frequency}}{=}
+\frac{1}{2}\frac{d}{dt} \left( LI^2 \right) + \frac{1}{2}\frac{d}{dt} \left( \frac{Q^2}{C} \right) + \left( RI^2 - VI \right) = 0
+\end{split}$${#eq-energyconserv-1} 
+
+
+### Thermal
+...
+
+
+### Ralativistc
+...
+
