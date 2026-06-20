@@ -8,7 +8,7 @@
 {{< include C:/Users/erine/Desktop/Physics-Explorations/GitHub-Physics/PhysEcon/Content/Maxwell_slow.qmd >}}
 
 
-## Potential
+## Potential derivation
 
 $\Rightarrow$ 
 Wave equation that determines Potential:
@@ -137,7 +137,7 @@ k c \sqrt{\frac{\varepsilon_0\mu_0}{\varepsilon\mu}}
 \approx
 \frac{1}{\sqrt{LC}} 
 \newline &
-\stackrel{gravitational}{=}
+\stackrel{gravitation}{=}
 \sqrt{\frac{g}{r}}
 \end{split}$${#eq-freq}
 
@@ -148,10 +148,18 @@ $$\begin{split} &
 k s - \omega t = ... 
 \end{split}$${#eq-phase}
 
+### Phaseshift:
+$$\begin{split} &
+\Delta\varphi = \Delta k \left( \vec{r}\cdot\vec{\Delta k} \right) - \Delta \omega t 
+\coloneqq
+\Delta k s - \Delta \omega t = ... 
+\end{split}$${#eq-phaseshift}
+
 ### Refraction:
 Refraction $\Leftrightarrow$ $\exists$ Matter; refraction causes dispersion
 $$\begin{split} &
-\eta = \frac{\tan\alpha}{\tan\beta} 
+\eta = \frac{\tan\alpha}{\tan\beta} = \frac{\lambda_0}{\lambda} = 
+c \sqrt{\varepsilon\mu}
 \> \hat{=} \> 
 \mathscr{E}_\beta^{-1} \mathscr{E}_\alpha = 
 \frac{\varepsilon_\alpha}{\varepsilon_\beta} = ...
@@ -159,24 +167,24 @@ $$\begin{split} &
 
 ### Dispersion:
 Dispersion $\Leftrightarrow$ $\exists$ Matter (dielctric madium or conductor); 
-Dispersion $\neq$ Dissipation
+Dispersion $\neq$ Dissipation $\neq$ Diffusion
 $$\begin{split} &
 ...
 \end{split}$${#eq-dispers}
 
 ### Dielectricity:
 $$\begin{split} &
-\varepsilon = ...
+\varepsilon(\omega) = ...
 \end{split}$${#eq-dielectricity}
 
 ### Permeability:
 $$\begin{split} &
-\mu = ...
+\mu(\omega) = ...
 \end{split}$${#eq-permeability}
 
 ### Conductivity:
 $$\begin{split} &
-\sigma = ...
+\sigma(\omega) = ...
 \end{split}$${#eq-conductivity}
 
 
@@ -191,16 +199,11 @@ $$\begin{split} &
 \frac{v}{c} \ll \frac{1}{c}\frac{\mathscr{E}}{\mathscr{B}} \ll \frac{c}{v}
 \end{split}$${#eq-slowcurrent}
 
-## Energy conservation for (large extended) conductive medium:
-$$\begin{split} &   
-\int    \left(
-\frac{\partial}{\partial t} \left( we + w_m \right) + \mathbf{\nabla} \cdot \mathbf{\mathscr{S}} + \boldsymbol{j} \cdot \mathscr{E} 
-\right) \, dr
-= \frac{d}{dt}W_e + \frac{d}{dt}W_m + D_S + \int \left( \boldsymbol{j} \cdot \mathscr{E} \right) \, dr 
-\newline & 
-\stackrel{\textnormal{low frequency}}{=}
-\frac{1}{2}\frac{d}{dt} \left( LI^2 \right) + \frac{1}{2}\frac{d}{dt} \left( \frac{Q^2}{C} \right) + \left( RI^2 - VI \right) = 0
-\end{split}$${#eq-energyconserv-1}  
+
+## Energy Balance
+
+{{< include C:/Users/erine/Desktop/Physics-Explorations/GitHub-Physics/PhysEcon/Content/energy-balance.qmd >}}
+
  
 ## Energy of thin conductor (concentrated conductive medium without electric charge in its surrounding), Voltage (potentialdifference, tension):
 
@@ -275,6 +278,10 @@ no Dissipation, Velocity changing, acceleration of charge (ion) causes emgergenc
 
 ## Continuity and periodic (harmoneous oscillation) Movement in VACUUM
 
+$c = \frac{1}{\sqrt{\varepsilon_0\mu_0}} = \nu\lambda = \frac{\lambda}{T}$
+
+$2\pi = k\lambda = T\omega = \frac{\omega}{\nu}$
+
 $$
 2\pi = k \lambda \gg kr_0 \ll 1
 $$\linebreak$$
@@ -286,13 +293,15 @@ $$
 
 
 ## Continuity and periodic (harmoneous oscillation) Movement in MATTER
-Refraction index emerges
+
+Refraction index $\eta$  emerges: $\varepsilon\mu = \left( \frac{\eta}{v_{ph}} \right)^2 \hat{=} \left( \frac{\eta}{c} \right)^2$
 
 Dispersion: $k^2 = \varepsilon \mu \omega^2 + i \mu \sigma \omega$
 
 
 
 ## Near Field
+granular spacetime
 
 $$
 r \ll \lambda  = \frac{2\pi}{k}
@@ -313,6 +322,7 @@ $$
 
 
 ## Far Field
+flat spacetime
 
 accelerated movement -> Radiation in Far Field of charge source
 
@@ -352,3 +362,7 @@ $\Rightarrow \textnormal{Ionisation Energy of chemical element } E_i = h\nu = h\
 
 $\Rightarrow \textnormal{Energy released (gained) } E_{gain} = E_{pot} - E_i = mc^2 - h\nu$
 
+
+
+## Operators
+{{< include C:/Users/erine/Desktop/Physics-Explorations/GitHub-Physics/PhysEcon/Content/Operators.qmd >}}

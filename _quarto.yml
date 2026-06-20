@@ -71,6 +71,9 @@ website:
         contents:
           - text: "Potentials"
             href: C:/Users/erine/Desktop/Physics-Explorations/GitHub-Physics/Potentials/Potentials.qmd
+          - text: "Operators"
+            href: C:/Users/erine/Desktop/Physics-Explorations/GitHub-Physics/PhysEcon/Content/Operators.qmd
+      - section: "Resources"
       - section: "Resources"
         href: dummy.qmd
         contents:

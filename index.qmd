@@ -16,7 +16,8 @@ date: today
 
 keywords:
   - Physics
-  - Economy
+  - Energy
+  - Potential
 
 copyright: 
   holder: Author
