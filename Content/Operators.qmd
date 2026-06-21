@@ -1,0 +1,13 @@
+Operators
+
+$\nabla \coloneqq grad = \text{Gradient (Gefälle, Neigung)}$
+
+$\nabla \cdot \coloneqq div = \text{Divergence (Quelle)}$
+
+$\nabla \times \coloneqq rot = \text{Rotation (Wirbelung, Curl)}$
+
+$\nabla^2 = \text{Lagrange Operatonr (Krümmung, Beschleunigung)}$
+
+$\Delta \cdot \coloneqq div(grad) = \text{Laplace Operatorn}$
+
+$\Delta \coloneqq \text{Difference, shift}$
