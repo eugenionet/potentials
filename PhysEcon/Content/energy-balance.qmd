@@ -1,4 +1,19 @@
 
+Energy Balance
+$$\begin{split} &   
+\frac{\partial}{\partial t} \sum w_i+ \mathbf{\nabla} \cdot \sum \mathbf{\mathscr{S}}_i + \boldsymbol{j} \cdot \mathscr{E} = 0 
+\end{split}$${#eq-energbal} 
+
+Abbreviations:
+
+$w_i$ = engery densities (electric, magnetic, gravitational, etc. ...)
+
+$\mathbf{\mathscr{S}}_i$ = energy transport densities (transfer) by fields (electric, magnetic, gravitational, etc. ...) 
+
+$\boldsymbol{j} \cdot \mathscr{E}$ = energy gain provided by fields $\mathscr{E}$ and $\mathscr{B}$ through current density $j$
+
+
+
 ### Mechanical
 ...
 
@@ -13,18 +28,47 @@ $\boldsymbol{j} \cdot \mathscr{E} \hat{=}$ energy gain
 $\mathscr{S} = \mathscr{E} \times \mathscr{H} \hat{=}$ energy transport density (Intensity)
 
 
-
 Energy conservation for (large extended) conductive medium:
 
 $$\begin{split} &   
 \int    \left(
-\frac{\partial}{\partial t} \left( we + w_m \right) + \mathbf{\nabla} \cdot \mathbf{\mathscr{S}} + \boldsymbol{j} \cdot \mathscr{E} 
+\frac{\partial}{\partial t} \left( w_e + w_m \right) + \mathbf{\nabla} \cdot \mathbf{\mathscr{S}} + \boldsymbol{j} \cdot \mathscr{E} 
 \right) \, dr
 = \frac{d}{dt}W_e + \frac{d}{dt}W_m + D_S + \int \left( \boldsymbol{j} \cdot \mathscr{E} \right) \, dr 
 \newline & 
 \stackrel{\textnormal{low frequency}}{=}
 \frac{1}{2}\frac{d}{dt} \left( LI^2 \right) + \frac{1}{2}\frac{d}{dt} \left( \frac{Q^2}{C} \right) + \left( RI^2 - VI \right) = 0
 \end{split}$${#eq-energyconserv-1} 
+
+Abreviations:
+$$
+\Delta \cdot \coloneqq \textnormal{ div grad = Laplacian}
+$$\linebreak$$  
+J = \textnormal{"ignition of inhomogenity,cause"} \quad
+j = \textnormal{Current density} \quad
+\varrho = \textnormal{Charge density}
+$$\linebreak$$  
+V = \textnormal{Potentialdifference} \quad  
+I = \textnormal{Current} \quad
+R = \textnormal{Resistance} \quad
+$$\linebreak$$  
+L = \textnormal{Inductance} \qquad  
+C = \textnormal{Capacitance} \qquad
+Q = c\textnormal{harge (ion)} \qquad
+\Psi = LI = \textnormal{mag. Flux}
+$$\linebreak$$ 
+\mathscr{S} = \mathscr{E} \times \mathscr{H} = \textnormal{Poynting-Vector = radiation intensity}
+$$\linebreak$$
+D_S = \int \left( \mathbf{\nabla} \cdot \mathbf{\mathscr{S}} \right) \, dr = \int \textnormal{div}(\mathscr{E} \times \mathscr{H}) \, dr = \textnormal{dissipation engergy lost from radiation} \approx \textnormal{0 for low frequencies } \omega
+$$\linebreak$$
+d = \sqrt{\frac{1}{\mu \sigma} \frac{2}{\omega}} = \textnormal{skin depth (surface) of conductor} \qquad
+r = \frac{d}{\sqrt{2i}}\rho = \frac{d}{1+i}\rho = \textnormal{radius (extension) of conductor}
+$$\linebreak$$
+\rho = kr = \textnormal{"radius of curvature $k$"}
+$$\linebreak$$ 
+\mu = \textnormal{permeability of conductor}    \qquad
+\sigma = \textnormal{conductivity of conductor (dielectricum)} \qquad
+$$
 
 
 ### Thermal
