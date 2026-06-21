@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>potentials – PHYSECON</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-99175323bdc6ffcce6067e17d2d848ec.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-a4ddf414298af9676052205868b046b0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-99175323bdc6ffcce6067e17d2d848ec.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">PHYSECON</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./dummy.html"> 
+<span class="menu-text">Contribute</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="mailto:eugenionetweb@gmail.com?subject=Working%20Paper%20Economy-Physics&amp;body=Body%20text"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.researchgate.net/login?_sg=GVPRQCDS6NDU-YgTVOp8WJPPcGkOTjrVnKYT-SENPkZYSmRb9li_cjw9cbtoFy1MrMYmNVUez5YPVsOwZ8UvUQ&amp;_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6ImluZGV4IiwicGFnZSI6ImluZGV4IiwicG9zaXRpb24iOiJnbG9iYWxIZWFkZXIifX0" target="_blank"> 
+<span class="menu-text">ResearchGate</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-feather"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://cocalc.com/" target="_blank">
+            SageMath
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://www.wolframalpha.com/" target="_blank">
+            WolframAlpha
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://datasette.io/" target="_blank">
+            Datasette
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://www.mathcha.io/" target="_blank">
+            Mathcha
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://www.geogebra.org/" target="_blank">
+            GeoGebra
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://ptable.com/?lang=en#Properties" target="_blank">
+            Chemical Elements
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://socialsci.libretexts.org/Bookshelves/Economics/Introductory_Comprehensive_Economics/Economics_(Boundless)/01%3A_Principles_of_Economics/1.06%3A_Differences_Between_Macroeconomics_and_Microeconomics" target="_blank">
+            Economy Fundamentals
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dummy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Synopsis</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Projects</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PhysEcon</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dummy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PhysFina</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dummy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inquiries on Nature</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dummy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">On Inertia, Multipoles, and Potentials</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Explorations</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="C:/Users/erine/Desktop/Physics-Explorations/GitHub-Physics/Potentials/Potentials.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Potentials</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="C:/Users/erine/Desktop/Physics-Explorations/GitHub-Physics/PhysEcon/Content/Operators.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Operators</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Resources</span></span>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./dummy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dummy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Probability, Liklyhood, Determinism and Prediction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dummy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Optimization &amp; Variation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dummy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Micro &amp; Macro</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Chapters</h2>
+   
+  <ul>
+  <li><a href="#potential-as-intrinsic-energy-of-inertia" id="toc-potential-as-intrinsic-energy-of-inertia" class="nav-link active" data-scroll-target="#potential-as-intrinsic-energy-of-inertia"><span class="header-section-number">1</span> Potential as “intrinsic energy of inertia”</a>
+  <ul class="collapse">
+  <li><a href="#electro-magnetic-field-force-caused-by-potential" id="toc-electro-magnetic-field-force-caused-by-potential" class="nav-link" data-scroll-target="#electro-magnetic-field-force-caused-by-potential"><span class="header-section-number">1.1</span> Electro-Magnetic Field (force caused by potential)</a></li>
+  <li><a href="#electro-magnetic-interactionscoupling-maxwell-conditions" id="toc-electro-magnetic-interactionscoupling-maxwell-conditions" class="nav-link" data-scroll-target="#electro-magnetic-interactionscoupling-maxwell-conditions"><span class="header-section-number">1.2</span> Electro-Magnetic interactions/coupling (Maxwell conditions)</a></li>
+  </ul></li>
+  <li><a href="#potential-derivation" id="toc-potential-derivation" class="nav-link" data-scroll-target="#potential-derivation"><span class="header-section-number">2</span> Potential derivation</a></li>
+  <li><a href="#elec.-potential-structure" id="toc-elec.-potential-structure" class="nav-link" data-scroll-target="#elec.-potential-structure"><span class="header-section-number">3</span> elec. Potential structure:</a></li>
+  <li><a href="#magn.-potential-structure" id="toc-magn.-potential-structure" class="nav-link" data-scroll-target="#magn.-potential-structure"><span class="header-section-number">4</span> magn. Potential structure:</a></li>
+  <li><a href="#electric-endogen-energy" id="toc-electric-endogen-energy" class="nav-link" data-scroll-target="#electric-endogen-energy"><span class="header-section-number">5</span> Electric endogen energy</a></li>
+  <li><a href="#electric-induced-energy-exogenous-excitation" id="toc-electric-induced-energy-exogenous-excitation" class="nav-link" data-scroll-target="#electric-induced-energy-exogenous-excitation"><span class="header-section-number">6</span> Electric induced energy (exogenous excitation)</a>
+  <ul class="collapse">
+  <li><a href="#power" id="toc-power" class="nav-link" data-scroll-target="#power"><span class="header-section-number">6.1</span> Power:</a></li>
+  <li><a href="#frequency" id="toc-frequency" class="nav-link" data-scroll-target="#frequency"><span class="header-section-number">6.2</span> Frequency:</a></li>
+  <li><a href="#phase" id="toc-phase" class="nav-link" data-scroll-target="#phase"><span class="header-section-number">6.3</span> Phase:</a></li>
+  <li><a href="#phaseshift" id="toc-phaseshift" class="nav-link" data-scroll-target="#phaseshift"><span class="header-section-number">6.4</span> Phaseshift:</a></li>
+  <li><a href="#refraction" id="toc-refraction" class="nav-link" data-scroll-target="#refraction"><span class="header-section-number">6.5</span> Refraction:</a></li>
+  <li><a href="#dispersion" id="toc-dispersion" class="nav-link" data-scroll-target="#dispersion"><span class="header-section-number">6.6</span> Dispersion:</a></li>
+  <li><a href="#dielectricity" id="toc-dielectricity" class="nav-link" data-scroll-target="#dielectricity"><span class="header-section-number">6.7</span> Dielectricity:</a></li>
+  <li><a href="#permeability" id="toc-permeability" class="nav-link" data-scroll-target="#permeability"><span class="header-section-number">6.8</span> Permeability:</a></li>
+  <li><a href="#conductivity" id="toc-conductivity" class="nav-link" data-scroll-target="#conductivity"><span class="header-section-number">6.9</span> Conductivity:</a></li>
+  <li><a href="#conductor-charge-conductive-element-for-energy-transfer-condition" id="toc-conductor-charge-conductive-element-for-energy-transfer-condition" class="nav-link" data-scroll-target="#conductor-charge-conductive-element-for-energy-transfer-condition"><span class="header-section-number">6.10</span> Conductor (charge conductive element for energy transfer) condition:</a></li>
+  <li><a href="#slow-changing-current-quasi-stationary-low-frequencies-condition" id="toc-slow-changing-current-quasi-stationary-low-frequencies-condition" class="nav-link" data-scroll-target="#slow-changing-current-quasi-stationary-low-frequencies-condition"><span class="header-section-number">6.11</span> Slow changing current (quasi-stationary, low frequencies) condition:</a></li>
+  </ul></li>
+  <li><a href="#energy-balance" id="toc-energy-balance" class="nav-link" data-scroll-target="#energy-balance"><span class="header-section-number">7</span> Energy Balance</a>
+  <ul class="collapse">
+  <li><a href="#mechanical" id="toc-mechanical" class="nav-link" data-scroll-target="#mechanical"><span class="header-section-number">7.1</span> Mechanical</a></li>
+  <li><a href="#electromagnectic-energy-transfer" id="toc-electromagnectic-energy-transfer" class="nav-link" data-scroll-target="#electromagnectic-energy-transfer"><span class="header-section-number">7.2</span> Electromagnectic energy transfer</a></li>
+  <li><a href="#thermal" id="toc-thermal" class="nav-link" data-scroll-target="#thermal"><span class="header-section-number">7.3</span> Thermal</a></li>
+  <li><a href="#ralativistc" id="toc-ralativistc" class="nav-link" data-scroll-target="#ralativistc"><span class="header-section-number">7.4</span> Ralativistc</a></li>
+  </ul></li>
+  <li><a href="#energy-of-thin-conductor-concentrated-conductive-medium-without-electric-charge-in-its-surrounding-voltage-potentialdifference-tension" id="toc-energy-of-thin-conductor-concentrated-conductive-medium-without-electric-charge-in-its-surrounding-voltage-potentialdifference-tension" class="nav-link" data-scroll-target="#energy-of-thin-conductor-concentrated-conductive-medium-without-electric-charge-in-its-surrounding-voltage-potentialdifference-tension"><span class="header-section-number">8</span> Energy of thin conductor (concentrated conductive medium without electric charge in its surrounding), Voltage (potentialdifference, tension):</a></li>
+  <li><a href="#low-frequency" id="toc-low-frequency" class="nav-link" data-scroll-target="#low-frequency"><span class="header-section-number">9</span> Low Frequency</a></li>
+  <li><a href="#high-frequency" id="toc-high-frequency" class="nav-link" data-scroll-target="#high-frequency"><span class="header-section-number">10</span> High Frequency</a></li>
+  <li><a href="#continuity-at-rest-electic-charge" id="toc-continuity-at-rest-electic-charge" class="nav-link" data-scroll-target="#continuity-at-rest-electic-charge"><span class="header-section-number">11</span> Continuity at Rest: Electic Charge</a></li>
+  <li><a href="#continuity-at-movement-magnetic-field" id="toc-continuity-at-movement-magnetic-field" class="nav-link" data-scroll-target="#continuity-at-movement-magnetic-field"><span class="header-section-number">12</span> Continuity at Movement: Magnetic Field</a></li>
+  <li><a href="#continuity-at-acceleration-radiation-energy" id="toc-continuity-at-acceleration-radiation-energy" class="nav-link" data-scroll-target="#continuity-at-acceleration-radiation-energy"><span class="header-section-number">13</span> Continuity at Acceleration: Radiation Energy</a></li>
+  <li><a href="#continuity-and-periodic-harmoneous-oscillation-movement-in-vacuum" id="toc-continuity-and-periodic-harmoneous-oscillation-movement-in-vacuum" class="nav-link" data-scroll-target="#continuity-and-periodic-harmoneous-oscillation-movement-in-vacuum"><span class="header-section-number">14</span> Continuity and periodic (harmoneous oscillation) Movement in VACUUM</a></li>
+  <li><a href="#continuity-and-periodic-harmoneous-oscillation-movement-in-matter" id="toc-continuity-and-periodic-harmoneous-oscillation-movement-in-matter" class="nav-link" data-scroll-target="#continuity-and-periodic-harmoneous-oscillation-movement-in-matter"><span class="header-section-number">15</span> Continuity and periodic (harmoneous oscillation) Movement in MATTER</a></li>
+  <li><a href="#near-field" id="toc-near-field" class="nav-link" data-scroll-target="#near-field"><span class="header-section-number">16</span> Near Field</a></li>
+  <li><a href="#far-field" id="toc-far-field" class="nav-link" data-scroll-target="#far-field"><span class="header-section-number">17</span> Far Field</a></li>
+  <li><a href="#dissipation-in-vacuum" id="toc-dissipation-in-vacuum" class="nav-link" data-scroll-target="#dissipation-in-vacuum"><span class="header-section-number">18</span> Dissipation in Vacuum</a></li>
+  <li><a href="#dissipation-in-matter" id="toc-dissipation-in-matter" class="nav-link" data-scroll-target="#dissipation-in-matter"><span class="header-section-number">19</span> Dissipation in Matter</a></li>
+  <li><a href="#energy-gain-by-excitation" id="toc-energy-gain-by-excitation" class="nav-link" data-scroll-target="#energy-gain-by-excitation"><span class="header-section-number">20</span> Energy gain by excitation:</a></li>
+  <li><a href="#operators" id="toc-operators" class="nav-link" data-scroll-target="#operators"><span class="header-section-number">21</span> Operators</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Potentials.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://quarto.org/docs/output-formats/html-basics.html"><i class="bi bi-link-45deg"></i>see also</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+
+<section id="potential-as-intrinsic-energy-of-inertia" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="potential-as-intrinsic-energy-of-inertia"><span class="header-section-number">1</span> Potential as “intrinsic energy of inertia”</h2>
+<section id="electro-magnetic-field-force-caused-by-potential" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="electro-magnetic-field-force-caused-by-potential"><span class="header-section-number">1.1</span> Electro-Magnetic Field (force caused by potential)</h3>
+<ul>
+<li>static: lovslized source charge at rest, only spacial dependency, no time dependency</li>
+<li>stationary: source charce at uniform movement, steady current flow, space and time dependency</li>
+<li>dynamic: source charge at fast movement, radiation, space and time dependency</li>
+<li>relativistc: source charge at very speedy movement, radiation, space and time dependency</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>rest localization vs.&nbsp;time-dependency</li>
+<li>slow vs.&nbsp;fast movemnt</li>
+<li>vacuum vs.&nbsp;matter</li>
+<li>local vs.&nbsp;global of <span class="math inline">\(\mathscr{B}\)</span>, singularity vs.&nbsp;regularity of <span class="math inline">\(\mathscr{E}\)</span></li>
+<li>macro vs.&nbsp;micro</li>
+<li>far-field vs.&nbsp;near-field</li>
+</ul>
+<p><br>
+</p>
+<section id="magnetic-field-in-vacuum" class="level4" data-number="1.1.1">
+<h4 data-number="1.1.1" class="anchored" data-anchor-id="magnetic-field-in-vacuum"><span class="header-section-number">1.1.1</span> Magnetic Field in Vacuum</h4>
+<p><span id="eq-mfield"><span class="math display">\[\begin{split} &amp;
+\mathscr{B} = \nabla \times \boldsymbol{U_m} \coloneqq rot(A)
+\newline &amp;
+\stackrel{\textnormal{Matter}}{=}
+\mu_0 \left( \mathscr{H} + \mathscr{M} \right)
+\newline &amp;
+\stackrel{\textnormal{Vacuum}}{=}
+\frac{1}{c} \left( \frac{r}{\left| r \right|} \times \mathscr{E} \right)
+\newline &amp;
+\stackrel{\textnormal{Far Field}}{=}
+\frac{1}{2} \frac{1}{2\pi} \mu_0 \frac{k^2 e^{i(kr - \omega t)}}{r} \frac{r}{\left| r \right|} \times \left( c p_{0_{dipol}} + m_{0_{dipol}} \times \frac{r}{\left| r \right|} \right)
+\newline &amp;
+\stackrel{\textnormal{Near Field}}{\approx}
+\frac{1}{2} \frac{1}{2\pi} \mu_0 q \frac{v \times r}{\left| r \right|^2}
+\approx
+\frac{1}{2} \frac{1}{2\pi} i k c \mu_0 \frac{ \frac{r}{\left| r \right|} \times p_m}{r^2}
+\end{split} \tag{1}\]</span></span></p>
+</section>
+<section id="magnetic-field-in-matter" class="level4" data-number="1.1.2">
+<h4 data-number="1.1.2" class="anchored" data-anchor-id="magnetic-field-in-matter"><span class="header-section-number">1.1.2</span> Magnetic Field in Matter</h4>
+<p>Exitation <span class="math inline">\(\hat{=}\)</span> Displacement <span id="eq-hfield"><span class="math display">\[\begin{split} &amp;
+\text{Exication:} \qquad
+\mathscr{H} = \frac{1}{\mu_0}\mathscr{B} - \mathscr{M} = \frac{1}{\mu}\mathscr{B}
+\newline &amp;
+\text{Magnetisation:} \qquad
+\mathscr{M} = \frac{\mu - \mu_0}{\mu\mu_0}\mathscr{B} = \frac{\mu - \mu_0}{\mu_0}\mathscr{H}
+\end{split} \tag{2}\]</span></span></p>
+</section>
+<section id="electric-field-in-vacuum" class="level4" data-number="1.1.3">
+<h4 data-number="1.1.3" class="anchored" data-anchor-id="electric-field-in-vacuum"><span class="header-section-number">1.1.3</span> Electric Field in Vacuum</h4>
+<p><span id="eq-efield"><span class="math display">\[\begin{split} &amp;
+\mathscr{E}
+\stackrel{\textnormal{conservativ}}{=}
+-\nabla U_e
+\stackrel{\textnormal{dynamic}}{=}
+-\nabla U_e - \frac{\partial}{\partial t} \boldsymbol{U_m}
+\newline &amp;
+\stackrel{\textnormal{fast moving charge}}{=}
+\newline &amp;
+\frac{1}{2} \frac{1}{2\pi} \frac{1}{\varepsilon_0} \frac{1}{r} \frac{1}{\left( 1 - \frac{r}{\left| r \right|} \cdot \frac{v}{c} \right)^3 } q
+\left[
+\underbrace{
+\left( 1 - \frac{v^2}{c^2} \right) \frac{\frac{r}{\left| r \right|} - \frac{v}{c}}{r}
+}_\text{uniform movement}
++
+\underbrace{
+    \frac{\frac{r}{\left| r \right|} \times \left[ \left( \frac{r}{\left| r \right|} - \frac{v}{c} \right) \times \dot{v} \right]
+}{c^2}
+}_\text{accelerated movement}
+\right]
+\newline &amp;
+\stackrel{\textnormal{Far Field}}
+= c \mathscr{B} \times \frac{1}{\left| r \right|}
+\newline &amp;
+\stackrel{\textnormal{Near Field}}
+\approx
+\frac{1}{2} \frac{1}{2\pi} \frac{1}{\varepsilon_0} q \frac{r}{\left| r \right|^3}
+\approx
+\frac{1}{2} \frac{1}{2\pi} \frac{1}{\varepsilon_0} \frac{ 3 \frac{r}{\left| r \right|} \cdot p_m \frac{r}{\left| r \right|} - p_m}{r^3}
+\end{split} \tag{3}\]</span></span></p>
+</section>
+<section id="electric-field-in-matter" class="level4" data-number="1.1.4">
+<h4 data-number="1.1.4" class="anchored" data-anchor-id="electric-field-in-matter"><span class="header-section-number">1.1.4</span> Electric Field in Matter</h4>
+<p>Displacement <span class="math inline">\(\hat{=}\)</span> Exitation (field change)<br>
+dielectricum = non-conducting material<br>
+electricum = conductor medium</p>
+<p><span id="eq-dfield"><span class="math display">\[\begin{split} &amp;
+\text{Exication:} \qquad
+\mathscr{D} = \varepsilon_0 \mathscr{E} + \mathscr{P} =
+\newline &amp;
+\stackrel{\textnormal{isotropic medium in weak fields}}{=}
+\newline &amp;
+\varepsilon_0 \mathscr{E} + \varepsilon_0 \mbox{\Large$\chi$} \mathscr{E} =
+\varepsilon_0 \left( 1 + \mbox{\Large$\chi$}  \right) \mathscr{E} =
+\newline &amp;
+\varepsilon_0 4\pi r^3 n \left&lt; p_m \right&gt; =
+4\pi r^3 n \varepsilon_0 \left&lt; \mathscr{E}_m \right&gt; =
+\alpha n \varepsilon_0 \bar{\mathscr{E}}_m =
+\varepsilon \mathscr{E}
+\newline &amp;
+\text{Polarisation:} \qquad
+\mathscr{P} = \left( \varepsilon - \varepsilon_0 \right) \mathscr{E}
+\end{split} \tag{4}\]</span></span></p>
+</section>
+<section id="abbreviations" class="level4" data-number="1.1.5">
+<h4 data-number="1.1.5" class="anchored" data-anchor-id="abbreviations"><span class="header-section-number">1.1.5</span> Abbreviations</h4>
+<p><span class="math display">\[
+\Phi = \text{electric potential} \qquad
+A = \text{magnetic potential} \qquad
+j = \nabla \times \mathscr{H} = \text{elec. current density}
+\]</span><span class="math display">\[
+\mathscr{E} = \text{Electric Field} \qquad
+\mathscr{B} = \text{Magnetic Field}     \qquad      \nabla \cdot \mathscr{B} = 0    \qquad
+\mathscr{D} = \text{Displacement density of dielectricum} \qquad
+\mathscr{M} = \text{magnetisation density}
+\]</span><span class="math display">\[
+\mathscr{P} = \text{Polarisation} \qquad
+\mathscr{H} = \text{magn. exitation, magn. field strength ("magn. displacement")}  \qquad
+\]</span><span class="math display">\[
+n = \text{spacial molecule density in volume}
+\]</span><span class="math display">\[
+\alpha = 4\pi r^3 = constant     \qquad
+\mbox{\Large$\chi$} = \text{elec. susceptibility of dieelectricum}    \qquad
+\kappa = \frac{\mu - \mu_0}{\mu_0} = \text{magn. susceptibility}
+\]</span><span class="math display">\[
+\left&lt; p_m \right&gt; = \text{spacial average of magn. dipol moment} \qquad
+\left&lt; \mathscr{E}_m \right&gt; = \text{spacial average of electric field}  
+\]</span><span class="math display">\[
+\bar{\mathscr{E}}_m = \text{time average of electric field} \qquad
+\mu = \text{magn. permeability} \qquad
+\mu_0 = \text{magn. constant ...}
+\]</span><span class="math display">\[
+\varepsilon = \text{dielectricity constant} \qquad
+\varepsilon_0 = \text{...}
+\]</span></p>
+</section>
+</section>
+<section id="electro-magnetic-interactionscoupling-maxwell-conditions" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="electro-magnetic-interactionscoupling-maxwell-conditions"><span class="header-section-number">1.2</span> Electro-Magnetic interactions/coupling (Maxwell conditions)</h3>
+<section id="conservativ-static-charge-localisation" class="level4" data-number="1.2.1">
+<h4 data-number="1.2.1" class="anchored" data-anchor-id="conservativ-static-charge-localisation"><span class="header-section-number">1.2.1</span> conservativ, static charge localisation:</h4>
+<p>…</p>
+</section>
+<section id="stationary-slow-charge-movement" class="level4" data-number="1.2.2">
+<h4 data-number="1.2.2" class="anchored" data-anchor-id="stationary-slow-charge-movement"><span class="header-section-number">1.2.2</span> stationary, slow charge movement:</h4>
+<p><span id="eq-maxwell_slow"><span class="math display">\[\begin{split} &amp;
+\nabla \cdot \varepsilon_0 \mathscr{E} = \varrho \qquad \qquad \qquad \qquad
+\nabla \cdot \mathscr{B} = 0
+\newline &amp;
+\nabla \times \mathscr{E} = -\frac{\partial}{\partial t} \mathscr{B} = i\omega\mathscr{B}  \qquad
+\nabla \times \frac{1}{\mu_0} \mathscr{B} = j + \varepsilon_0 \frac{\partial}{\partial t} \mathscr{E} = j - i\omega\varepsilon_0\mathscr{E}
+\end{split} \tag{5}\]</span></span></p>
+</section>
+<section id="relativistic-fast-charge-movement" class="level4" data-number="1.2.3">
+<h4 data-number="1.2.3" class="anchored" data-anchor-id="relativistic-fast-charge-movement"><span class="header-section-number">1.2.3</span> relativistic, fast charge movement:</h4>
+<p>…</p>
+</section>
+</section>
+</section>
+<section id="potential-derivation" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="potential-derivation"><span class="header-section-number">2</span> Potential derivation</h2>
+<p><span class="math inline">\(\Rightarrow\)</span> Wave equation that determines Potential: <span id="eq-potignit"><span class="math display">\[\begin{split} &amp;
+\Delta \cdot U - \frac{1}{c^2} \frac{\partial^2}{\partial t^2} U = J
+\end{split} \tag{6}\]</span></span></p>
+<p><span class="math inline">\(\Rightarrow\)</span> Potential caused by “ignition J” (inhomgenity) from source at rest, v = 0: <span id="eq-potelec"><span class="math display">\[\begin{split} &amp;
+U = -\frac{1}{4\pi} \int \frac{J}{\left | r  \right |} \, dr'
+\end{split} \tag{7}\]</span></span></p>
+</section>
+<section id="elec.-potential-structure" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="elec.-potential-structure"><span class="header-section-number">3</span> elec. Potential structure:</h2>
+<p><span class="math inline">\(J = -\frac{1}{\varepsilon_0} \varrho\)</span> <span id="eq-potelec"><span class="math display">\[\begin{split} &amp;
+U_e \coloneqq \Phi
+\newline &amp;
+\stackrel{\textnormal{elec. charge dens.=}\varrho}{=}
+\frac{1}{4\pi} \frac{1}{\varepsilon_0} \int \frac{\varrho}{\left | r  \right |} \, dr'
+\newline &amp;
+\&gt; \hat{=} \&gt;
+\frac{1}{2} \frac{1}{2\pi} \frac{1}{\left | r \right |} \frac{1}{\varepsilon_0} Q =
+\frac{1}{2} \frac{1}{2\pi} \frac{1}{\left | r \right |} \frac{1}{\varepsilon_0} It
+\end{split} \tag{8}\]</span></span></p>
+</section>
+<section id="magn.-potential-structure" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="magn.-potential-structure"><span class="header-section-number">4</span> magn. Potential structure:</h2>
+<p><span class="math inline">\(J = -\mu_0 j\)</span> <span id="eq-potmagn"><span class="math display">\[\begin{split} &amp;
+U_m \coloneqq \boldsymbol{A}
+\newline &amp;
+\stackrel{\textnormal{elec. current dens.=}j}{=}
+\frac{\mu_0}{4\pi} \int \frac{j}{\left | r  \right |} \, dr'
+\newline &amp;
+\&gt; \hat{=} \&gt;
+\frac{1}{2} \frac{1}{2\pi} \frac{1}{\left | r \right |} \mu_0 I =
+\frac{1}{2} \frac{1}{2\pi} \frac{1}{\left | r \right |} \frac{1}{c^2 \varepsilon_0} I =
+\frac{1}{c^2} \frac{1}{t} U_e
+\newline &amp;
+\stackrel{\textnormal{source in uniformal movement,} v = const. \neq 0}{=}
+\frac{1}{2} \frac{1}{2\pi} \frac{1}{\left( \left | r \right | - r\cdot\frac{v}{c} \right)} \mu_0 Qv
+\newline &amp;
+=
+\frac{1}{2} \frac{1}{2\pi} \frac{1}{\left( \left | r \right | - r\cdot\frac{v}{c} \right)} \frac{1}{c^2 \varepsilon_0} vQ
+\newline &amp;
+=
+\frac{1}{2} \frac{1}{2\pi} \frac{1}{\left( \left | r \right | - r\cdot\frac{v}{c} \right)} \frac{1}{c^2 \varepsilon_0} Itv =
+\frac{1}{2} \frac{1}{2\pi} \frac{1}{\left( \left | r \right | - r\cdot\frac{v}{c} \right)} \frac{1}{c^2 \varepsilon_0} Ir
+\end{split} \tag{9}\]</span></span></p>
+<p><br>
+</p>
+</section>
+<section id="electric-endogen-energy" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="electric-endogen-energy"><span class="header-section-number">5</span> Electric endogen energy</h2>
+<ul>
+<li>Bond Energy</li>
+<li>Binding Energy</li>
+</ul>
+<p><span class="math inline">\(E_{pot} = mc^2\)</span></p>
+<p><span id="eq-echarge"><span class="math display">\[\begin{split} &amp;
+e = \textnormal{electron charge} \qquad
+q = ne = \textnormal{charge} \qquad
+n \in \mathbb{N}
+\end{split} \tag{10}\]</span></span></p>
+<p><span id="eq-potential-1"><span class="math display">\[\begin{split} &amp;
+\textnormal{Potential} \qquad
+U =
+\frac{E_{pot}}{q} =
+\frac{\left( mc^2 \right)^2}{ne} =
+\frac{m}{q} m c^4 =
+\kappa m c^4
+\end{split} \tag{11}\]</span></span></p>
+</section>
+<section id="electric-induced-energy-exogenous-excitation" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="electric-induced-energy-exogenous-excitation"><span class="header-section-number">6</span> Electric induced energy (exogenous excitation)</h2>
+<ul>
+<li>Ionisation Energy</li>
+<li>Exitation Energy</li>
+</ul>
+<p><span class="math inline">\(E_{kin} = \frac{1}{2}mv^2 \&gt; \hat{=} \&gt; \left( pc \right)^2 \&gt; \hat{=} \&gt; h\nu\)</span></p>
+<p><span class="math inline">\(E_{kin}\)</span> Energy density electric: <span id="eq-energydensity-e"><span class="math display">\[\begin{split} &amp;
+w_e = \frac{1}{2} \varepsilon_0 \mathscr{E}^2
+\end{split} \tag{12}\]</span></span></p>
+<p><span class="math inline">\(E_{kin}\)</span> Energy density magnetic: <span id="eq-energydensity-m"><span class="math display">\[\begin{split} &amp;
+w_m = \frac{1}{2} \frac{1}{\mu_0} \mathscr{B}^2
+\end{split} \tag{13}\]</span></span></p>
+<p><span class="math inline">\(E_{kin}\)</span> Electric Energy: <span id="eq-electricenergy"><span class="math display">\[\begin{split} &amp;
+W_e = \frac{1}{2} CU^2
+\end{split} \tag{14}\]</span></span></p>
+<p><span class="math inline">\(E_{kin}\)</span> Magnetic Energy: <span id="eq-magneticenergy"><span class="math display">\[\begin{split} &amp;
+W_m = \frac{1}{2} LI^2
+\end{split} \tag{15}\]</span></span></p>
+<section id="power" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="power"><span class="header-section-number">6.1</span> Power:</h3>
+<p><span id="eq-power"><span class="math display">\[\begin{split} &amp;
+P = VI = (U_1 - U_2) \frac{Q}{t} =
+\frac{E_1 - E_2}{t} = \frac{W}{t} = \frac{Fr}{t} = Fv
+\end{split} \tag{16}\]</span></span></p>
+</section>
+<section id="frequency" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="frequency"><span class="header-section-number">6.2</span> Frequency:</h3>
+<p><span id="eq-freq"><span class="math display">\[\begin{split} &amp;
+\omega = \dot{\rho} = \frac{v}{r} = 2 \pi \nu = k \lambda \frac{1}{T}
+\stackrel{vacuum}{=}
+kc
+\newline &amp;
+\stackrel{matter}{=}
+k \frac{c}{\eta} = kc \frac{\tan\beta}{\tan\alpha}
+\&gt; \hat{=} \&gt;
+k c \left( \mathscr{E_\beta}^{-1} \mathscr{E_\alpha} \right)^{-1} =
+k c \frac{\varepsilon_\beta}{\varepsilon_\alpha} =
+k c \sqrt{\frac{\varepsilon_0\mu_0}{\varepsilon\mu}}
+\&gt; \hat{=} \&gt;
+\sqrt{\frac{k}{m}}
+\newline &amp;
+\&gt; \hat{=} \&gt;
+\frac{1}{\sqrt{LC}} \sqrt{1 - \frac{C}{L}R^2}
+\approx
+\frac{1}{\sqrt{LC}}
+\newline &amp;
+\stackrel{gravitation}{=}
+\sqrt{\frac{g}{r}}
+\end{split} \tag{17}\]</span></span></p>
+</section>
+<section id="phase" class="level3" data-number="6.3">
+<h3 data-number="6.3" class="anchored" data-anchor-id="phase"><span class="header-section-number">6.3</span> Phase:</h3>
+<p><span id="eq-phase"><span class="math display">\[\begin{split} &amp;
+\varphi = k \left( \vec{r}\cdot\vec{k} \right) - \omega t
+\coloneqq
+k s - \omega t = ...
+\end{split} \tag{18}\]</span></span></p>
+</section>
+<section id="phaseshift" class="level3" data-number="6.4">
+<h3 data-number="6.4" class="anchored" data-anchor-id="phaseshift"><span class="header-section-number">6.4</span> Phaseshift:</h3>
+<p><span id="eq-phaseshift"><span class="math display">\[\begin{split} &amp;
+\Delta\varphi = \Delta k \left( \vec{r}\cdot\vec{\Delta k} \right) - \Delta \omega t
+\coloneqq
+\Delta k s - \Delta \omega t = ...
+\end{split} \tag{19}\]</span></span></p>
+</section>
+<section id="refraction" class="level3" data-number="6.5">
+<h3 data-number="6.5" class="anchored" data-anchor-id="refraction"><span class="header-section-number">6.5</span> Refraction:</h3>
+<p>Refraction <span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(\exists\)</span> Matter; refraction causes dispersion <span id="eq-refract"><span class="math display">\[\begin{split} &amp;
+\eta = \frac{\tan\alpha}{\tan\beta} = \frac{\lambda_0}{\lambda} =
+c \sqrt{\varepsilon\mu}
+\&gt; \hat{=} \&gt;
+\mathscr{E}_\beta^{-1} \mathscr{E}_\alpha =
+\frac{\varepsilon_\alpha}{\varepsilon_\beta} = ...
+\end{split} \tag{20}\]</span></span></p>
+</section>
+<section id="dispersion" class="level3" data-number="6.6">
+<h3 data-number="6.6" class="anchored" data-anchor-id="dispersion"><span class="header-section-number">6.6</span> Dispersion:</h3>
+<p>Dispersion <span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(\exists\)</span> Matter (dielctric madium or conductor); Dispersion <span class="math inline">\(\neq\)</span> Dissipation <span class="math inline">\(\neq\)</span> Diffusion <span id="eq-dispers"><span class="math display">\[\begin{split} &amp;
+...
+\end{split} \tag{21}\]</span></span></p>
+</section>
+<section id="dielectricity" class="level3" data-number="6.7">
+<h3 data-number="6.7" class="anchored" data-anchor-id="dielectricity"><span class="header-section-number">6.7</span> Dielectricity:</h3>
+<p><span id="eq-dielectricity"><span class="math display">\[\begin{split} &amp;
+\varepsilon(\omega) = ...
+\end{split} \tag{22}\]</span></span></p>
+</section>
+<section id="permeability" class="level3" data-number="6.8">
+<h3 data-number="6.8" class="anchored" data-anchor-id="permeability"><span class="header-section-number">6.8</span> Permeability:</h3>
+<p><span id="eq-permeability"><span class="math display">\[\begin{split} &amp;
+\mu(\omega) = ...
+\end{split} \tag{23}\]</span></span></p>
+</section>
+<section id="conductivity" class="level3" data-number="6.9">
+<h3 data-number="6.9" class="anchored" data-anchor-id="conductivity"><span class="header-section-number">6.9</span> Conductivity:</h3>
+<p><span id="eq-conductivity"><span class="math display">\[\begin{split} &amp;
+\sigma(\omega) = ...
+\end{split} \tag{24}\]</span></span></p>
+</section>
+<section id="conductor-charge-conductive-element-for-energy-transfer-condition" class="level3" data-number="6.10">
+<h3 data-number="6.10" class="anchored" data-anchor-id="conductor-charge-conductive-element-for-energy-transfer-condition"><span class="header-section-number">6.10</span> Conductor (charge conductive element for energy transfer) condition:</h3>
+<p><span id="eq-conductor"><span class="math display">\[\begin{split} &amp;
+\sigma \cdot t \gg \varepsilon_0
+\end{split} \tag{25}\]</span></span></p>
+</section>
+<section id="slow-changing-current-quasi-stationary-low-frequencies-condition" class="level3" data-number="6.11">
+<h3 data-number="6.11" class="anchored" data-anchor-id="slow-changing-current-quasi-stationary-low-frequencies-condition"><span class="header-section-number">6.11</span> Slow changing current (quasi-stationary, low frequencies) condition:</h3>
+<p><span id="eq-slowcurrent"><span class="math display">\[\begin{split} &amp;
+\frac{v}{c} \ll \frac{1}{c}\frac{\mathscr{E}}{\mathscr{B}} \ll \frac{c}{v}
+\end{split} \tag{26}\]</span></span></p>
+</section>
+</section>
+<section id="energy-balance" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="energy-balance"><span class="header-section-number">7</span> Energy Balance</h2>
+<p>Energy Balance <span id="eq-energbal"><span class="math display">\[\begin{split} &amp;   
+\frac{\partial}{\partial t} \sum w_i+ \mathbf{\nabla} \cdot \sum \mathbf{\mathscr{S}}_i + \boldsymbol{j} \cdot \mathscr{E} = 0
+\end{split} \tag{27}\]</span></span></p>
+<p>Abbreviations:</p>
+<p><span class="math inline">\(w_i\)</span> = engery densities (electric, magnetic, gravitational, etc. …)</p>
+<p><span class="math inline">\(\mathbf{\mathscr{S}}_i\)</span> = energy transport densities (transfer) by fields (electric, magnetic, gravitational, etc. …)</p>
+<p><span class="math inline">\(\boldsymbol{j} \cdot \mathscr{E}\)</span> = energy gain provided by fields <span class="math inline">\(\mathscr{E}\)</span> and <span class="math inline">\(\mathscr{B}\)</span> through current density <span class="math inline">\(j\)</span></p>
+<section id="mechanical" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="mechanical"><span class="header-section-number">7.1</span> Mechanical</h3>
+<p>…</p>
+</section>
+<section id="electromagnectic-energy-transfer" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="electromagnectic-energy-transfer"><span class="header-section-number">7.2</span> Electromagnectic energy transfer</h3>
+<p>charge conservation:</p>
+<p><span id="eq-continuity"><span class="math display">\[\begin{split} &amp;   
+\frac{\partial}{\partial t}\varrho + \nabla \cdot j = 0
+\end{split} \tag{28}\]</span></span></p>
+<p><span class="math inline">\(\varrho = \sigma\delta =\)</span> charge density in interior</p>
+<p><span class="math inline">\(\sigma =\)</span> charge density at border (surface)</p>
+<p><span class="math inline">\(\delta =\)</span> Dirac delta-function</p>
+<p><span class="math inline">\(\boldsymbol{j} = \sigma \left( \mathscr{E} + v \times \mathscr{B} \right) = \nabla \times \mathscr{H} - \frac{\partial}{\partial t}\mathscr{D} \hat{=}\)</span> elecectric current density</p>
+<p><span class="math inline">\(\boldsymbol{j} \cdot \mathscr{E} \hat{=}\)</span> energy gain</p>
+<p><span class="math inline">\(\mathscr{S} = \mathscr{E} \times \mathscr{H} \hat{=}\)</span> energy transport density (Intensity)</p>
+<p>Energy conservation for (large extended) conductive medium:</p>
+<p><span id="eq-energyconserv-1"><span class="math display">\[\begin{split} &amp;   
+\int    \left(
+\frac{\partial}{\partial t} \left( w_e + w_m \right) + \mathbf{\nabla} \cdot \mathbf{\mathscr{S}} + \boldsymbol{j} \cdot \mathscr{E}
+\right) \, dr
+= \frac{d}{dt}W_e + \frac{d}{dt}W_m + D_S + \int \left( \boldsymbol{j} \cdot \mathscr{E} \right) \, dr
+\newline &amp;
+\stackrel{\textnormal{low frequency}}{=}
+\frac{1}{2}\frac{d}{dt} \left( LI^2 \right) + \frac{1}{2}\frac{d}{dt} \left( \frac{Q^2}{C} \right) + \left( RI^2 - VI \right) = 0
+\end{split} \tag{29}\]</span></span></p>
+<p>Abreviations: <span class="math display">\[
+\Delta \cdot \coloneqq \textnormal{ div grad = Laplacian}
+\]</span><span class="math display">\[  
+J = \textnormal{"ignition of inhomogenity,cause"} \quad
+j = \textnormal{Current density} \quad
+\varrho = \textnormal{Charge density}
+\]</span><span class="math display">\[  
+V = \textnormal{Potentialdifference} \quad  
+I = \textnormal{Current} \quad
+R = \textnormal{Resistance} \quad
+\]</span><span class="math display">\[  
+L = \textnormal{Inductance} \qquad  
+C = \textnormal{Capacitance} \qquad
+Q = c\textnormal{harge (ion)} \qquad
+\Psi = LI = \textnormal{mag. Flux}
+\]</span><span class="math display">\[
+\mathscr{S} = \mathscr{E} \times \mathscr{H} = \textnormal{Poynting-Vector = radiation intensity}
+\]</span><span class="math display">\[
+D_S = \int \left( \mathbf{\nabla} \cdot \mathbf{\mathscr{S}} \right) \, dr = \int \textnormal{div}(\mathscr{E} \times \mathscr{H}) \, dr = \textnormal{dissipation engergy lost from radiation} \approx \textnormal{0 for low frequencies } \omega
+\]</span><span class="math display">\[
+d = \sqrt{\frac{1}{\mu \sigma} \frac{2}{\omega}} = \textnormal{skin depth (surface) of conductor} \qquad
+r = \frac{d}{\sqrt{2i}}\rho = \frac{d}{1+i}\rho = \textnormal{radius (extension) of conductor}
+\]</span><span class="math display">\[
+\rho = kr = \textnormal{"radius of curvature $k$"}
+\]</span><span class="math display">\[
+\mu = \textnormal{permeability of conductor}    \qquad
+\sigma = \textnormal{conductivity of conductor (dielectricum)} \qquad
+\]</span></p>
+</section>
+<section id="thermal" class="level3" data-number="7.3">
+<h3 data-number="7.3" class="anchored" data-anchor-id="thermal"><span class="header-section-number">7.3</span> Thermal</h3>
+<p>…</p>
+</section>
+<section id="ralativistc" class="level3" data-number="7.4">
+<h3 data-number="7.4" class="anchored" data-anchor-id="ralativistc"><span class="header-section-number">7.4</span> Ralativistc</h3>
+<p>…</p>
+</section>
+</section>
+<section id="energy-of-thin-conductor-concentrated-conductive-medium-without-electric-charge-in-its-surrounding-voltage-potentialdifference-tension" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="energy-of-thin-conductor-concentrated-conductive-medium-without-electric-charge-in-its-surrounding-voltage-potentialdifference-tension"><span class="header-section-number">8</span> Energy of thin conductor (concentrated conductive medium without electric charge in its surrounding), Voltage (potentialdifference, tension):</h2>
+<p><span id="eq-potential-3"><span class="math display">\[\begin{split} &amp;
+V =
+U_1 - U_2 =
+r \mathscr{E} =
+\dot{\Psi} + R I + \frac{I}{C}t =
+L \dot{I} + R I + \frac{Q}{C}
+\end{split} \tag{30}\]</span></span></p>
+<p><br>
+</p>
+</section>
+<section id="low-frequency" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="low-frequency"><span class="header-section-number">9</span> Low Frequency</h2>
+<p><span id="eq-lowfreq-cond"><span class="math display">\[\begin{split} &amp; \omega \ll \frac{1}{\mu \sigma} \frac{2}{r^2} \iff r \ll d \iff \rho \ll 1 \end{split} \tag{31}\]</span></span> <span class="math display">\[
+L \approx const.    \qquad
+C \approx const.    \qquad
+D_S \approx 0
+\]</span></p>
+</section>
+<section id="high-frequency" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="high-frequency"><span class="header-section-number">10</span> High Frequency</h2>
+<p><span id="eq-highfreq-cond"><span class="math display">\[\begin{split} &amp; \omega \gg \frac{1}{\mu \sigma} \frac{2}{r^2} \iff r \gg d \iff \rho \gg 1 \end{split} \tag{32}\]</span></span> <span class="math display">\[
+L(t) \neq const.    \qquad
+C(t) \neq const.   \qquad
+\textnormal{for Dipol: } D_S \propto \omega^4 \gg 0
+\]</span></p>
+<p><br>
+</p>
+</section>
+<section id="continuity-at-rest-electic-charge" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="continuity-at-rest-electic-charge"><span class="header-section-number">11</span> Continuity at Rest: Electic Charge</h2>
+<p>no Dissipation, no velocity, charge (ion) causes Electric Field</p>
+</section>
+<section id="continuity-at-movement-magnetic-field" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="continuity-at-movement-magnetic-field"><span class="header-section-number">12</span> Continuity at Movement: Magnetic Field</h2>
+<p>no Dissipation, Velocity constant, moved charge (ion) causes emergence of Magnetic Field</p>
+</section>
+<section id="continuity-at-acceleration-radiation-energy" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="continuity-at-acceleration-radiation-energy"><span class="header-section-number">13</span> Continuity at Acceleration: Radiation Energy</h2>
+<p>no Dissipation, Velocity changing, acceleration of charge (ion) causes emgergence of Radiation</p>
+</section>
+<section id="continuity-and-periodic-harmoneous-oscillation-movement-in-vacuum" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="continuity-and-periodic-harmoneous-oscillation-movement-in-vacuum"><span class="header-section-number">14</span> Continuity and periodic (harmoneous oscillation) Movement in VACUUM</h2>
+<p><span class="math inline">\(c = \frac{1}{\sqrt{\varepsilon_0\mu_0}} = \nu\lambda = \frac{\lambda}{T}\)</span></p>
+<p><span class="math inline">\(2\pi = k\lambda = T\omega = \frac{\omega}{\nu}\)</span></p>
+<p><span class="math display">\[
+2\pi = k \lambda \gg kr_0 \ll 1
+\]</span><span class="math display">\[
+\omega = kc \ll \frac{c}{r_0}     \qquad
+\nabla \cdot j = i \omega \varrho     \qquad
+i \omega Q = 0
+\]</span></p>
+</section>
+<section id="continuity-and-periodic-harmoneous-oscillation-movement-in-matter" class="level2" data-number="15">
+<h2 data-number="15" class="anchored" data-anchor-id="continuity-and-periodic-harmoneous-oscillation-movement-in-matter"><span class="header-section-number">15</span> Continuity and periodic (harmoneous oscillation) Movement in MATTER</h2>
+<p>Refraction index <span class="math inline">\(\eta\)</span> emerges: <span class="math inline">\(\varepsilon\mu = \left( \frac{\eta}{v_{ph}} \right)^2 \hat{=} \left( \frac{\eta}{c} \right)^2\)</span></p>
+<p>Dispersion: <span class="math inline">\(k^2 = \varepsilon \mu \omega^2 + i \mu \sigma \omega\)</span></p>
+</section>
+<section id="near-field" class="level2" data-number="16">
+<h2 data-number="16" class="anchored" data-anchor-id="near-field"><span class="header-section-number">16</span> Near Field</h2>
+<p>granular spacetime</p>
+<p><span class="math display">\[
+r \ll \lambda  = \frac{2\pi}{k}
+\stackrel{\textnormal{vacuum}}{=}
+\frac{2\pi}{ \frac{\omega}{c} }
+\qquad
+kr \ll 2\pi
+\]</span></p>
+<p><span class="math display">\[
+\frac{w_m}{w_e} \sim \frac{ \frac{\vec{p}^2}{\varepsilon_0 r^6} }{ \frac{k^2 \mu_0 c^2 \vec{p}^2}{r^4} } \sim \left( kr \right)^2 \ll 1
+\]</span></p>
+<p><span class="math display">\[
+\vec{p} = \textnormal{elec. Dipol}
+\]</span></p>
+</section>
+<section id="far-field" class="level2" data-number="17">
+<h2 data-number="17" class="anchored" data-anchor-id="far-field"><span class="header-section-number">17</span> Far Field</h2>
+<p>flat spacetime</p>
+<p>accelerated movement -&gt; Radiation in Far Field of charge source</p>
+<p><span class="math display">\[
+r \gg \lambda  = \frac{2\pi}{k}
+\stackrel{\textnormal{vacuum}}{=}
+\frac{2\pi}{ \frac{\omega}{c} }
+\qquad
+kr \gg 1
+\qquad
+r \gg kr_0^2 \ll 1
+\]</span></p>
+<p><span class="math display">\[
+\frac{w_m}{w_e} =
+\frac{ \frac{\varepsilon_0}{2} c^2 \left( \mathscr{B} \times \frac{r}{\left| r \right|} \right)^2 }{ \frac{\varepsilon_0}{2} c^2 \left( \mathscr{B} \times \frac{r}{\left| r \right|} \right)^2 } = 1
+\]</span></p>
+</section>
+<section id="dissipation-in-vacuum" class="level2" data-number="18">
+<h2 data-number="18" class="anchored" data-anchor-id="dissipation-in-vacuum"><span class="header-section-number">18</span> Dissipation in Vacuum</h2>
+<p>no Contiunuity of chrge/matter, no Refraction index, Reflection</p>
+</section>
+<section id="dissipation-in-matter" class="level2" data-number="19">
+<h2 data-number="19" class="anchored" data-anchor-id="dissipation-in-matter"><span class="header-section-number">19</span> Dissipation in Matter</h2>
+<p>no Contiunuity of chrge/matter with Dielectricum, Refraction merges, Reflection, Absorbtion</p>
+<p><br>
+</p>
+</section>
+<section id="energy-gain-by-excitation" class="level2" data-number="20">
+<h2 data-number="20" class="anchored" data-anchor-id="energy-gain-by-excitation"><span class="header-section-number">20</span> Energy gain by excitation:</h2>
+<p>Action Quantum, Planck Constant (Energy-Frequency-Slope): <!-- \index{Plank Constant} \index{Action Quantum} --></p>
+<p><span id="eq-quant_h-1"><span class="math display">\[\begin{split} &amp;
+h =
+\tan(\alpha) =
+\frac{E_{kin}}{\nu_i - \nu_0} =
+\frac{eV_{0i}}{\nu_i - \nu_0}
+\equiv \\&amp;
+\frac{E_1 - E_2}{\nu_0} =
+\frac{W}{\nu_0} =
+\frac{F_{EM} \cdot x}{\nu_0} =
+\hbar k \lambda
+\end{split} \tag{33}\]</span></span></p>
+<p><span id="eq-quant_h-2"><span class="math display">\[\begin{split} &amp;
+\hbar =
+\frac{E_1 - E_2}{\omega} =
+\end{split} \tag{34}\]</span></span></p>
+<p><span id="eq-quant_h-4"><span class="math display">\[\begin{split} &amp;
+E_{kin}^{max} =
+eV_0 =
+e \frac{Q}{C} =
+h(\nu - \nu_0)
+\end{split} \tag{35}\]</span></span></p>
+<p><span class="math display">\[
+V_0 = \textnormal{Opposing Potential ($I=0$)}
+\]</span><span class="math display">\[
+\alpha = \angle( E_{kin}, \nu ) \qquad
+e = \textnormal{electron charge} \qquad
+Q = \textnormal{ion charge} \qquad
+\]</span><span class="math display">\[
+C = \textnormal{Capacitance} \qquad
+\nu = \frac{1}{2\pi} \frac{1}{\sqrt{LC}} \sqrt{1 - \frac{C}{L}R^2}
+\]</span><span class="math display">\[
+\Rightarrow \textnormal{Inductance } L = \frac{4\pi^2}{C} \left( \frac{e}{h}Q + \nu_0 \right)^2
+\]</span></p>
+<p><br>
+</p>
+<p><span class="math inline">\(\Rightarrow \textnormal{Ionisation Energy of chemical element } E_i = h\nu = h\frac{\lambda}{c} = \hbar\omega = \frac{h}{k\lambda} \omega\)</span></p>
+<p><span class="math inline">\(\Rightarrow \textnormal{Energy released (gained) } E_{gain} = E_{pot} - E_i = mc^2 - h\nu\)</span></p>
+</section>
+<section id="operators" class="level2" data-number="21">
+<h2 data-number="21" class="anchored" data-anchor-id="operators"><span class="header-section-number">21</span> Operators</h2>
+<p>Operators</p>
+<p><span class="math inline">\(\nabla \coloneqq grad = \text{Gradient (Gefälle, Neigung)}\)</span></p>
+<p><span class="math inline">\(\nabla \cdot \coloneqq div = \text{Divergence (Quelle)}\)</span></p>
+<p><span class="math inline">\(\nabla \times \coloneqq rot = \text{Rotation (Wirbelung, Curl)}\)</span></p>
+<p><span class="math inline">\(\nabla^2 = \text{Lagrange Operatonr (Krümmung, Beschleunigung)}\)</span></p>
+<p><span class="math inline">\(\Delta \cdot \coloneqq div(grad) = \text{Laplace Operatorn}\)</span></p>
+<p><span class="math inline">\(\Delta \coloneqq \text{Difference, shift}\)</span></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© 2026 Eugenio Net. | <a href="https://eugenionet.github.io/physecon/index.pdf">PDF script</a> | Update at <a href="https://eugenionet.github.io/physecon/">eugenionet.github.io/physecon</a> | <a href="mailto:eugenionetweb@gmail.com?subject=Working%20Paper%20Economy-Physics&amp;body=Body%20text">Contact</a> to collaborate</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
