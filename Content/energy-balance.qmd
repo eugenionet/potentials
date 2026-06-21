@@ -23,9 +23,9 @@ $\boldsymbol{j} \cdot \mathscr{E}$ = energy gain provided by fields $\mathscr{E}
 
 $\boldsymbol{j} = \sigma \left( \mathscr{E} + v \times \mathscr{B} \right) = \nabla \times \mathscr{H} - \frac{\partial}{\partial t}\mathscr{D} \hat{=}$ elecectric current density
 
-$\boldsymbol{j} \cdot \mathscr{E} \hat{=}$ energy gain
+$\boldsymbol{j} \cdot \mathscr{E} \hat{=}$ energy gain by fields $\mathscr{E}$ and $\mathscr{B}$ through current density $j$
 
-$\mathscr{S} = \mathscr{E} \times \mathscr{H} \hat{=}$ energy transport density (Intensity)
+$\mathscr{S} = \mathscr{E} \times \mathscr{H} \hat{=}$ energy transport density (Intensity = $\left| \bar{\mathscr{S}} \right|$)
 
 
 Energy conservation for (large extended) conductive medium:
@@ -57,7 +57,7 @@ C = \textnormal{Capacitance} \qquad
 Q = c\textnormal{harge (ion)} \qquad
 \Psi = LI = \textnormal{mag. Flux}
 $$\linebreak$$ 
-\mathscr{S} = \mathscr{E} \times \mathscr{H} = \textnormal{Poynting-Vector = radiation intensity}
+\mathscr{S} = \mathscr{E} \times \mathscr{H} = \textnormal{Poynting-Vector, radiation intensity}
 $$\linebreak$$
 D_S = \int \left( \mathbf{\nabla} \cdot \mathbf{\mathscr{S}} \right) \, dr = \int \textnormal{div}(\mathscr{E} \times \mathscr{H}) \, dr = \textnormal{dissipation engergy lost from radiation} \approx \textnormal{0 for low frequencies } \omega
 $$\linebreak$$
