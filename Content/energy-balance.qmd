@@ -1,14 +1,14 @@
 
 Energy Balance
 $$\begin{split} &   
-\frac{\partial}{\partial t} \sum w_i+ \mathbf{\nabla} \cdot \sum \mathbf{\mathscr{S}}_i + \boldsymbol{j} \cdot \mathscr{E} = 0 
+\frac{\partial}{\partial t} \sum w_i+ \mathbf{\nabla} \cdot \sum \mathbf{\mathscr{S}}_{w_i} + \boldsymbol{j} \cdot \mathscr{E} = 0 
 \end{split}$${#eq-energbal} 
 
 Abbreviations:
 
-$w_i$ = engery densities (electric, magnetic, gravitational, etc. ...)
+$w_i$ = engery densities (electric, magnetic, gravitational, etc. ...), $i \in \mathbb{N}$
 
-$\mathbf{\mathscr{S}}_i$ = energy transport densities (transfer) by fields (electric, magnetic, gravitational, etc. ...) 
+$\mathbf{\mathscr{S}}_{w_i}$ = Poynting-Vectros $\hat{=}$ energy transport densities (transfers) by fields (electric, magnetic, gravitational, etc. ...) to corresponding energy densities $w_i$
 
 $\boldsymbol{j} \cdot \mathscr{E}$ = energy gain provided by fields $\mathscr{E}$ and $\mathscr{B}$ through current density $j$
 
@@ -75,6 +75,6 @@ $$
 ...
 
 
-### Ralativistc
+### Gravitational
 ...
 
