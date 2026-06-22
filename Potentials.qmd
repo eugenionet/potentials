@@ -22,7 +22,7 @@ $$\begin{split} &
 U = -\frac{1}{4\pi} \int \frac{J}{\left | r  \right |} \, dr'
 \end{split}$${#eq-potelec}
 
-## elec. Potential structure:
+## elec. Potential structure
 $J = -\frac{1}{\varepsilon_0} \varrho$
 $$\begin{split} &
 U_e \coloneqq \Phi 
@@ -35,7 +35,7 @@ U_e \coloneqq \Phi
 \frac{1}{2} \frac{1}{2\pi} \frac{1}{\left | r \right |} \frac{1}{\varepsilon_0} It
 \end{split}$${#eq-potelec}
 
-## magn. Potential structure: 
+## magn. Potential structure
 $J = -\mu_0 j$
 $$\begin{split} &
 U_m \coloneqq \boldsymbol{A} 
@@ -323,7 +323,7 @@ no Contiunuity of chrge/matter with Dielectricum, Refraction merges, Reflection,
 
 \
 
-## Energy gain by excitation:
+## Energy gain by excitation
 
 {{< include C:/Users/erine/Desktop/Physics-Explorations/GitHub-Physics/Potentials/Content/Quant_h.qmd >}}
 
@@ -333,6 +333,11 @@ $\Rightarrow \textnormal{Ionisation Energy of chemical element } E_i = h\nu = h\
 
 $\Rightarrow \textnormal{Energy released (gained) } E_{gain} = E_{pot} - E_i = mc^2 - h\nu$
 
+
+
+## Frequency Cause-Effect
+
+{{< include C:/Users/erine/Desktop/Physics-Explorations/GitHub-Physics/Potentials/Content/Frequency.qmd >}}
 
 
 ## Operators
