@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>frequency – PHYSECON</title>
+<title>abstract_0 – PHYSECON</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,35 +73,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -489,15 +460,8 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Chapters</h2>
-   
-  <ul>
-  <li><a href="#frequency-commonness-probability-likelihood" id="toc-frequency-commonness-probability-likelihood" class="nav-link active" data-scroll-target="#frequency-commonness-probability-likelihood"><span class="header-section-number">0.1</span> Frequency (commonness, probability, likelihood)</a></li>
-  <li><a href="#frequency-contextual-causes" id="toc-frequency-contextual-causes" class="nav-link" data-scroll-target="#frequency-contextual-causes"><span class="header-section-number">0.2</span> Frequency contextual Causes</a></li>
-  </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Frequency.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://quarto.org/docs/output-formats/html-basics.html"><i class="bi bi-link-45deg"></i>see also</a></li></ul></div></nav>
-    </div>
+        
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="abstract_0.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://quarto.org/docs/output-formats/html-basics.html"><i class="bi bi-link-45deg"></i>see also</a></li></ul></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
@@ -505,145 +469,10 @@ window.Quarto = {
 
 
 
-<section id="frequency-commonness-probability-likelihood" class="level3" data-number="0.1">
-<h3 data-number="0.1" class="anchored" data-anchor-id="frequency-commonness-probability-likelihood"><span class="header-section-number">0.1</span> Frequency (commonness, probability, likelihood)</h3>
-<p><span id="eq-frequencyangular"><span class="math display">\[\begin{split} &amp;
-\omega =
-\frac{d}{dt}\varphi =
-\eta kv = kc =
-\frac{2\pi}{\mathcal{T}} =
-2\pi \cdot \nu =
-\frac{a}{v} =
-\frac{v}{r} =
-\frac{E}{\hbar} =
-\sqrt{ \frac{k}{m} } =
-\sqrt{ \frac{r \times F}{m} } =
-\sqrt{ \frac{g}{l} }
-\stackrel{EM}{=}
-... =
-\sqrt{ \frac{1}{LC} }
-\stackrel{QM}{=}
-\frac{1}{2} \frac{p^2}{m} \frac{1}{\hbar} =
-\frac{(\hbar\vec{k})^2}{2m} \frac{1}{\hbar} =   
-\frac{E}{\hbar}
-\stackrel{\text{time-independent Potential}}{=}  
-\frac{1}{i\Psi} \frac{\partial \Psi}{\partial t} =
-\frac{1}{2} \frac{\hbar}{m} \cdot \left[ -\frac{1}{\Psi} \left( \frac{\partial^2\Psi}{\partial x^2}+\frac{\partial^2\Psi}{\partial y^2}+\frac{\partial^2\Psi}{\partial z^2} \right) \right] =
-\frac{\hbar}{2m} \vec{k}^2  =
-\frac{\hbar}{2m} \Delta\Psi(\vec{r},t) =
-i \frac{\partial\Psi(\vec{r},t)}{\partial t}
-\end{split} \tag{1}\]</span></span></p>
-<p><span id="eq-refractionindex-1"><span class="math display">\[\begin{split} &amp;
-\nu =
-\frac{E}{h} =
-\frac{v_{phs}}{\lambda} =
-\frac{c^2}{v} \frac{1}{\lambda} =
-\frac{\omega}{k} \frac{1}{\lambda} =
-\frac{\omega}{2\pi}
-\end{split} \tag{2}\]</span></span></p>
-<p><span id="eq-refractionindex-2"><span class="math display">\[\begin{split} &amp;
-\nu_i =
-\frac{eV_{0i}}{h} + \nu_0 =
-\frac{E_{kin}}{\hbar} \omega\mathcal{T} + \nu_0
-\end{split} \tag{3}\]</span></span></p>
-<p><span id="eq-electroncharge"><span class="math display">\[\begin{split} &amp;
-e = \textnormal{electron charge}
-\qquad
-V_0 = \textnormal{Opposing Potential ($I=0$)}
-\\
-\textnormal{Energy Level: } i = [1,n] \in \mathbb{N}
-\end{split} \tag{4}\]</span></span></p>
-<p><span id="eq-energy_kin_max"><span class="math display">\[\begin{split} &amp;
-E_{kin}^{max} =
-eV_0 =
-h(\nu - \nu_0)
-\end{split} \tag{5}\]</span></span></p>
-</section>
-<section id="frequency-contextual-causes" class="level3" data-number="0.2">
-<h3 data-number="0.2" class="anchored" data-anchor-id="frequency-contextual-causes"><span class="header-section-number">0.2</span> Frequency contextual Causes</h3>
-<p>Frequency of rotational velocity as periodic occurance of an event/state by space distance and time periodicity as well as movement speed and reach length, <span class="math inline">\(\quad v^2 = v_{ph}v_{gr}, \quad \omega t = 2\pi\nu t = \lambda \neq 0 \quad\)</span>:</p>
-<p><span id="eq-frequencycause"><span class="math display">\[\begin{split} &amp;
-\frac{v}{r} =
-\omega =
-\frac{\lambda}{t}
-\end{split} \tag{6}\]</span></span></p>
-<section id="rest-state-of-source-charge" class="level4" data-number="0.2.1">
-<h4 data-number="0.2.1" class="anchored" data-anchor-id="rest-state-of-source-charge"><span class="header-section-number">0.2.1</span> Rest state of source charge</h4>
-<p>Statics localization of charge. Only spacial demependeny, no time dependency.</p>
-<p>Energy transport … Information transmission …</p>
-<p><span class="math inline">\(v = 0\)</span> <span class="math inline">\(\qquad\)</span> <span class="math inline">\(\dot{v} = 0\)</span> <span class="math inline">\(\qquad\)</span></p>
-</section>
-<section id="slow-movement-of-source-charge" class="level4" data-number="0.2.2">
-<h4 data-number="0.2.2" class="anchored" data-anchor-id="slow-movement-of-source-charge"><span class="header-section-number">0.2.2</span> Slow Movement of source charge</h4>
-<p>Stationarity localization of current flow by slow movement of charge. Dynamics, time dependency.</p>
-<p>Energy transport … Information transmission …</p>
-<p><span class="math inline">\(v = const. \ll c\)</span> <span class="math inline">\(\qquad\)</span> <span class="math inline">\(\dot{v} = 0\)</span></p>
-</section>
-<section id="fast-movement-of-source-charge" class="level4" data-number="0.2.3">
-<h4 data-number="0.2.3" class="anchored" data-anchor-id="fast-movement-of-source-charge"><span class="header-section-number">0.2.3</span> Fast Movement of source charge</h4>
-<p>Fields forces by fast movement of charge. Dynamics, time dependency.</p>
-<p>Energy transport … Information transmission …</p>
-<p><span class="math inline">\(v \approx c\)</span> <span class="math inline">\(\qquad\)</span> <span class="math inline">\(\dot{v} = 0\)</span></p>
-</section>
-<section id="acceleration-movement-of-source-charge" class="level4" data-number="0.2.4">
-<h4 data-number="0.2.4" class="anchored" data-anchor-id="acceleration-movement-of-source-charge"><span class="header-section-number">0.2.4</span> Acceleration Movement of source charge</h4>
-<p>Radiation energy by accelerated movement of charge. Dynamics, time dependency.</p>
-<p>Energy transport … Information transmission …</p>
-<p><span class="math inline">\(v \neq 0\)</span> <span class="math inline">\(\qquad\)</span> <span class="math inline">\(\dot{v} \neq 0\)</span></p>
-</section>
-<section id="movement-in-vacuum" class="level4" data-number="0.2.5">
-<h4 data-number="0.2.5" class="anchored" data-anchor-id="movement-in-vacuum"><span class="header-section-number">0.2.5</span> Movement in Vacuum</h4>
-<p><span class="math inline">\(\eta = \sqrt{\frac{1}{\varepsilon_0 \mu_0}} = 1\)</span> <span class="math inline">\(\qquad\)</span> <span class="math inline">\(2\pi = k \lambda\)</span> <span class="math inline">\(\qquad\)</span> <span class="math inline">\(v_{ph} = c\)</span> <span class="math inline">\(\qquad\)</span> <span class="math inline">\(\omega = k c\)</span></p>
-<p><span class="math inline">\(\varepsilon_0\mu_0 = \frac{1}{c^2}\)</span></p>
-<p>Continuity: <span class="math inline">\(\nabla\cdot j = i \omega\varrho\)</span> <span class="math inline">\(\qquad\)</span> <span class="math inline">\(i \omega Q = 0\)</span></p>
-</section>
-<section id="movement-in-matter" class="level4" data-number="0.2.6">
-<h4 data-number="0.2.6" class="anchored" data-anchor-id="movement-in-matter"><span class="header-section-number">0.2.6</span> Movement in Matter</h4>
-<p><span class="math inline">\(\eta = \sqrt{\frac{\varepsilon\mu}{\varepsilon_0\mu_0}} = \frac{c}{v_{Ph}} \neq 1\)</span> <span class="math inline">\(\qquad\)</span> <span class="math inline">\(v_{ph} = \pm \sqrt{\frac{1}{\varepsilon\mu} - \frac{\sigma^2}{4\varepsilon^2 k^2}}\)</span> <span class="math inline">\(\qquad\)</span> <span class="math inline">\(\omega = k v_{ph} = kc \sqrt{\frac{\varepsilon_0\mu_0}{\varepsilon\mu}} = kc\frac{\tan(\beta)}{\tan{\alpha}} = k \frac{c}{\eta}\)</span></p>
-<p><span class="math inline">\(\varepsilon\mu = \left( \frac{\eta}{c} \right)^2\)</span></p>
-<p>Dispersion: <span class="math inline">\(k^2 = \varepsilon\mu\omega^2 + i \mu\sigma\omega\)</span></p>
-</section>
-<section id="near-field" class="level4" data-number="0.2.7">
-<h4 data-number="0.2.7" class="anchored" data-anchor-id="near-field"><span class="header-section-number">0.2.7</span> Near Field</h4>
-<p><span class="math inline">\(r_0 \ll r \ll \lambda\)</span> <span class="math inline">\(\qquad\)</span> <span class="math inline">\(kr \ll 2\pi\)</span> <span class="math inline">\(\qquad\)</span> <span class="math inline">\(\frac{w_m}{w_e} \ll 1\)</span></p>
-<p><span class="math inline">\(r\)</span> is small, fast movement</p>
-</section>
-<section id="far-field" class="level4" data-number="0.2.8">
-<h4 data-number="0.2.8" class="anchored" data-anchor-id="far-field"><span class="header-section-number">0.2.8</span> Far Field</h4>
-<p><span class="math inline">\(r \gg \lambda\)</span> <span class="math inline">\(\qquad\)</span> <span class="math inline">\(kr \gg 1\)</span> <span class="math inline">\(\qquad\)</span> <span class="math inline">\(r \gg kr_0^2 \ll 1\)</span> <span class="math inline">\(\qquad\)</span> <span class="math inline">\(\frac{w_m}{w_e} = 1\)</span></p>
-<p><span class="math inline">\(r\)</span> is big, slow movement</p>
-</section>
-<section id="high-frequency" class="level4" data-number="0.2.9">
-<h4 data-number="0.2.9" class="anchored" data-anchor-id="high-frequency"><span class="header-section-number">0.2.9</span> High Frequency</h4>
-<p><span class="math inline">\(\omega \gg \frac{2}{\mu \sigma r_0^2}\)</span></p>
-<p><span class="math inline">\(\lambda\)</span> is big, <span class="math inline">\(\nu\)</span> frequency i small, short time period</p>
-</section>
-<section id="low-frequency" class="level4" data-number="0.2.10">
-<h4 data-number="0.2.10" class="anchored" data-anchor-id="low-frequency"><span class="header-section-number">0.2.10</span> Low Frequency</h4>
-<p><span class="math inline">\(\omega \ll \frac{2}{\mu \sigma r_0^2}\)</span></p>
-<p><span class="math inline">\(\lambda\)</span> is small, <span class="math inline">\(\nu\)</span> frequency i big, long time period</p>
-</section>
-<section id="conditions" class="level4" data-number="0.2.11">
-<h4 data-number="0.2.11" class="anchored" data-anchor-id="conditions"><span class="header-section-number">0.2.11</span> Conditions</h4>
-<p>Border (skin surface): …</p>
-<p>Interior (medium body): …</p>
-<p>Global: ….</p>
-<p>Local: ….</p>
-</section>
-<section id="consequences" class="level4" data-number="0.2.12">
-<h4 data-number="0.2.12" class="anchored" data-anchor-id="consequences"><span class="header-section-number">0.2.12</span> Consequences</h4>
-<p>dielectricity constant (matter medium): <span class="math inline">\(\varepsilon = \varepsilon(\omega) = \mathscr{E}^{-1}\mathscr{D} = \mathscr{E}^{-1}\left( \mathscr{P} + \varepsilon_0 \mathscr{B} \right)\)</span></p>
-<p>permeability constant (matter medium): <span class="math inline">\(\mu = \mu(\omega) = \mathscr{B}^{-1}\mathscr{H} = \mathscr{B}^{-1} \left( \frac{1}{\mu_0}\mathscr{B} - \mathscr{M} \right)\)</span></p>
-<p>conductivity (matter medium): <span class="math inline">\(\sigma = \sigma(\omega) = \frac{\sigma_0}{\sqrt{1 + \omega^2 t^2}}\)</span></p>
-<p>magn. energy density (vacuum): <span class="math inline">\(w_m = \frac{1}{2}\frac{1}{\mu_0}\mathscr{B}^2\)</span></p>
-<p>elec. energy density (vacuum): <span class="math inline">\(w_e = \frac{1}{2}\varepsilon_0\mathscr{E}^2\)</span></p>
-<p>wave vector: <span class="math inline">\(k = \frac{2\pi}{\lambda} = \eta \frac{\omega}{c}\)</span></p>
-<p>refraction index (matter medium): <span class="math inline">\(\eta = \frac{\tan{\alpha}}{\tan{\beta}} = \frac{\eta_{medium1}}{\eta_{medium2}}\)</span></p>
-<p>Energy: <span class="math inline">\(E = h \nu = \hbar \omega = E_{kin} + E_{pot} \stackrel{\text{!}}{=} \sqrt{ \left( pc \right)^2 + \left( mc^2 \right)^2 }\)</span></p>
+<p>An exploratory attempt …</p>
+<p>Interconnection network between movement, force, momentum, energy, and work. Describing systems with Lagrangian and Hamltonian when constraints and starting conditions exist. Modeling systems and optimisation with constraints and conditions. Interwoven system of macro- and microeconomie under constraints, limitations, and conditions.</p>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
