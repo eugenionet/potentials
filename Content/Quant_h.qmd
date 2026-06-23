@@ -3,7 +3,7 @@ Action Quantum, Planck Constant (Energy-Frequency-Slope)\footnote{Wirkungsquantu
 
 $$\begin{split} &
 h = 
-\tan(\alpha) = 
+\tan(\varphi) = 
 \frac{E_{kin}}{\nu_i - \nu_0} = 
 \frac{eV_{0i}}{\nu_i - \nu_0} 
 \equiv \\&
@@ -28,7 +28,7 @@ h(\nu - \nu_0)
 $$
 V_0 = \textnormal{Opposing Potential ($I=0$)}
 $$\linebreak$$
-\alpha = \angle( E_{kin}, \nu ) \qquad
+\varphi = \angle( E_{kin}, \nu ) \qquad
 e = \textnormal{electron charge} \qquad
 Q = \textnormal{ion charge} \qquad
 $$\linebreak$$

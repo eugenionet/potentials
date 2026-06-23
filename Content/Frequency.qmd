@@ -12,14 +12,14 @@ $$\begin{split} &
 \sqrt{ \frac{k}{m} } = 
 \sqrt{ \frac{r \times F}{m} } = 
 \sqrt{ \frac{g}{l} } 
-\stackrel{EM}{=} 
+\stackrel{electromagnetic}{=} 
 ... =
 \sqrt{ \frac{1}{LC} }
 \stackrel{QM}{=} 
 \frac{1}{2} \frac{p^2}{m} \frac{1}{\hbar} = 
 \frac{(\hbar\vec{k})^2}{2m} \frac{1}{\hbar} =   
 \frac{E}{\hbar} 
-\stackrel{\text{time-independent Potential}}{=}  
+\stackrel{\text{time-independent potential}}{=}  
 \frac{1}{i\Psi} \frac{\partial \Psi}{\partial t} = 
 \frac{1}{2} \frac{\hbar}{m} \cdot \left[ -\frac{1}{\Psi} \left( \frac{\partial^2\Psi}{\partial x^2}+\frac{\partial^2\Psi}{\partial y^2}+\frac{\partial^2\Psi}{\partial z^2} \right) \right] = 
 \frac{\hbar}{2m} \vec{k}^2  = 
@@ -127,7 +127,7 @@ $\dot{v} \neq 0$
 
 #### Movement in Vacuum
 
-$\eta = \sqrt{\frac{1}{\varepsilon_0 \mu_0}} = 1$ 
+$\eta = \frac{\tan\alpha}{\tan\beta} = \frac{c}{v_{Ph}} = 1$ 
 $\qquad$
 $2\pi = k \lambda$
 $\qquad$
@@ -145,11 +145,11 @@ $i \omega Q = 0$
 
 #### Movement in Matter
 
-$\eta = \sqrt{\frac{\varepsilon\mu}{\varepsilon_0\mu_0}} = \frac{c}{v_{Ph}} \neq 1$
+$\eta = \frac{\tan\alpha}{\tan\beta} = \frac{c}{v_{Ph}} = \sqrt{\frac{\varepsilon\mu}{\varepsilon_0\mu_0}} \neq 1$
 $\qquad$
 $v_{ph} = \pm \sqrt{\frac{1}{\varepsilon\mu} - \frac{\sigma^2}{4\varepsilon^2 k^2}}$
 $\qquad$
-$\omega = k v_{ph} = kc \sqrt{\frac{\varepsilon_0\mu_0}{\varepsilon\mu}} = kc\frac{\tan(\beta)}{\tan{\alpha}} = k \frac{c}{\eta}$
+$\omega = k v_{ph} = kc \sqrt{\frac{\varepsilon_0\mu_0}{\varepsilon\mu}} = kc\frac{\tan\beta}{\tan{\alpha}} = k \frac{c}{\eta}$
 
 $\varepsilon\mu = \left( \frac{\eta}{c} \right)^2$
 
