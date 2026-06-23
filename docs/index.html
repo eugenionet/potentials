@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Eugenio Net">
-<meta name="dcterms.date" content="2026-06-22">
+<meta name="dcterms.date" content="2026-06-23">
 <meta name="keywords" content="Physics, Energy, Potential">
 
 <title>Physics Concepts as Indicative Framework to Model Systems of Economies Ex-ante – PHYSECON</title>
@@ -594,7 +594,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 22, 2026</p>
+      <p class="date">June 23, 2026</p>
     </div>
   </div>
   
@@ -868,7 +868,7 @@ U =
 <li>Ionisation Energy</li>
 <li>Exitation Energy</li>
 </ul>
-<p><span class="math inline">\(E_{kin} = \frac{1}{2}mv^2 \&gt; \hat{=} \&gt; \left( pc \right)^2 \&gt; \hat{=} \&gt; h\nu\)</span></p>
+<p><span class="math inline">\(E_{kin} = \frac{1}{2}mv^2 \&gt; \hat{=} \&gt; \left( pc \right)^2 \&gt; \hat{=} \&gt; h\nu = \hbar\omega\)</span></p>
 <p><span class="math inline">\(E_{kin}\)</span> Energy density electric: <span id="eq-energydensity-e"><span class="math display">\[\begin{split} &amp;
 w_e = \frac{1}{2} \varepsilon_0 \mathscr{E}^2
 \end{split} \tag{12}\]</span></span></p>
@@ -891,23 +891,26 @@ P = VI = (U_1 - U_2) \frac{Q}{t} =
 <section id="frequency" class="level3" data-number="1.6.2">
 <h3 data-number="1.6.2" class="anchored" data-anchor-id="frequency"><span class="header-section-number">1.6.2</span> Frequency:</h3>
 <p><span id="eq-freq"><span class="math display">\[\begin{split} &amp;
-\omega = \dot{\rho} = \frac{v}{r} = 2 \pi \nu = k \lambda \frac{1}{T}
+\omega = \dot{\rho} = \frac{v}{r} = 2 \pi \nu = k \lambda \frac{1}{T} =
+\sqrt{\frac{k}{m}}
+\newline &amp;
 \stackrel{vacuum}{=}
 kc
-\newline &amp;
 \stackrel{matter}{=}
 k \frac{c}{\eta} = kc \frac{\tan\beta}{\tan\alpha}
-\&gt; \hat{=} \&gt;
+\newline &amp;
+\stackrel{\text{electromagnetic}}{=}
 k c \left( \mathscr{E_\beta}^{-1} \mathscr{E_\alpha} \right)^{-1} =
 k c \frac{\varepsilon_\beta}{\varepsilon_\alpha} =
 k c \sqrt{\frac{\varepsilon_0\mu_0}{\varepsilon\mu}}
-\&gt; \hat{=} \&gt;
-\sqrt{\frac{k}{m}}
 \newline &amp;
 \&gt; \hat{=} \&gt;
 \frac{1}{\sqrt{LC}} \sqrt{1 - \frac{C}{L}R^2}
 \approx
 \frac{1}{\sqrt{LC}}
+\newline &amp;
+\stackrel{thermal}{=}
+...
 \newline &amp;
 \stackrel{gravitation}{=}
 \sqrt{\frac{g}{r}}
@@ -1110,7 +1113,7 @@ i \omega Q = 0
 </section>
 <section id="near-field" class="level2" data-number="1.16">
 <h2 data-number="1.16" class="anchored" data-anchor-id="near-field"><span class="header-section-number">1.16</span> Near Field</h2>
-<p>granular spacetime</p>
+<p>static, vacuum, granular spacetime</p>
 <p><span class="math display">\[
 r \ll \lambda  = \frac{2\pi}{k}
 \stackrel{\textnormal{vacuum}}{=}
@@ -1127,7 +1130,7 @@ kr \ll 2\pi
 </section>
 <section id="far-field" class="level2" data-number="1.17">
 <h2 data-number="1.17" class="anchored" data-anchor-id="far-field"><span class="header-section-number">1.17</span> Far Field</h2>
-<p>flat spacetime</p>
+<p>static, vacuum, flat spacetime</p>
 <p>accelerated movement -&gt; Radiation in Far Field of charge source</p>
 <p><span class="math display">\[
 r \gg \lambda  = \frac{2\pi}{k}
@@ -1149,7 +1152,7 @@ r \gg kr_0^2 \ll 1
 </section>
 <section id="dissipation-in-matter" class="level2" data-number="1.19">
 <h2 data-number="1.19" class="anchored" data-anchor-id="dissipation-in-matter"><span class="header-section-number">1.19</span> Dissipation in Matter</h2>
-<p>no Contiunuity of chrge/matter with Dielectricum, Refraction merges, Reflection, Absorbtion</p>
+<p>no Contiunuity of charge/matter with dielectricum, refraction merges, reflection, absorbtion</p>
 <p><br>
 </p>
 </section>
@@ -1158,7 +1161,7 @@ r \gg kr_0^2 \ll 1
 <p>Action Quantum, Planck Constant (Energy-Frequency-Slope): <!-- \index{Plank Constant} \index{Action Quantum} --></p>
 <p><span id="eq-quant_h-1"><span class="math display">\[\begin{split} &amp;
 h =
-\tan(\alpha) =
+\tan(\varphi) =
 \frac{E_{kin}}{\nu_i - \nu_0} =
 \frac{eV_{0i}}{\nu_i - \nu_0}
 \equiv \\&amp;
@@ -1180,7 +1183,7 @@ h(\nu - \nu_0)
 <p><span class="math display">\[
 V_0 = \textnormal{Opposing Potential ($I=0$)}
 \]</span><span class="math display">\[
-\alpha = \angle( E_{kin}, \nu ) \qquad
+\varphi = \angle( E_{kin}, \nu ) \qquad
 e = \textnormal{electron charge} \qquad
 Q = \textnormal{ion charge} \qquad
 \]</span><span class="math display">\[
@@ -1192,7 +1195,11 @@ C = \textnormal{Capacitance} \qquad
 <p><br>
 </p>
 <p><span class="math inline">\(\Rightarrow \textnormal{Ionisation Energy of chemical element } E_i = h\nu = h\frac{\lambda}{c} = \hbar\omega = \frac{h}{k\lambda} \omega\)</span></p>
-<p><span class="math inline">\(\Rightarrow \textnormal{Energy released (gained) } E_{gain} = E_{pot} - E_i = mc^2 - h\nu\)</span></p>
+<p><span class="math inline">\(\Rightarrow\)</span> Energy released (gained):</p>
+<ul>
+<li><p>with mass (e.g.&nbsp;electron), Tunnel-Effect: <span class="math inline">\(E_{gain} = E_{pot} - E_i = mc^2 - h\nu\)</span></p></li>
+<li><p>massless (e.g.&nbsp;photon), Doppler-Effect (frequency shift): <span class="math inline">\(E_{gain} = E_{kin} - E_i = h \left( \nu_0 - \nu_i \right) = \Delta\omega \hbar\)</span></p></li>
+</ul>
 </section>
 <section id="frequency-cause-effect" class="level2" data-number="1.21">
 <h2 data-number="1.21" class="anchored" data-anchor-id="frequency-cause-effect"><span class="header-section-number">1.21</span> Frequency Cause-Effect</h2>
@@ -1210,14 +1217,14 @@ C = \textnormal{Capacitance} \qquad
 \sqrt{ \frac{k}{m} } =
 \sqrt{ \frac{r \times F}{m} } =
 \sqrt{ \frac{g}{l} }
-\stackrel{EM}{=}
+\stackrel{electromagnetic}{=}
 ... =
 \sqrt{ \frac{1}{LC} }
 \stackrel{QM}{=}
 \frac{1}{2} \frac{p^2}{m} \frac{1}{\hbar} =
 \frac{(\hbar\vec{k})^2}{2m} \frac{1}{\hbar} =   
 \frac{E}{\hbar}
-\stackrel{\text{time-independent Potential}}{=}  
+\stackrel{\text{time-independent potential}}{=}  
 \frac{1}{i\Psi} \frac{\partial \Psi}{\partial t} =
 \frac{1}{2} \frac{\hbar}{m} \cdot \left[ -\frac{1}{\Psi} \left( \frac{\partial^2\Psi}{\partial x^2}+\frac{\partial^2\Psi}{\partial y^2}+\frac{\partial^2\Psi}{\partial z^2} \right) \right] =
 \frac{\hbar}{2m} \vec{k}^2  =
@@ -1284,13 +1291,13 @@ h(\nu - \nu_0)
 </section>
 <section id="movement-in-vacuum" class="level4" data-number="1.21.2.5">
 <h4 data-number="1.21.2.5" class="anchored" data-anchor-id="movement-in-vacuum"><span class="header-section-number">1.21.2.5</span> Movement in Vacuum</h4>
-<p><span class="math inline">\(\eta = \sqrt{\frac{1}{\varepsilon_0 \mu_0}} = 1\)</span> <span class="math inline">\(\qquad\)</span> <span class="math inline">\(2\pi = k \lambda\)</span> <span class="math inline">\(\qquad\)</span> <span class="math inline">\(v_{ph} = c\)</span> <span class="math inline">\(\qquad\)</span> <span class="math inline">\(\omega = k c\)</span></p>
+<p><span class="math inline">\(\eta = \frac{\tan\alpha}{\tan\beta} = \frac{c}{v_{Ph}} = 1\)</span> <span class="math inline">\(\qquad\)</span> <span class="math inline">\(2\pi = k \lambda\)</span> <span class="math inline">\(\qquad\)</span> <span class="math inline">\(v_{ph} = c\)</span> <span class="math inline">\(\qquad\)</span> <span class="math inline">\(\omega = k c\)</span></p>
 <p><span class="math inline">\(\varepsilon_0\mu_0 = \frac{1}{c^2}\)</span></p>
 <p>Continuity: <span class="math inline">\(\nabla\cdot j = i \omega\varrho\)</span> <span class="math inline">\(\qquad\)</span> <span class="math inline">\(i \omega Q = 0\)</span></p>
 </section>
 <section id="movement-in-matter" class="level4" data-number="1.21.2.6">
 <h4 data-number="1.21.2.6" class="anchored" data-anchor-id="movement-in-matter"><span class="header-section-number">1.21.2.6</span> Movement in Matter</h4>
-<p><span class="math inline">\(\eta = \sqrt{\frac{\varepsilon\mu}{\varepsilon_0\mu_0}} = \frac{c}{v_{Ph}} \neq 1\)</span> <span class="math inline">\(\qquad\)</span> <span class="math inline">\(v_{ph} = \pm \sqrt{\frac{1}{\varepsilon\mu} - \frac{\sigma^2}{4\varepsilon^2 k^2}}\)</span> <span class="math inline">\(\qquad\)</span> <span class="math inline">\(\omega = k v_{ph} = kc \sqrt{\frac{\varepsilon_0\mu_0}{\varepsilon\mu}} = kc\frac{\tan(\beta)}{\tan{\alpha}} = k \frac{c}{\eta}\)</span></p>
+<p><span class="math inline">\(\eta = \frac{\tan\alpha}{\tan\beta} = \frac{c}{v_{Ph}} = \sqrt{\frac{\varepsilon\mu}{\varepsilon_0\mu_0}} \neq 1\)</span> <span class="math inline">\(\qquad\)</span> <span class="math inline">\(v_{ph} = \pm \sqrt{\frac{1}{\varepsilon\mu} - \frac{\sigma^2}{4\varepsilon^2 k^2}}\)</span> <span class="math inline">\(\qquad\)</span> <span class="math inline">\(\omega = k v_{ph} = kc \sqrt{\frac{\varepsilon_0\mu_0}{\varepsilon\mu}} = kc\frac{\tan\beta}{\tan{\alpha}} = k \frac{c}{\eta}\)</span></p>
 <p><span class="math inline">\(\varepsilon\mu = \left( \frac{\eta}{c} \right)^2\)</span></p>
 <p>Dispersion: <span class="math inline">\(k^2 = \varepsilon\mu\omega^2 + i \mu\sigma\omega\)</span></p>
 </section>
