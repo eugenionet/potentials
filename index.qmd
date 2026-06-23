@@ -60,6 +60,6 @@ abstract: |
 
 # POTENTIALS {#sec-potential}
 
-{{< include C:/Users/erine/Desktop/Physics-Explorations/GitHub-Physics/Potentials/Potentials.qmd >}}
+{{< include C:/Users/erine/Desktop/Physics-Explorations/GitHub-Physics/Potentials/Content/Potentials.qmd >}}
 \
 \
