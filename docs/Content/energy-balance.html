@@ -493,10 +493,13 @@ window.Quarto = {
     <h2 id="toc-title">Chapters</h2>
    
   <ul>
-  <li><a href="#mechanical" id="toc-mechanical" class="nav-link active" data-scroll-target="#mechanical"><span class="header-section-number">0.1</span> Mechanical</a></li>
-  <li><a href="#electromagnectic-energy-transfer" id="toc-electromagnectic-energy-transfer" class="nav-link" data-scroll-target="#electromagnectic-energy-transfer"><span class="header-section-number">0.2</span> Electromagnectic energy transfer</a></li>
-  <li><a href="#thermal" id="toc-thermal" class="nav-link" data-scroll-target="#thermal"><span class="header-section-number">0.3</span> Thermal</a></li>
-  <li><a href="#gravitational" id="toc-gravitational" class="nav-link" data-scroll-target="#gravitational"><span class="header-section-number">0.4</span> Gravitational</a></li>
+  <li><a href="#energy-balance" id="toc-energy-balance" class="nav-link active" data-scroll-target="#energy-balance"><span class="header-section-number">1</span> Energy Balance</a>
+  <ul class="collapse">
+  <li><a href="#mechanical" id="toc-mechanical" class="nav-link" data-scroll-target="#mechanical"><span class="header-section-number">1.1</span> Mechanical</a></li>
+  <li><a href="#electromagnectic-energy-transfer" id="toc-electromagnectic-energy-transfer" class="nav-link" data-scroll-target="#electromagnectic-energy-transfer"><span class="header-section-number">1.2</span> Electromagnectic energy transfer</a></li>
+  <li><a href="#thermal" id="toc-thermal" class="nav-link" data-scroll-target="#thermal"><span class="header-section-number">1.3</span> Thermal</a></li>
+  <li><a href="#gravitational" id="toc-gravitational" class="nav-link" data-scroll-target="#gravitational"><span class="header-section-number">1.4</span> Gravitational</a></li>
+  </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="energy-balance.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://quarto.org/docs/output-formats/html-basics.html"><i class="bi bi-link-45deg"></i>see also</a></li></ul></div></nav>
     </div>
@@ -507,25 +510,27 @@ window.Quarto = {
 
 
 
-<p>Energy Balance <span id="eq-energbal"><span class="math display">\[\begin{split} &amp;   
+<section id="energy-balance" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="energy-balance"><span class="header-section-number">1</span> Energy Balance</h2>
+<p><span id="eq-energbal"><span class="math display">\[\begin{split} &amp;   
 \frac{\partial}{\partial t} \sum w_i+ \mathbf{\nabla} \cdot \sum \mathbf{\mathscr{S}}_{w_i} + \boldsymbol{j} \cdot \mathscr{E} = 0
 \end{split} \tag{1}\]</span></span></p>
-<p>Abbreviations:</p>
-<p><span class="math inline">\(w_i\)</span> = engery densities (electric, magnetic, gravitational, etc. …), <span class="math inline">\(i \in \mathbb{N}\)</span></p>
+<p>Abbreviations:4</p>
+<p><span class="math inline">\(w_i\)</span> = energy densities (electric <span class="math inline">\(w_e\)</span>, magnetic <span class="math inline">\(e_m\)</span>, gravitational, etc. …), <span class="math inline">\(i \in \mathbb{N}\)</span></p>
 <p><span class="math inline">\(\mathbf{\mathscr{S}}_{w_i}\)</span> = Poynting-Vectros <span class="math inline">\(\hat{=}\)</span> energy transport densities (transfers) by fields (electric, magnetic, gravitational, etc. …) to corresponding energy densities <span class="math inline">\(w_i\)</span></p>
 <p><span class="math inline">\(\boldsymbol{j} \cdot \mathscr{E}\)</span> = energy gain provided by fields <span class="math inline">\(\mathscr{E}\)</span> and <span class="math inline">\(\mathscr{B}\)</span> through current density <span class="math inline">\(j\)</span></p>
-<section id="mechanical" class="level3" data-number="0.1">
-<h3 data-number="0.1" class="anchored" data-anchor-id="mechanical"><span class="header-section-number">0.1</span> Mechanical</h3>
+<section id="mechanical" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="mechanical"><span class="header-section-number">1.1</span> Mechanical</h3>
 <p>…</p>
 </section>
-<section id="electromagnectic-energy-transfer" class="level3" data-number="0.2">
-<h3 data-number="0.2" class="anchored" data-anchor-id="electromagnectic-energy-transfer"><span class="header-section-number">0.2</span> Electromagnectic energy transfer</h3>
+<section id="electromagnectic-energy-transfer" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="electromagnectic-energy-transfer"><span class="header-section-number">1.2</span> Electromagnectic energy transfer</h3>
 <p>charge conservation:</p>
 <p><span id="eq-continuity"><span class="math display">\[\begin{split} &amp;   
 \frac{\partial}{\partial t}\varrho + \nabla \cdot j = 0
 \end{split} \tag{2}\]</span></span></p>
 <p><span class="math inline">\(\varrho = \sigma\delta =\)</span> charge density in interior</p>
-<p><span class="math inline">\(\sigma =\)</span> charge density at border (surface)</p>
+<p><span class="math inline">\(\sigma =\)</span> charge density at border (skin)</p>
 <p><span class="math inline">\(\delta =\)</span> Dirac delta-function</p>
 <p><span class="math inline">\(\boldsymbol{j} = \sigma \left( \mathscr{E} + v \times \mathscr{B} \right) = \nabla \times \mathscr{H} - \frac{\partial}{\partial t}\mathscr{D} \hat{=}\)</span> elecectric current density</p>
 <p><span class="math inline">\(\boldsymbol{j} \cdot \mathscr{E} \hat{=}\)</span> energy gain by fields <span class="math inline">\(\mathscr{E}\)</span> and <span class="math inline">\(\mathscr{B}\)</span> through current density <span class="math inline">\(j\)</span></p>
@@ -569,15 +574,16 @@ r = \frac{d}{\sqrt{2i}}\rho = \frac{d}{1+i}\rho = \textnormal{radius (extension)
 \sigma = \textnormal{conductivity of conductor (dielectricum)} \qquad
 \]</span></p>
 </section>
-<section id="thermal" class="level3" data-number="0.3">
-<h3 data-number="0.3" class="anchored" data-anchor-id="thermal"><span class="header-section-number">0.3</span> Thermal</h3>
+<section id="thermal" class="level3" data-number="1.3">
+<h3 data-number="1.3" class="anchored" data-anchor-id="thermal"><span class="header-section-number">1.3</span> Thermal</h3>
 <p>…</p>
 </section>
-<section id="gravitational" class="level3" data-number="0.4">
-<h3 data-number="0.4" class="anchored" data-anchor-id="gravitational"><span class="header-section-number">0.4</span> Gravitational</h3>
+<section id="gravitational" class="level3" data-number="1.4">
+<h3 data-number="1.4" class="anchored" data-anchor-id="gravitational"><span class="header-section-number">1.4</span> Gravitational</h3>
 <p>…</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

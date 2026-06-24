@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>continuity – PHYSECON</title>
+<title>boundry-conditions – PHYSECON</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -489,8 +489,19 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Continuity.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://quarto.org/docs/output-formats/html-basics.html"><i class="bi bi-link-45deg"></i>see also</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Chapters</h2>
+   
+  <ul>
+  <li><a href="#conditions-skin-interface-border-surface" id="toc-conditions-skin-interface-border-surface" class="nav-link active" data-scroll-target="#conditions-skin-interface-border-surface"><span class="header-section-number">1</span> Conditions (skin, interface, border, surface)</a>
+  <ul class="collapse">
+  <li><a href="#boundary-conditions" id="toc-boundary-conditions" class="nav-link" data-scroll-target="#boundary-conditions"><span class="header-section-number">1.1</span> Boundary Conditions</a></li>
+  <li><a href="#interior-conditions" id="toc-interior-conditions" class="nav-link" data-scroll-target="#interior-conditions"><span class="header-section-number">1.2</span> Interior Conditions</a></li>
+  <li><a href="#abreviations" id="toc-abreviations" class="nav-link" data-scroll-target="#abreviations"><span class="header-section-number">1.3</span> Abreviations</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="boundry-conditions.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://quarto.org/docs/output-formats/html-basics.html"><i class="bi bi-link-45deg"></i>see also</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
@@ -498,15 +509,34 @@ window.Quarto = {
 
 
 
-<p>charge conservation:</p>
-<p><span id="eq-continuity"><span class="math display">\[\begin{split} &amp;   
-\frac{\partial}{\partial t}\varrho + \nabla \cdot j = 0
-\end{split} \tag{1}\]</span></span></p>
-<p><span class="math inline">\(\varrho = \sigma\delta =\)</span> charge density in interior</p>
-<p><span class="math inline">\(\sigma =\)</span> charge density at border (skin)</p>
-<p><span class="math inline">\(\delta =\)</span> Dirac delta-function</p>
+<section id="conditions-skin-interface-border-surface" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="conditions-skin-interface-border-surface"><span class="header-section-number">1</span> Conditions (skin, interface, border, surface)</h2>
+<section id="boundary-conditions" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="boundary-conditions"><span class="header-section-number">1.1</span> Boundary Conditions</h3>
+<p><span class="math inline">\(\textbf{n} \cdot \left[ \mathscr{D} \right] = \sigma\)</span></p>
+<p><span class="math inline">\(\textbf{n} \cdot \left[ \mathscr{B} \right] = 0\)</span></p>
+<p><span class="math inline">\(\textbf{n} \times \left[ \mathscr{E} \right] = 0\)</span></p>
+<p><span class="math inline">\(\textbf{n} \times \left[ \mathscr{H} \right] = J\)</span></p>
+</section>
+<section id="interior-conditions" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="interior-conditions"><span class="header-section-number">1.2</span> Interior Conditions</h3>
+<p>e.g.&nbsp;for Superconductivity</p>
+<p><span class="math inline">\(\textbf{n} \cdot \mathscr{H} = 0\)</span></p>
+<p><span class="math inline">\(\textbf{n} \times \mathscr{D} = 0\)</span></p>
+</section>
+<section id="abreviations" class="level3" data-number="1.3">
+<h3 data-number="1.3" class="anchored" data-anchor-id="abreviations"><span class="header-section-number">1.3</span> Abreviations</h3>
+<p><span class="math inline">\(\textbf{n} =\)</span> normal vector (orthogonality orientation)</p>
+<p><span class="math inline">\(\mathscr{E} =\)</span> elec. Field (“traction force”?)</p>
+<p><span class="math inline">\(\mathscr{B} =\)</span> magn. Field (“compressive force”?)</p>
+<p><span class="math inline">\(\mathscr{D} =\)</span> elec. Displacement Field (“exitioan”)</p>
+<p><span class="math inline">\(\mathscr{H} =\)</span> magn. Exitation Field (“incentivation”)</p>
+<p><span class="math inline">\(\sigma =\)</span> electric charge at surface</p>
+<p><span class="math inline">\(J =\)</span> current density at surface</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
