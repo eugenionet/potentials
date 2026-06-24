@@ -7,6 +7,6 @@ $$\begin{split} &
 
 $\varrho = \sigma\delta =$ charge density in interior
 
-$\sigma =$ charge density at border (surface)
+$\sigma =$ charge density at border (skin)
 
 $\delta =$ Dirac delta-function

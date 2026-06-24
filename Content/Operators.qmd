@@ -1,4 +1,5 @@
-Operators
+
+## Operators
 
 $\nabla \coloneqq grad = \text{Gradient (Gefälle, Neigung)}$
 

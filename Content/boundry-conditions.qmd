@@ -1,0 +1,38 @@
+
+## Conditions (skin, interface, border, surface)
+
+### Boundary Conditions
+
+$\textbf{n} \cdot \left[ \mathscr{D} \right] = \sigma$
+
+$\textbf{n} \cdot \left[ \mathscr{B} \right] = 0$
+
+$\textbf{n} \times \left[ \mathscr{E} \right] = 0$
+
+$\textbf{n} \times \left[ \mathscr{H} \right] = J$
+
+
+
+### Interior Conditions
+e.g. for Superconductivity
+
+$\textbf{n} \cdot \mathscr{H} = 0$
+
+$\textbf{n} \times \mathscr{D} = 0$
+
+
+### Abreviations
+
+$\textbf{n} =$ normal vector (orthogonality orientation)
+
+$\mathscr{E} =$ elec. Field ("traction force"?)
+
+$\mathscr{B} =$ magn. Field ("compressive force"?)
+
+$\mathscr{D} =$ elec. Displacement Field ("exitioan")
+
+$\mathscr{H} =$ magn. Exitation Field ("incentivation")
+
+$\sigma =$ electric charge at surface
+
+$J =$ current density at surface

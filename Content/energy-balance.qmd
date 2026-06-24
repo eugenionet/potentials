@@ -1,12 +1,12 @@
 
-Energy Balance
+## Energy Balance
 $$\begin{split} &   
 \frac{\partial}{\partial t} \sum w_i+ \mathbf{\nabla} \cdot \sum \mathbf{\mathscr{S}}_{w_i} + \boldsymbol{j} \cdot \mathscr{E} = 0 
 \end{split}$${#eq-energbal} 
 
-Abbreviations:
+Abbreviations:4
 
-$w_i$ = engery densities (electric, magnetic, gravitational, etc. ...), $i \in \mathbb{N}$
+$w_i$ = energy densities (electric $w_e$, magnetic $e_m$, gravitational, etc. ...), $i \in \mathbb{N}$
 
 $\mathbf{\mathscr{S}}_{w_i}$ = Poynting-Vectros $\hat{=}$ energy transport densities (transfers) by fields (electric, magnetic, gravitational, etc. ...) to corresponding energy densities $w_i$
 

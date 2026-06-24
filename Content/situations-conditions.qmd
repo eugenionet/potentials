@@ -1,0 +1,48 @@
+## Distinguishing Situations Conditions and Dependencies
+
+effects of charge (separaton) and differentieting situations (conditioning frameworks) for fields and potentials:
+
+### Spacetime Embeding
+- Spacial dependence (mechanics)
+- Time dependence (dynamics)
+
+### Movement Framework
+- Static: rest system, equilibrium
+- Dynamic:
+  - Stationary: slow motion
+  - Relativistic: fast motion
+  - Radiation; accelerated motion
+
+### Medium Property
+- Vacuum: spacial mean = time mean
+- Matter:
+  - Mass (inertia)
+  - Charge (conductor, ion)
+  - Dielectricum (isolator)
+  - Dispersion (refraction)
+
+### Field Distance
+- Near Field (granular spacetime, mean average values)
+- Far Field (flat spacetime)
+
+### Localisation Identity
+- Global (regular)
+- Local (singular)
+
+
+-> Tool concepts: Momentum, Force, Energy
+
+-> Conditions framework: 
+    - continuity condition (charge, current)
+    - equilibrium conditions (action vs. reactio, homgenity vs. inhomogenity)
+    - initial conditions (starting point)
+    - border (skin) conditions (differentiation)
+    - interior conditions (integration)
+    - conservations of local densities (charge, energy, momentum)
+
+
+-> Properties:
+    - characteristics from charge: dielectricity $\varepsilon$, permeability $\mu$, conductivity $\sigma$, frequency $\omega$
+    - characteristics from heat: ...
+    - Properties frm gravitation: ...
+

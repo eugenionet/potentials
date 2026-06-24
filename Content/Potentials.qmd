@@ -2,10 +2,10 @@
 ## Potential as "intrinsic energy of inertia"
 
 
-{{< include C:/Users/erine/Desktop/Physics-Explorations/GitHub-Physics/Potentials/Content/EMfield.qmd >}}
+{{< include C:/Users/erine/Desktop/Physics-Explorations/Content_repository/EMfield.qmd >}}
 
 
-{{< include C:/Users/erine/Desktop/Physics-Explorations/GitHub-Physics/Potentials/Content/Maxwell_slow.qmd >}}
+{{< include C:/Users/erine/Desktop/Physics-Explorations/Content_repository/Maxwell_slow.qmd >}}
 
 
 ## Potential derivation
@@ -203,8 +203,7 @@ $$\begin{split} &
 \end{split}$${#eq-slowcurrent}
 
 
-## Energy Balance
-
+<!-- Energy Balance -->
 {{< include C:/Users/erine/Desktop/Physics-Explorations/GitHub-Physics/Potentials/Content/energy-balance.qmd >}}
 
  
@@ -332,11 +331,13 @@ no Contiunuity of charge/matter with dielectricum, refraction merges, reflection
 
 \
 
-$\Rightarrow \textnormal{Ionisation Energy of chemical element } E_i = h\nu = h\frac{\lambda}{c} = \hbar\omega = \frac{h}{k\lambda} \omega$
+\Rightarrow 
+Ionisation Energy of chemical element $E_i = h\nu = h\frac{\lambda}{c} = \hbar\omega = \frac{h}{k\lambda} \omega$
 
-$\Rightarrow$ Energy released (gained):
+\Rightarrow 
+Energy released (gained), see... @eq-potignit
 
-- with mass (e.g. electron), Tunnel-Effect: $E_{gain} = E_{pot} - E_i = mc^2 - h\nu$
+- with mass (e.g. electron), Tunnel-Effect: $E_{gain} = E_{pot} - E_i = mc^2 - h\nu_i$
 
 - massless (e.g. photon), Doppler-Effect (frequency shift): $E_{gain} = E_{kin} - E_i = h \left( \nu_0 - \nu_i \right) = \Delta\omega \hbar$
 
@@ -344,8 +345,17 @@ $\Rightarrow$ Energy released (gained):
 
 ## Frequency Cause-Effect
 
-{{< include C:/Users/erine/Desktop/Physics-Explorations/GitHub-Physics/Potentials/Content/Frequency.qmd >}}
+{{< include C:/Users/erine/Desktop/Physics-Explorations/Content_repository/Frequency.qmd >}}
 
 
-## Operators
-{{< include C:/Users/erine/Desktop/Physics-Explorations/GitHub-Physics/Potentials/Content/Operators.qmd >}}
+<!-- Boundry Conditions -->
+{{< include C:/Users/erine/Desktop/Physics-Explorations/Content_repository/boundry-conditions.qmd >}}
+
+
+<!-- Situations Conditions -->
+{{< include C:/Users/erine/Desktop/Physics-Explorations/Content_repository/situations-conditions.qmd >}}
+
+
+<!-- Operators -->
+{{< include C:/Users/erine/Desktop/Physics-Explorations/Content_repository/Operators.qmd >}}
+
