@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>energy-balance</title>
+<title>emfield</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,18 +23,18 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="energy-balance_files/libs/clipboard/clipboard.min.js"></script>
-<script src="energy-balance_files/libs/quarto-html/quarto.js" type="module"></script>
-<script src="energy-balance_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="energy-balance_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="energy-balance_files/libs/quarto-html/popper.min.js"></script>
-<script src="energy-balance_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="energy-balance_files/libs/quarto-html/anchor.min.js"></script>
-<link href="energy-balance_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="energy-balance_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="energy-balance_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="energy-balance_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="energy-balance_files/libs/bootstrap/bootstrap-9e3ffae467580fdb927a41352e75a2e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="EMfield_files/libs/clipboard/clipboard.min.js"></script>
+<script src="EMfield_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="EMfield_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="EMfield_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="EMfield_files/libs/quarto-html/popper.min.js"></script>
+<script src="EMfield_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="EMfield_files/libs/quarto-html/anchor.min.js"></script>
+<link href="EMfield_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="EMfield_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="EMfield_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="EMfield_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="EMfield_files/libs/bootstrap/bootstrap-9e3ffae467580fdb927a41352e75a2e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -77,116 +77,143 @@ window.Quarto = {
 
 
 
-<section id="energy-balance" class="level2">
-<h2 class="anchored" data-anchor-id="energy-balance">Energy Balance</h2>
-<p><span id="eq-energbal"><span class="math display">\[\begin{split} &amp;   
-\frac{\partial}{\partial t} \sum w_i+ \mathbf{\nabla} \cdot \sum \mathbf{\mathscr{S}}_{w_i} + \boldsymbol{j} \cdot \mathscr{E} = 0
+<section id="electro-magnetic-field-force-caused-by-potential" class="level3">
+<h3 class="anchored" data-anchor-id="electro-magnetic-field-force-caused-by-potential">Electro-Magnetic Field (force caused by potential)</h3>
+<ul>
+<li>static: lovslized source charge at rest, only spacial dependency, no time dependency</li>
+<li>stationary: source charce at uniform movement, steady current flow, space and time dependency</li>
+<li>dynamic: source charge at fast movement, radiation, space and time dependency</li>
+<li>relativistc: source charge at very speedy movement, radiation, space and time dependency</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>rest localization vs.&nbsp;time-dependency</li>
+<li>slow vs.&nbsp;fast movemnt</li>
+<li>vacuum vs.&nbsp;matter</li>
+<li>local vs.&nbsp;global of <span class="math inline">\(\mathscr{B}\)</span>, singularity vs.&nbsp;regularity of <span class="math inline">\(\mathscr{E}\)</span></li>
+<li>macro vs.&nbsp;micro</li>
+<li>far-field vs.&nbsp;near-field</li>
+</ul>
+<p><br>
+</p>
+<section id="magnetic-field-in-vacuum" class="level4">
+<h4 class="anchored" data-anchor-id="magnetic-field-in-vacuum">Magnetic Field in Vacuum</h4>
+<p><span id="eq-mfield"><span class="math display">\[\begin{split} &amp;
+\mathscr{B} = \nabla \times \boldsymbol{U_m} \coloneqq rot(A)
+\newline &amp;
+\stackrel{\textnormal{Matter}}{=}
+\mu_0 \left( \mathscr{H} + \mathscr{M} \right)
+\newline &amp;
+\stackrel{\textnormal{Vacuum}}{=}
+\frac{1}{c} \left( \frac{r}{\left| r \right|} \times \mathscr{E} \right)
+\newline &amp;
+\stackrel{\textnormal{Far Field}}{=}
+\frac{1}{2} \frac{1}{2\pi} \mu_0 \frac{k^2 e^{i(kr - \omega t)}}{r} \frac{r}{\left| r \right|} \times \left( c p_{0_{dipol}} + m_{0_{dipol}} \times \frac{r}{\left| r \right|} \right)
+\newline &amp;
+\stackrel{\textnormal{Near Field}}{\approx}
+\frac{1}{2} \frac{1}{2\pi} \mu_0 q \frac{v \times r}{\left| r \right|^2}
+\approx
+\frac{1}{2} \frac{1}{2\pi} i k c \mu_0 \frac{ \frac{r}{\left| r \right|} \times p_m}{r^2}
 \end{split} \tag{1}\]</span></span></p>
 </section>
-<section id="local-force-balance" class="level2">
-<h2 class="anchored" data-anchor-id="local-force-balance">Local Force Balance</h2>
-<p><span id="eq-localforce"><span class="math display">\[\begin{split} &amp;
-\dot{p} = F \hat{=}
+<section id="magnetic-field-in-matter" class="level4">
+<h4 class="anchored" data-anchor-id="magnetic-field-in-matter">Magnetic Field in Matter</h4>
+<p>Exitation <span class="math inline">\(\hat{=}\)</span> Displacement <span id="eq-hfield"><span class="math display">\[\begin{split} &amp;
+\text{Exication:} \qquad
+\mathscr{H} = \frac{1}{\mu_0}\mathscr{B} - \mathscr{M} = \frac{1}{\mu}\mathscr{B}
 \newline &amp;
-\underbrace{
-\varrho\mathscr{E} + j \times \mathscr{B}
-}_\text{charge force}
-+
-\underbrace{
-\frac{\partial}{\partial t}\frac{1}{c^2}\mathscr{S}
-}_\text{field force}
-+
-\underbrace{
-\nabla \cdot \mathscr{T}
-}_\text{tension force}
-= 0
+\text{Magnetisation:} \qquad
+\mathscr{M} = \frac{\mu - \mu_0}{\mu\mu_0}\mathscr{B} = \frac{\mu - \mu_0}{\mu_0}\mathscr{H}
 \end{split} \tag{2}\]</span></span></p>
 </section>
-<section id="local-momentum-balance" class="level2">
-<h2 class="anchored" data-anchor-id="local-momentum-balance">Local Momentum Balance</h2>
-<p><span id="eq-localmomentum"><span class="math display">\[\begin{split} &amp;  
-p = \int F \hat{=}
-... = 0
+<section id="electric-field-in-vacuum" class="level4">
+<h4 class="anchored" data-anchor-id="electric-field-in-vacuum">Electric Field in Vacuum</h4>
+<p><span id="eq-efield"><span class="math display">\[\begin{split} &amp;
+\mathscr{E}
+\stackrel{\textnormal{conservativ}}{=}
+-\nabla U_e
+\stackrel{\textnormal{dynamic}}{=}
+-\nabla U_e - \frac{\partial}{\partial t} \boldsymbol{U_m}
+\newline &amp;
+\stackrel{\textnormal{fast moving charge}}{=}
+\newline &amp;
+\frac{1}{2} \frac{1}{2\pi} \frac{1}{\varepsilon_0} \frac{1}{r} \frac{1}{\left( 1 - \frac{r}{\left| r \right|} \cdot \frac{v}{c} \right)^3 } q
+\left[
+\underbrace{
+\left( 1 - \frac{v^2}{c^2} \right) \frac{\frac{r}{\left| r \right|} - \frac{v}{c}}{r}
+}_\text{uniform movement}
++
+\underbrace{
+    \frac{\frac{r}{\left| r \right|} \times \left[ \left( \frac{r}{\left| r \right|} - \frac{v}{c} \right) \times \dot{v} \right]
+}{c^2}
+}_\text{accelerated movement}
+\right]
+\newline &amp;
+\stackrel{\textnormal{Far Field}}
+= c \mathscr{B} \times \frac{1}{\left| r \right|}
+\newline &amp;
+\stackrel{\textnormal{Near Field}}
+\approx
+\frac{1}{2} \frac{1}{2\pi} \frac{1}{\varepsilon_0} q \frac{r}{\left| r \right|^3}
+\approx
+\frac{1}{2} \frac{1}{2\pi} \frac{1}{\varepsilon_0} \frac{ 3 \frac{r}{\left| r \right|} \cdot p_m \frac{r}{\left| r \right|} - p_m}{r^3}
 \end{split} \tag{3}\]</span></span></p>
 </section>
-<section id="local-angular-momentum-balance-spin" class="level2">
-<h2 class="anchored" data-anchor-id="local-angular-momentum-balance-spin">Local Angular Momentum Balance, Spin</h2>
-<p><span id="eq-localangularmomentum"><span class="math display">\[\begin{split} &amp;   
-... = 0
+<section id="electric-field-in-matter" class="level4">
+<h4 class="anchored" data-anchor-id="electric-field-in-matter">Electric Field in Matter</h4>
+<p>Displacement <span class="math inline">\(\hat{=}\)</span> Exitation (field change)<br>
+dielectricum = non-conducting material<br>
+electricum = conductor medium</p>
+<p><span id="eq-dfield"><span class="math display">\[\begin{split} &amp;
+\text{Exication:} \qquad
+\mathscr{D} = \varepsilon_0 \mathscr{E} + \mathscr{P} =
+\newline &amp;
+\stackrel{\textnormal{isotropic medium in weak fields}}{=}
+\newline &amp;
+\varepsilon_0 \mathscr{E} + \varepsilon_0 \mbox{\Large$\chi$} \mathscr{E} =
+\varepsilon_0 \left( 1 + \mbox{\Large$\chi$}  \right) \mathscr{E} =
+\newline &amp;
+\varepsilon_0 4\pi r^3 n \left&lt; p_m \right&gt; =
+4\pi r^3 n \varepsilon_0 \left&lt; \mathscr{E}_m \right&gt; =
+\alpha n \varepsilon_0 \bar{\mathscr{E}}_m =
+\varepsilon \mathscr{E}
+\newline &amp;
+\text{Polarisation:} \qquad
+\mathscr{P} = \left( \varepsilon - \varepsilon_0 \right) \mathscr{E}
 \end{split} \tag{4}\]</span></span></p>
 </section>
-<section id="tension" class="level2">
-<h2 class="anchored" data-anchor-id="tension">Tension</h2>
-<p><span id="eq-emtension"><span class="math display">\[\begin{split} &amp;   
-\nabla\cdot\mathscr{T} = \varepsilon_0 \left( \mathscr{E} \times \nabla\times\mathscr{E} - \mathscr{E} \nabla\cdot\mathscr{E} \right) + \frac{1}{\mu_0} \left( \mathscr{B} \nabla\times\mathscr{B} - \mathscr{B}\nabla\cdot\mathscr{B} \right)
-\end{split} \tag{5}\]</span></span></p>
-<p>Abbreviations:</p>
-<p><span class="math inline">\(w_i\)</span> = energy densities (electric <span class="math inline">\(w_e\)</span>, magnetic <span class="math inline">\(e_m\)</span>, gravitational, etc. …), <span class="math inline">\(i \in \mathbb{N}\)</span></p>
-<p><span class="math inline">\(\mathbf{\mathscr{S}}_{w_i}\)</span> = Poynting-Vectros <span class="math inline">\(\hat{=}\)</span> energy transport densities (transfers) by fields (electric, magnetic, gravitational, etc. …) to corresponding energy densities <span class="math inline">\(w_i\)</span></p>
-<p><span class="math inline">\(\boldsymbol{j} \cdot \mathscr{E}\)</span> = energy gain provided by fields <span class="math inline">\(\mathscr{E}\)</span> and <span class="math inline">\(\mathscr{B}\)</span> through current density <span class="math inline">\(j\)</span></p>
-<p><span class="math inline">\(\mathscr{T}\)</span> = Tension Tensor; Tension <span class="math inline">\(\hat{=} \Delta\)</span>Forces = Pressure - Traction <span class="math inline">\(\hat{=}\)</span> Torsion Tension at angular momentum$</p>
-<section id="mechanical" class="level3">
-<h3 class="anchored" data-anchor-id="mechanical">Mechanical</h3>
-<p>…</p>
-</section>
-<section id="electromagnectic-energy-transfer" class="level3">
-<h3 class="anchored" data-anchor-id="electromagnectic-energy-transfer">Electromagnectic energy transfer</h3>
-<p>charge conservation:</p>
-<p><span id="eq-continuity"><span class="math display">\[\begin{split} &amp;   
-\frac{\partial}{\partial t}\varrho + \nabla \cdot j = 0
-\end{split} \tag{6}\]</span></span></p>
-<p><span class="math inline">\(\varrho = \sigma\delta =\)</span> charge density in interior</p>
-<p><span class="math inline">\(\sigma =\)</span> charge density at border (skin)</p>
-<p><span class="math inline">\(\delta =\)</span> Dirac delta-function</p>
-<p><span class="math inline">\(\boldsymbol{j} = \sigma \left( \mathscr{E} + v \times \mathscr{B} \right) = \nabla \times \mathscr{H} - \frac{\partial}{\partial t}\mathscr{D} \hat{=}\)</span> elecectric current density</p>
-<p><span class="math inline">\(\boldsymbol{j} \cdot \mathscr{E} \hat{=}\)</span> energy gain by fields <span class="math inline">\(\mathscr{E}\)</span> and <span class="math inline">\(\mathscr{B}\)</span> through current density <span class="math inline">\(j\)</span></p>
-<p><span class="math inline">\(\mathscr{S} = \mathscr{E} \times \mathscr{H} \hat{=}\)</span> energy transport density (Intensity = <span class="math inline">\(\left| \bar{\mathscr{S}} \right|\)</span>)</p>
-<p>Energy conservation for (large extended) conductive medium:</p>
-<p><span id="eq-energyconserv-1"><span class="math display">\[\begin{split} &amp;   
-\int    \left(
-\frac{\partial}{\partial t} \left( w_e + w_m \right) + \mathbf{\nabla} \cdot \mathbf{\mathscr{S}} + \boldsymbol{j} \cdot \mathscr{E}
-\right) \, dr
-= \frac{d}{dt}W_e + \frac{d}{dt}W_m + D_S + \int \left( \boldsymbol{j} \cdot \mathscr{E} \right) \, dr
-\newline &amp;
-\stackrel{\textnormal{low frequency}}{=}
-\frac{1}{2}\frac{d}{dt} \left( LI^2 \right) + \frac{1}{2}\frac{d}{dt} \left( \frac{Q^2}{C} \right) + \left( RI^2 - VI \right) = 0
-\end{split} \tag{7}\]</span></span></p>
-<p>Abreviations: <span class="math display">\[
-\Delta \cdot \coloneqq \textnormal{ div grad = Laplacian}
-\]</span><span class="math display">\[  
-J = \textnormal{"ignition of inhomogenity,cause"} \quad
-j = \textnormal{Current density} \quad
-\varrho = \textnormal{Charge density}
-\]</span><span class="math display">\[  
-V = \textnormal{Potentialdifference} \quad  
-I = \textnormal{Current} \quad
-R = \textnormal{Resistance} \quad
-\]</span><span class="math display">\[  
-L = \textnormal{Inductance} \qquad  
-C = \textnormal{Capacitance} \qquad
-Q = c\textnormal{harge (ion)} \qquad
-\Psi = LI = \textnormal{mag. Flux}
+<section id="abbreviations" class="level4">
+<h4 class="anchored" data-anchor-id="abbreviations">Abbreviations</h4>
+<p><span class="math display">\[
+\Phi = \text{electric potential} \qquad
+A = \text{magnetic potential} \qquad
+j = \nabla \times \mathscr{H} = \text{elec. current density}
 \]</span><span class="math display">\[
-\mathscr{S} = \mathscr{E} \times \mathscr{H} = \textnormal{Poynting-Vector, radiation intensity}
+\mathscr{E} = \text{Electric Field} \qquad
+\mathscr{B} = \text{Magnetic Field}     \qquad      \nabla \cdot \mathscr{B} = 0    \qquad
+\mathscr{D} = \text{Displacement density of dielectricum} \qquad
+\mathscr{M} = \text{magnetisation density}
 \]</span><span class="math display">\[
-D_S = \int \left( \mathbf{\nabla} \cdot \mathbf{\mathscr{S}} \right) \, dr = \int \textnormal{div}(\mathscr{E} \times \mathscr{H}) \, dr = \textnormal{dissipation engergy lost from radiation} \approx \textnormal{0 for low frequencies } \omega
+\mathscr{P} = \text{Polarisation} \qquad
+\mathscr{H} = \text{magn. exitation, magn. field strength ("magn. displacement")}  \qquad
 \]</span><span class="math display">\[
-d = \sqrt{\frac{1}{\mu \sigma} \frac{2}{\omega}} = \textnormal{skin depth (surface) of conductor} \qquad
-r = \frac{d}{\sqrt{2i}}\rho = \frac{d}{1+i}\rho = \textnormal{radius (extension) of conductor}
+n = \text{spacial molecule density in volume}
 \]</span><span class="math display">\[
-\rho = kr = \textnormal{"radius of curvature $k$"}
+\alpha = 4\pi r^3 = constant     \qquad
+\mbox{\Large$\chi$} = \text{elec. susceptibility of dieelectricum}    \qquad
+\kappa = \frac{\mu - \mu_0}{\mu_0} = \text{magn. susceptibility}
 \]</span><span class="math display">\[
-\mu = \textnormal{permeability of conductor}    \qquad
-\sigma = \textnormal{conductivity of conductor (dielectricum)} \qquad
+\left&lt; p_m \right&gt; = \text{spacial average of magn. dipol moment} \qquad
+\left&lt; \mathscr{E}_m \right&gt; = \text{spacial average of electric field}  
+\]</span><span class="math display">\[
+\bar{\mathscr{E}}_m = \text{time average of electric field} \qquad
+\mu = \text{magn. permeability} \qquad
+\mu_0 = \text{magn. constant ...}
+\]</span><span class="math display">\[
+\varepsilon = \text{dielectricity constant} \qquad
+\varepsilon_0 = \text{...}
 \]</span></p>
-</section>
-<section id="thermal" class="level3">
-<h3 class="anchored" data-anchor-id="thermal">Thermal</h3>
-<p>…</p>
-</section>
-<section id="gravitational" class="level3">
-<h3 class="anchored" data-anchor-id="gravitational">Gravitational</h3>
-<p>…</p>
 </section>
 </section>
 

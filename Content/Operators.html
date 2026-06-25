@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>energy-balance</title>
+<title>operators</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,18 +23,18 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="energy-balance_files/libs/clipboard/clipboard.min.js"></script>
-<script src="energy-balance_files/libs/quarto-html/quarto.js" type="module"></script>
-<script src="energy-balance_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="energy-balance_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="energy-balance_files/libs/quarto-html/popper.min.js"></script>
-<script src="energy-balance_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="energy-balance_files/libs/quarto-html/anchor.min.js"></script>
-<link href="energy-balance_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="energy-balance_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="energy-balance_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="energy-balance_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="energy-balance_files/libs/bootstrap/bootstrap-9e3ffae467580fdb927a41352e75a2e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="Operators_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Operators_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="Operators_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="Operators_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="Operators_files/libs/quarto-html/popper.min.js"></script>
+<script src="Operators_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Operators_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Operators_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Operators_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Operators_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Operators_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Operators_files/libs/bootstrap/bootstrap-9e3ffae467580fdb927a41352e75a2e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -77,117 +77,14 @@ window.Quarto = {
 
 
 
-<section id="energy-balance" class="level2">
-<h2 class="anchored" data-anchor-id="energy-balance">Energy Balance</h2>
-<p><span id="eq-energbal"><span class="math display">\[\begin{split} &amp;   
-\frac{\partial}{\partial t} \sum w_i+ \mathbf{\nabla} \cdot \sum \mathbf{\mathscr{S}}_{w_i} + \boldsymbol{j} \cdot \mathscr{E} = 0
-\end{split} \tag{1}\]</span></span></p>
-</section>
-<section id="local-force-balance" class="level2">
-<h2 class="anchored" data-anchor-id="local-force-balance">Local Force Balance</h2>
-<p><span id="eq-localforce"><span class="math display">\[\begin{split} &amp;
-\dot{p} = F \hat{=}
-\newline &amp;
-\underbrace{
-\varrho\mathscr{E} + j \times \mathscr{B}
-}_\text{charge force}
-+
-\underbrace{
-\frac{\partial}{\partial t}\frac{1}{c^2}\mathscr{S}
-}_\text{field force}
-+
-\underbrace{
-\nabla \cdot \mathscr{T}
-}_\text{tension force}
-= 0
-\end{split} \tag{2}\]</span></span></p>
-</section>
-<section id="local-momentum-balance" class="level2">
-<h2 class="anchored" data-anchor-id="local-momentum-balance">Local Momentum Balance</h2>
-<p><span id="eq-localmomentum"><span class="math display">\[\begin{split} &amp;  
-p = \int F \hat{=}
-... = 0
-\end{split} \tag{3}\]</span></span></p>
-</section>
-<section id="local-angular-momentum-balance-spin" class="level2">
-<h2 class="anchored" data-anchor-id="local-angular-momentum-balance-spin">Local Angular Momentum Balance, Spin</h2>
-<p><span id="eq-localangularmomentum"><span class="math display">\[\begin{split} &amp;   
-... = 0
-\end{split} \tag{4}\]</span></span></p>
-</section>
-<section id="tension" class="level2">
-<h2 class="anchored" data-anchor-id="tension">Tension</h2>
-<p><span id="eq-emtension"><span class="math display">\[\begin{split} &amp;   
-\nabla\cdot\mathscr{T} = \varepsilon_0 \left( \mathscr{E} \times \nabla\times\mathscr{E} - \mathscr{E} \nabla\cdot\mathscr{E} \right) + \frac{1}{\mu_0} \left( \mathscr{B} \nabla\times\mathscr{B} - \mathscr{B}\nabla\cdot\mathscr{B} \right)
-\end{split} \tag{5}\]</span></span></p>
-<p>Abbreviations:</p>
-<p><span class="math inline">\(w_i\)</span> = energy densities (electric <span class="math inline">\(w_e\)</span>, magnetic <span class="math inline">\(e_m\)</span>, gravitational, etc. …), <span class="math inline">\(i \in \mathbb{N}\)</span></p>
-<p><span class="math inline">\(\mathbf{\mathscr{S}}_{w_i}\)</span> = Poynting-Vectros <span class="math inline">\(\hat{=}\)</span> energy transport densities (transfers) by fields (electric, magnetic, gravitational, etc. …) to corresponding energy densities <span class="math inline">\(w_i\)</span></p>
-<p><span class="math inline">\(\boldsymbol{j} \cdot \mathscr{E}\)</span> = energy gain provided by fields <span class="math inline">\(\mathscr{E}\)</span> and <span class="math inline">\(\mathscr{B}\)</span> through current density <span class="math inline">\(j\)</span></p>
-<p><span class="math inline">\(\mathscr{T}\)</span> = Tension Tensor; Tension <span class="math inline">\(\hat{=} \Delta\)</span>Forces = Pressure - Traction <span class="math inline">\(\hat{=}\)</span> Torsion Tension at angular momentum$</p>
-<section id="mechanical" class="level3">
-<h3 class="anchored" data-anchor-id="mechanical">Mechanical</h3>
-<p>…</p>
-</section>
-<section id="electromagnectic-energy-transfer" class="level3">
-<h3 class="anchored" data-anchor-id="electromagnectic-energy-transfer">Electromagnectic energy transfer</h3>
-<p>charge conservation:</p>
-<p><span id="eq-continuity"><span class="math display">\[\begin{split} &amp;   
-\frac{\partial}{\partial t}\varrho + \nabla \cdot j = 0
-\end{split} \tag{6}\]</span></span></p>
-<p><span class="math inline">\(\varrho = \sigma\delta =\)</span> charge density in interior</p>
-<p><span class="math inline">\(\sigma =\)</span> charge density at border (skin)</p>
-<p><span class="math inline">\(\delta =\)</span> Dirac delta-function</p>
-<p><span class="math inline">\(\boldsymbol{j} = \sigma \left( \mathscr{E} + v \times \mathscr{B} \right) = \nabla \times \mathscr{H} - \frac{\partial}{\partial t}\mathscr{D} \hat{=}\)</span> elecectric current density</p>
-<p><span class="math inline">\(\boldsymbol{j} \cdot \mathscr{E} \hat{=}\)</span> energy gain by fields <span class="math inline">\(\mathscr{E}\)</span> and <span class="math inline">\(\mathscr{B}\)</span> through current density <span class="math inline">\(j\)</span></p>
-<p><span class="math inline">\(\mathscr{S} = \mathscr{E} \times \mathscr{H} \hat{=}\)</span> energy transport density (Intensity = <span class="math inline">\(\left| \bar{\mathscr{S}} \right|\)</span>)</p>
-<p>Energy conservation for (large extended) conductive medium:</p>
-<p><span id="eq-energyconserv-1"><span class="math display">\[\begin{split} &amp;   
-\int    \left(
-\frac{\partial}{\partial t} \left( w_e + w_m \right) + \mathbf{\nabla} \cdot \mathbf{\mathscr{S}} + \boldsymbol{j} \cdot \mathscr{E}
-\right) \, dr
-= \frac{d}{dt}W_e + \frac{d}{dt}W_m + D_S + \int \left( \boldsymbol{j} \cdot \mathscr{E} \right) \, dr
-\newline &amp;
-\stackrel{\textnormal{low frequency}}{=}
-\frac{1}{2}\frac{d}{dt} \left( LI^2 \right) + \frac{1}{2}\frac{d}{dt} \left( \frac{Q^2}{C} \right) + \left( RI^2 - VI \right) = 0
-\end{split} \tag{7}\]</span></span></p>
-<p>Abreviations: <span class="math display">\[
-\Delta \cdot \coloneqq \textnormal{ div grad = Laplacian}
-\]</span><span class="math display">\[  
-J = \textnormal{"ignition of inhomogenity,cause"} \quad
-j = \textnormal{Current density} \quad
-\varrho = \textnormal{Charge density}
-\]</span><span class="math display">\[  
-V = \textnormal{Potentialdifference} \quad  
-I = \textnormal{Current} \quad
-R = \textnormal{Resistance} \quad
-\]</span><span class="math display">\[  
-L = \textnormal{Inductance} \qquad  
-C = \textnormal{Capacitance} \qquad
-Q = c\textnormal{harge (ion)} \qquad
-\Psi = LI = \textnormal{mag. Flux}
-\]</span><span class="math display">\[
-\mathscr{S} = \mathscr{E} \times \mathscr{H} = \textnormal{Poynting-Vector, radiation intensity}
-\]</span><span class="math display">\[
-D_S = \int \left( \mathbf{\nabla} \cdot \mathbf{\mathscr{S}} \right) \, dr = \int \textnormal{div}(\mathscr{E} \times \mathscr{H}) \, dr = \textnormal{dissipation engergy lost from radiation} \approx \textnormal{0 for low frequencies } \omega
-\]</span><span class="math display">\[
-d = \sqrt{\frac{1}{\mu \sigma} \frac{2}{\omega}} = \textnormal{skin depth (surface) of conductor} \qquad
-r = \frac{d}{\sqrt{2i}}\rho = \frac{d}{1+i}\rho = \textnormal{radius (extension) of conductor}
-\]</span><span class="math display">\[
-\rho = kr = \textnormal{"radius of curvature $k$"}
-\]</span><span class="math display">\[
-\mu = \textnormal{permeability of conductor}    \qquad
-\sigma = \textnormal{conductivity of conductor (dielectricum)} \qquad
-\]</span></p>
-</section>
-<section id="thermal" class="level3">
-<h3 class="anchored" data-anchor-id="thermal">Thermal</h3>
-<p>…</p>
-</section>
-<section id="gravitational" class="level3">
-<h3 class="anchored" data-anchor-id="gravitational">Gravitational</h3>
-<p>…</p>
-</section>
+<section id="operators" class="level2">
+<h2 class="anchored" data-anchor-id="operators">Operators</h2>
+<p><span class="math inline">\(\nabla \coloneqq grad = \text{Gradient (Gefälle, Neigung)}\)</span></p>
+<p><span class="math inline">\(\nabla \cdot \coloneqq div = \text{Divergence (Quelle)}\)</span></p>
+<p><span class="math inline">\(\nabla \times \coloneqq rot = \text{Rotation (Wirbelung, Curl)}\)</span></p>
+<p><span class="math inline">\(\nabla^2 = \text{Lagrange Operatonr (Krümmung, Beschleunigung)}\)</span></p>
+<p><span class="math inline">\(\Delta \cdot \coloneqq div(grad) = \text{Laplace Operatorn}\)</span></p>
+<p><span class="math inline">\(\Delta \coloneqq \text{Difference, shift}\)</span></p>
 </section>
 
 </main>

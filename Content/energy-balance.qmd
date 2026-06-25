@@ -4,13 +4,51 @@ $$\begin{split} &
 \frac{\partial}{\partial t} \sum w_i+ \mathbf{\nabla} \cdot \sum \mathbf{\mathscr{S}}_{w_i} + \boldsymbol{j} \cdot \mathscr{E} = 0 
 \end{split}$${#eq-energbal} 
 
-Abbreviations:4
+
+## Local Force Balance
+$$\begin{split} &
+\dot{p} = F \hat{=}
+\newline &
+\underbrace{
+\varrho\mathscr{E} + j \times \mathscr{B} 
+}_\text{charge force}
++ 
+\underbrace{
+\frac{\partial}{\partial t}\frac{1}{c^2}\mathscr{S}
+}_\text{field force}
++
+\underbrace{
+\nabla \cdot \mathscr{T}
+}_\text{tension force}
+= 0 
+\end{split}$${#eq-localforce}
+
+## Local Momentum Balance
+$$\begin{split} &  
+p = \int F \hat{=} 
+\newline &
+... = 0 
+\end{split}$${#eq-localmomentum}
+
+## Local Angular Momentum Balance, Spin
+$$\begin{split} &   
+... = 0 
+\end{split}$${#eq-localangularmomentum} 
+
+## Tension Tensor
+$$\begin{split} &   
+\nabla\cdot\mathscr{T} = \varepsilon_0 \left( \mathscr{E} \times \nabla\times\mathscr{E} - \mathscr{E} \nabla\cdot\mathscr{E} \right) + \frac{1}{\mu_0} \left( \mathscr{B} \nabla\times\mathscr{B} - \mathscr{B}\nabla\cdot\mathscr{B} \right)
+\end{split}$${#eq-emtension}
+
+Abbreviations:
 
 $w_i$ = energy densities (electric $w_e$, magnetic $e_m$, gravitational, etc. ...), $i \in \mathbb{N}$
 
 $\mathbf{\mathscr{S}}_{w_i}$ = Poynting-Vectros $\hat{=}$ energy transport densities (transfers) by fields (electric, magnetic, gravitational, etc. ...) to corresponding energy densities $w_i$
 
 $\boldsymbol{j} \cdot \mathscr{E}$ = energy gain provided by fields $\mathscr{E}$ and $\mathscr{B}$ through current density $j$
+
+$\mathscr{T}$ = Tension Tensor (momentum flow density); Tension $\hat{=} \Delta$Forces = Pressure - Traction $\hat{=}$ Torsion Tension at angular momentum$
 
 
 
