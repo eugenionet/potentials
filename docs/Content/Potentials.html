@@ -462,7 +462,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Content/Potential.html" class="sidebar-item-text sidebar-link">
+  <a href="../Content/Potential.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Potential</span></a>
   </div>
 </li>
@@ -1470,25 +1470,37 @@ r \gg kr_0^2 \ll 1
 <p>Action Quantum, Planck Constant (Energy-Frequency-Slope): <!-- \index{Plank Constant} \index{Action Quantum} --></p>
 <p><span id="eq-quant_h-1"><span class="math display">\[\begin{split} &amp;
 h =
-\tan(\alpha) =
+\tan(\varphi) =
 \frac{E_{kin}}{\nu_i - \nu_0} =
 \frac{eV_{0i}}{\nu_i - \nu_0}
 \equiv \\&amp;
-\frac{\Delta E}{\nu_0} =
+\frac{E_1 - E_2}{\nu_0} =
 \frac{W}{\nu_0} =
 \frac{F_{EM} \cdot x}{\nu_0} =
 \hbar k \lambda
 \end{split} \tag{37}\]</span></span></p>
 <p><span id="eq-quant_h-2"><span class="math display">\[\begin{split} &amp;
 \hbar =
-\frac{\Delta E}{\omega} =
+\frac{E_1 - E_2}{\omega} =
 \end{split} \tag{38}\]</span></span></p>
-<p><span id="eq-quant_h-3"><span class="math display">\[\begin{split} &amp;
-\alpha = \angle( E_{kin}, \nu ) \qquad
-e = \textnormal{electron charge} \qquad \\&amp;
-V_0 = \textnormal{Opposing Potential ($I=0$)} \qquad
-E_{kin}^{max} = eV_0    \qquad
+<p><span id="eq-quant_h-4"><span class="math display">\[\begin{split} &amp;
+E_{kin}^{max} =
+eV_0 =
+e \frac{Q}{C} =
+h(\nu - \nu_0)
 \end{split} \tag{39}\]</span></span></p>
+<p><span class="math display">\[
+V_0 = \textnormal{Opposing Potential ($I=0$)}
+\]</span><span class="math display">\[
+\varphi = \angle( E_{kin}, \nu ) \qquad
+e = \textnormal{electron charge} \qquad
+Q = \textnormal{ion charge} \qquad
+\]</span><span class="math display">\[
+C = \textnormal{Capacitance} \qquad
+\nu = \frac{1}{2\pi} \frac{1}{\sqrt{LC}} \sqrt{1 - \frac{C}{L}R^2}
+\]</span><span class="math display">\[
+\Rightarrow \textnormal{Inductance } L = \frac{4\pi^2}{C} \left( \frac{e}{h}Q + \nu_0 \right)^2
+\]</span></p>
 <p><br>
 </p>
 <p>Ionisation Energy of chemical element <span class="math inline">\(E_i = h\nu = h\frac{\lambda}{c} = \hbar\omega = \frac{h}{k\lambda} \omega\)</span></p>
