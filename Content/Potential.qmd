@@ -1,299 +1,35 @@
+Potential (intrinsic energy of inertia)
 
-## Potential as "intrinsic energy of inertia"
-
-
-{{< include C:/Users/erine/Desktop/Physics-Explorations/GitHub-Physics/PhysEcon/Content/EMfield.qmd >}}
-
-
-{{< include Maxwell_slow.qmd >}}
-
-
-## Potential
-
-$\Rightarrow$ 
-Wave equation that determines Potential:
-$$\begin{split} &
-\Delta \cdot U - \frac{1}{c^2} \frac{\partial^2}{\partial t^2} U = J
-\end{split}$${#eq-potignit}
-
-$\Rightarrow$
-Potential caused by "ignition J" (inhomgenity) from source at rest, v = 0:
-$$\begin{split} &
-U = -\frac{1}{4\pi} \int \frac{J}{\left | r  \right |} \, dr'
-\end{split}$${#eq-potelec}
-
-## elec. Potential structure:
-$J = -\frac{1}{\varepsilon_0} \varrho$
-$$\begin{split} &
-U_e \coloneqq \Phi 
-\newline & 
-\stackrel{\textnormal{elec. charge dens.=}\varrho}{=}
-\frac{1}{4\pi} \frac{1}{\varepsilon_0} \int \frac{\varrho}{\left | r  \right |} \, dr'
-\newline & 
-\> \hat{=} \>
-\frac{1}{2} \frac{1}{2\pi} \frac{1}{\left | r \right |} \frac{1}{\varepsilon_0} Q = 
-\frac{1}{2} \frac{1}{2\pi} \frac{1}{\left | r \right |} \frac{1}{\varepsilon_0} It
-\end{split}$${#eq-potelec}
-
-## magn. Potential structure: 
-$J = -\mu_0 j$
-$$\begin{split} &
-U_m \coloneqq \boldsymbol{A} 
-\newline &
-\stackrel{\textnormal{elec. current dens.=}j}{=}
-\frac{\mu_0}{4\pi} \int \frac{j}{\left | r  \right |} \, dr'
-\newline &
-\> \hat{=} \>
-\frac{1}{2} \frac{1}{2\pi} \frac{1}{\left | r \right |} \mu_0 I =
-\frac{1}{2} \frac{1}{2\pi} \frac{1}{\left | r \right |} \frac{1}{c^2 \varepsilon_0} I =
-\frac{1}{c^2} \frac{1}{t} U_e 
-\newline &
-\stackrel{\textnormal{source in uniformal movement,} v = const. \neq 0}{=}
-\frac{1}{2} \frac{1}{2\pi} \frac{1}{\left( \left | r \right | - r\cdot\frac{v}{c} \right)} \mu_0 Qv
-\newline &
-=
-\frac{1}{2} \frac{1}{2\pi} \frac{1}{\left( \left | r \right | - r\cdot\frac{v}{c} \right)} \frac{1}{c^2 \varepsilon_0} vQ
-\newline & 
-=
-\frac{1}{2} \frac{1}{2\pi} \frac{1}{\left( \left | r \right | - r\cdot\frac{v}{c} \right)} \frac{1}{c^2 \varepsilon_0} Itv = 
-\frac{1}{2} \frac{1}{2\pi} \frac{1}{\left( \left | r \right | - r\cdot\frac{v}{c} \right)} \frac{1}{c^2 \varepsilon_0} Ir
-\end{split}$${#eq-potmagn}
-
-\
-
-## Electric endogen energy 
-
-- Bond Energy
-- Binding Energy
-
-$E_{pot} = mc^2$
-
+Electric Potential $U$:
 $$\begin{split} &
 e = \textnormal{electron charge} \qquad
 q = ne = \textnormal{charge} \qquad
 n \in \mathbb{N}
-\end{split}$${#eq-echarge}
+\end{split}$${#eq-potentia-1}
 
 $$\begin{split} &
-\textnormal{Potential} \qquad
 U = 
 \frac{E_{pot}}{q} = 
-\frac{\left( mc^2 \right)^2}{ne} = 
-\frac{m}{q} m c^4 = 
-\kappa m c^4
-\end{split}$${#eq-potential-1}
+\frac{m}{q}c^2 = 
+\kappa c^2
+\end{split}$${#eq-potential-2}
 
 
-## Electric induced energy (exogenous excitation)
-
-- Ionisation Energy
-- Exitation Energy
-
-$E_{kin} = \frac{1}{2}mv^2 \> \hat{=} \> \left( pc \right)^2 \> \hat{=} \> h\nu$
-
-$E_{kin}$ Energy density electric:
-$$\begin{split} &
-w_e = \frac{1}{2} \varepsilon_0 \mathscr{E}^2
-\end{split}$${#eq-energydensity-e}
-
-$E_{kin}$ Energy density magnetic:
-$$\begin{split} &
-w_m = \frac{1}{2} \frac{1}{\mu_0} \mathscr{B}^2
-\end{split}$${#eq-energydensity-m}
-
-$E_{kin}$ Electric Energy:
-$$\begin{split} &
-W_e = \frac{1}{2} CU^2
-\end{split}$${#eq-electricenergy}
-
-$E_{kin}$ Magnetic Energy:
-$$\begin{split} &
-W_m = \frac{1}{2} LI^2
-\end{split}$${#eq-magneticenergy}
-
-Power:
-$$\begin{split} &
-P = VI = (U_1 - U_2) \frac{Q}{t} = 
-\frac{E_1 - E_2}{t} = \frac{W}{t} = \frac{Fr}{t} = Fv 
-\end{split}$${#eq-power}
-
-### Conductor (charge conductive element for energy transfer) condition:
-$$\begin{split} & 
-\sigma \cdot t \gg \varepsilon_0
-\end{split}$${#eq-conductor}
-
-### Slow changing current (quasi-stationary, low frequencies) condition:
-$$\begin{split} & 
-\frac{v}{c} \ll \frac{1}{c}\frac{\mathscr{E}}{\mathscr{B}} \ll \frac{c}{v}
-\end{split}$${#eq-slowcurrent}
-
-## Energy conservation for (large extended) conductive medium:
-$$\begin{split} &   
-\int    \left(
-\frac{\partial}{\partial t} \left( we + w_m \right) + \mathbf{\nabla} \cdot \mathbf{\mathscr{S}} + \boldsymbol{j} \cdot \mathscr{E} 
-\right) \, dr
-= \frac{d}{dt}W_e + \frac{d}{dt}W_m + D_S + \int \left( \boldsymbol{j} \cdot \mathscr{E} \right) \, dr 
-\newline & 
-\stackrel{\textnormal{low frequency}}{=}
-\frac{1}{2}\frac{d}{dt} \left( LI^2 \right) + \frac{1}{2}\frac{d}{dt} \left( \frac{Q^2}{C} \right) + \left( RI^2 - VI \right) = 0
-\end{split}$${#eq-energyconserv-1}  
- 
-## Energy of thin conductor (concentrated conductive medium without electric charge in its surrounding), Voltage (potentialdifference, tension):
+Voltage (potential difference, tension):
 
 $$\begin{split} &
 V = 
-U_1 - U_2 = 
-r \mathscr{E} = 
-\dot{\Psi} + R I + \frac{I}{C}t = 
-L \dot{I} + R I + \frac{Q}{C}
+\Delta U = 
+d \cdot \mathscr{E} = 
+Z \cdot I = 
+...
+\qquad Z = \textnormal{Resistance}
 \end{split}$${#eq-potential-3}
 
-$$
-\Delta \cdot \coloneqq \textnormal{ div grad = Laplacian}
-$$\linebreak$$  
-J = \textnormal{"ignition of inhomogenity,cause"} \quad
-j = \textnormal{Current density} \quad
-\varrho = \textnormal{Charge density}
-$$\linebreak$$  
-V = \textnormal{Potentialdifference} \quad  
-I = \textnormal{Current} \quad
-R = \textnormal{Resistance} \quad
-$$\linebreak$$  
-L = \textnormal{Inductance} \qquad  
-C = \textnormal{Capacitance} \qquad
-Q = c\textnormal{harge (ion)} \qquad
-\Psi = LI = \textnormal{mag. Flux}
-$$\linebreak$$ 
-\mathscr{S} = \mathscr{E} \times \mathscr{H} = \textnormal{Poynting-Vector = radiation intensity}
-$$\linebreak$$
-D_S = \int \left( \mathbf{\nabla} \cdot \mathbf{\mathscr{S}} \right) \, dr = \int \textnormal{div}(\mathscr{E} \times \mathscr{H}) \, dr = \textnormal{dissipation engergy lost from radiation} \approx \textnormal{0 for low frequencies } \omega
-$$\linebreak$$
-d = \sqrt{\frac{1}{\mu \sigma} \frac{2}{\omega}} = \textnormal{skin depth (surface) of conductor} \qquad
-r = \frac{d}{\sqrt{2i}}\rho = \frac{d}{1+i}\rho = \textnormal{radius (extension) of conductor}
-$$\linebreak$$
-\rho = kr = \textnormal{"radius of curvature $k$"}
-$$\linebreak$$ 
-\omega = \dot{\rho} = \frac{v}{r} = 2 \pi \nu = k \lambda \frac{1}{T}  = \sqrt{\frac{k}{m}}
-\> \hat{=} \>
-kc
-\> \hat{=} \>
-\frac{1}{\sqrt{LC}} 
-\> \hat{=} \>
-\sqrt{\frac{g}{r}}
-= \textnormal{frequency} 
-$$\linebreak$$ 
-\mu = \textnormal{permeability of conductor}    \qquad
-\sigma = \textnormal{conductivity of conductor (dielectricum)} \qquad
-$$
-
-\
-
-## Low Frequency
-$$\begin{split} & \omega \ll \frac{1}{\mu \sigma} \frac{2}{r^2} \iff r \ll d \iff \rho \ll 1 \end{split}$${#eq-lowfreq-cond}
-$$
-L \approx const.    \qquad
-C \approx const.    \qquad
-D_S \approx 0
-$$
-
-## High Frequency
-$$\begin{split} & \omega \gg \frac{1}{\mu \sigma} \frac{2}{r^2} \iff r \gg d \iff \rho \gg 1 \end{split}$${#eq-highfreq-cond}
-$$
-L(t) \neq const.    \qquad
-C(t) \neq const.   \qquad
-\textnormal{for Dipol: } D_S \propto \omega^4 \gg 0 
-$$
-
-\
-
-## Continuity at Rest: Electic Charge
-no Dissipation, no velocity, charge (ion) causes Electric Field
-
-
-## Continuity at Movement: Magnetic Field
-no Dissipation, Velocity constant, moved charge (ion) causes emergence of Magnetic Field
-
-
-## Continuity at Acceleration: Radiation Energy
-no Dissipation, Velocity changing, acceleration of charge (ion) causes emgergence of Radiation
-
-
-## Continuity and periodic (harmoneous oscillation) Movement in VACUUM
-
-$$
-2\pi = k \lambda \gg kr_0 \ll 1
-$$\linebreak$$
-\omega = kc \ll \frac{c}{r_0}     \qquad
-\nabla \cdot j = i \omega \varrho     \qquad
-i \omega Q = 0
-$$
-
-
-
-## Continuity and periodic (harmoneous oscillation) Movement in MATTER
-Refraction index emerges
-
-Dispersion: $k^2 = \varepsilon \mu \omega^2 + i \mu \sigma \omega$
-
-
-
-## Near Field
-
-$$
-r \ll \lambda  = \frac{2\pi}{k}
-\stackrel{\textnormal{vacuum}}{=}
-\frac{2\pi}{ \frac{\omega}{c} }
-\qquad
-kr \ll 2\pi
-$$
-
-$$
-\frac{w_m}{w_e} \sim \frac{ \frac{\vec{p}^2}{\varepsilon_0 r^6} }{ \frac{k^2 \mu_0 c^2 \vec{p}^2}{r^4} } \sim \left( kr \right)^2 \ll 1 
-$$
-
-$$
-\vec{p} = \textnormal{elec. Dipol}
-$$
-
-
-
-## Far Field
-
-accelerated movement -> Radiation in Far Field of charge source
-
-$$
-r \gg \lambda  = \frac{2\pi}{k}
-\stackrel{\textnormal{vacuum}}{=}
-\frac{2\pi}{ \frac{\omega}{c} }
-\qquad
-kr \gg 1
-\qquad
-r \gg kr_0^2 \ll 1
-$$
-
-$$
-\frac{w_m}{w_e} =
-\frac{ \frac{\varepsilon_0}{2} c^2 \left( \mathscr{B} \times \frac{r}{\left| r \right|} \right)^2 }{ \frac{\varepsilon_0}{2} c^2 \left( \mathscr{B} \times \frac{r}{\left| r \right|} \right)^2 } = 1
-$$
-
-
-## Dissipation in Vacuum
-no Contiunuity of chrge/matter, no Refraction index, Reflection
-
-
-## Dissipation in Matter
-no Contiunuity of chrge/matter with Dielectricum, Refraction merges, Reflection, Absorbtion
-
-
-\
-
-## Energy gain by excitation:
+$$\begin{split} &
+E_{kin}^{max} = 
+eV_0 = 
+h(\nu - \nu_0)
+\end{split}$${#eq-potential-4}
 
 {{< include Quant_h.qmd >}}
-
-\
-
-$\Rightarrow \textnormal{Ionisation Energy of chemical element } E_i = h\nu = h\frac{\lambda}{c} = \hbar\omega = \frac{h}{k\lambda} \omega$
-
-$\Rightarrow \textnormal{Energy released (gained) } E_{gain} = E_{pot} - E_i = mc^2 - h\nu$
-

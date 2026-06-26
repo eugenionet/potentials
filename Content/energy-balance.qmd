@@ -23,19 +23,37 @@ $$\begin{split} &
 = 0 
 \end{split}$${#eq-localforce}
 
-## Local Momentum Balance
-$$\begin{split} &  
-p = \int F \hat{=} 
+### Local Momentum Conservation
+
+linear momentum conservation if $p = const.$, otherwise "tension" occures:
+$$\begin{split} & 
+p = \int F = \int \frac{d}{dt} p \Rightarrow
 \newline &
-... = 0 
-\end{split}$${#eq-localmomentum}
+F = \dot{p} \hat{=} 
+\int\limits_{\mathbb{R}^{3}} \frac{d}{dt} \left[ \left( \varrho\mathscr{E} + j \times \mathscr{B} \right) + \frac{\partial}{\partial t}\frac{1}{c^2}\mathscr{S} \right] = 
+\newline &
+\frac{d}{dt} \underbrace{ \left[
+    \int\limits_{\mathbb{R}^{3}} \left( \varrho\mathscr{E} + j \times \mathscr{B} \right) + \frac{1}{c^2}\mathscr{S} 
+    \right] }_\text{= p momentum conserved if p = const.} = 
+    \begin{cases}
+        0  \Leftrightarrow p = const. &:  \text{linear Far Field} \\ \\
+        - \int\limits_{\mathbb{R}^{2}} \mathscr{T} \;df &: \text{linear Near Field}
+    \end{cases}
+\end{split}$${#eq-loclinmomentum}
 
-## Local Angular Momentum Balance, Spin
-$$\begin{split} &   
-... = 0 
-\end{split}$${#eq-localangularmomentum} 
 
-## Tension Tensor
+Momentum $p = \int\limits_{\mathbb{R}^{3}} \left( \varrho\mathscr{E} + j \times \mathscr{B} \right) + \frac{1}{c^2}\mathscr{S}$
+
+photon Spin = $\int\limits_{\mathbb{R}^{3}} \frac{1}{c^2}\mathscr{S}$
+
+
+angular momentum (photon Spin):
+$$\begin{split} &  
+D = \dot{L} \hat{=} 
+...
+\end{split}$${#eq-locangmomentum}
+
+### Tension Tensor
 $$\begin{split} &   
 \nabla\cdot\mathscr{T} = \varepsilon_0 \left( \mathscr{E} \times \nabla\times\mathscr{E} - \mathscr{E} \nabla\cdot\mathscr{E} \right) + \frac{1}{\mu_0} \left( \mathscr{B} \nabla\times\mathscr{B} - \mathscr{B}\nabla\cdot\mathscr{B} \right)
 \end{split}$${#eq-emtension}
