@@ -1,4 +1,4 @@
-Frequency (commonness)
+### Frequency (commonness, probability, likelihood)
 
 $$\begin{split} &
 \omega = 
@@ -12,20 +12,21 @@ $$\begin{split} &
 \sqrt{ \frac{k}{m} } = 
 \sqrt{ \frac{r \times F}{m} } = 
 \sqrt{ \frac{g}{l} } 
-\stackrel{EM}{=} 
+\stackrel{electromagnetic}{=} 
 ... =
 \sqrt{ \frac{1}{LC} }
 \stackrel{QM}{=} 
 \frac{1}{2} \frac{p^2}{m} \frac{1}{\hbar} = 
 \frac{(\hbar\vec{k})^2}{2m} \frac{1}{\hbar} =   
 \frac{E}{\hbar} 
-\stackrel{\text{time-independent Potential}}{=}  
+\stackrel{\text{time-independent potential}}{=}  
 \frac{1}{i\Psi} \frac{\partial \Psi}{\partial t} = 
 \frac{1}{2} \frac{\hbar}{m} \cdot \left[ -\frac{1}{\Psi} \left( \frac{\partial^2\Psi}{\partial x^2}+\frac{\partial^2\Psi}{\partial y^2}+\frac{\partial^2\Psi}{\partial z^2} \right) \right] = 
 \frac{\hbar}{2m} \vec{k}^2  = 
 \frac{\hbar}{2m} \Delta\Psi(\vec{r},t) = 
 i \frac{\partial\Psi(\vec{r},t)}{\partial t}
 \end{split}$${#eq-frequencyangular}
+
 
 $$\begin{split} &
 \nu = 
@@ -42,6 +43,8 @@ $$\begin{split} &
 \frac{E_{kin}}{\hbar} \omega\mathcal{T} + \nu_0
 \end{split}$${#eq-refractionindex-2}
 
+
+
 $$\begin{split} &
 e = \textnormal{electron charge}
 \qquad
@@ -55,3 +58,175 @@ E_{kin}^{max} =
 eV_0 = 
 h(\nu - \nu_0)
 \end{split}$${#eq-energy_kin_max}
+
+
+
+### Frequency contextual Causes
+
+Frequency of rotational velocity as periodic occurance of an event/state by
+space distance and time periodicity as well as movement speed and reach length, $\quad v^2 = v_{ph}v_{gr}, \quad \omega t = 2\pi\nu t = \lambda \neq 0 \quad$:
+
+$$\begin{split} &
+\frac{v}{r} = 
+\omega = 
+\frac{\lambda}{t}
+\end{split}$${#eq-frequencycause}
+
+
+#### Rest state of source charge
+
+Statics localization of charge. Only spacial demependeny, no time dependency.
+
+Energy transport ...
+Information transmission ...
+
+$v = 0$ $\qquad$
+$\dot{v} = 0$ $\qquad$
+
+
+
+
+#### Slow Movement of source charge
+
+Stationarity localization of current flow by slow movement of charge. Dynamics, time dependency.
+
+Energy transport ...
+Information transmission ...
+
+$v = const. \ll c$ $\qquad$
+$\dot{v} = 0$ 
+
+
+
+
+#### Fast Movement of source charge
+
+Fields forces by fast movement of charge. Dynamics, time dependency.
+
+Energy transport ...
+Information transmission ...
+
+$v \approx c$ $\qquad$
+$\dot{v} = 0$
+
+
+
+
+#### Acceleration Movement of source charge
+
+Radiation energy by accelerated movement of charge. Dynamics, time dependency.
+
+Energy transport ...
+Information transmission ...
+
+$v \neq 0$ $\qquad$ 
+$\dot{v} \neq 0$
+
+
+
+
+#### Movement in Vacuum
+
+$\eta = \frac{\tan\alpha}{\tan\beta} = \frac{c}{v_{Ph}} = 1$ 
+$\qquad$
+$2\pi = k \lambda$
+$\qquad$
+$v_{ph} = c$
+$\qquad$
+$\omega = k c$
+
+$\varepsilon_0\mu_0 = \frac{1}{c^2}$
+
+Continuity:
+$\nabla\cdot j = i \omega\varrho$
+$\qquad$
+$i \omega Q = 0$
+
+
+#### Movement in Matter
+
+$\eta = \frac{\tan\alpha}{\tan\beta} = \frac{c}{v_{Ph}} = \sqrt{\frac{\varepsilon\mu}{\varepsilon_0\mu_0}} \neq 1$
+$\qquad$
+$v_{ph} = \pm \sqrt{\frac{1}{\varepsilon\mu} - \frac{\sigma^2}{4\varepsilon^2 k^2}}$
+$\qquad$
+$\omega = k v_{ph} = kc \sqrt{\frac{\varepsilon_0\mu_0}{\varepsilon\mu}} = kc\frac{\tan\beta}{\tan{\alpha}} = k \frac{c}{\eta}$
+
+$\varepsilon\mu = \left( \frac{\eta}{c} \right)^2$
+
+Dispersion:
+$k^2 = \varepsilon\mu\omega^2 + i \mu\sigma\omega$
+
+
+
+#### Near Field
+
+$r_0 \ll r \ll \lambda$ $\qquad$
+$kr \ll 2\pi$ $\qquad$ 
+$\frac{w_m}{w_e} \ll 1$ 
+
+$r$ is small, fast movement
+
+
+#### Far Field
+
+$r \gg \lambda$ $\qquad$
+$kr \gg 1$ $\qquad$
+$r \gg kr_0^2 \ll 1$ $\qquad$
+$\frac{w_m}{w_e} = 1$
+
+$r$ is big, slow movement
+
+
+#### High Frequency
+
+$\omega \gg \frac{2}{\mu \sigma r_0^2}$
+
+$\lambda$ is big, $\nu$ frequency i small, short time period
+
+
+#### Low Frequency
+
+$\omega \ll \frac{2}{\mu \sigma r_0^2}$
+
+$\lambda$ is small, $\nu$ frequency i big, long time period
+
+
+
+
+#### Conditions
+
+Border (skin surface): 
+...
+
+
+Interior (medium body):
+...
+
+
+Global:
+....
+
+
+Local:
+....
+
+
+
+#### Consequences
+
+dielectricity constant (matter medium): $\varepsilon = \varepsilon(\omega) = \mathscr{E}^{-1}\mathscr{D} = \mathscr{E}^{-1}\left( \mathscr{P} + \varepsilon_0 \mathscr{B} \right)$
+
+permeability constant (matter medium): $\mu = \mu(\omega) = \mathscr{B}^{-1}\mathscr{H} = \mathscr{B}^{-1} \left( \frac{1}{\mu_0}\mathscr{B} - \mathscr{M} \right)$
+
+conductivity (matter medium): $\sigma = \sigma(\omega) = \frac{\sigma_0}{\sqrt{1 + \omega^2 t^2}}$
+
+magn. energy density (vacuum): $w_m = \frac{1}{2}\frac{1}{\mu_0}\mathscr{B}^2$
+
+elec. energy density (vacuum): $w_e = \frac{1}{2}\varepsilon_0\mathscr{E}^2$
+
+wave vector: $k = \frac{2\pi}{\lambda} = \eta \frac{\omega}{c}$
+
+refraction index (matter medium): $\eta = \frac{\tan{\alpha}}{\tan{\beta}} = \frac{\eta_{medium1}}{\eta_{medium2}}$
+
+Energy: $E = h \nu = \hbar \omega = E_{kin} + E_{pot} \stackrel{\text{!}}{=} \sqrt{ \left( pc \right)^2 + \left( mc^2 \right)^2 }$
+

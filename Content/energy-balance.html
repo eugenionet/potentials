@@ -101,22 +101,31 @@ window.Quarto = {
 }_\text{tension force}
 = 0
 \end{split} \tag{2}\]</span></span></p>
-</section>
-<section id="local-momentum-balance" class="level2">
-<h2 class="anchored" data-anchor-id="local-momentum-balance">Local Momentum Balance</h2>
-<p><span id="eq-localmomentum"><span class="math display">\[\begin{split} &amp;  
-p = \int F \hat{=}
-... = 0
+<section id="local-momentum-conservation" class="level3">
+<h3 class="anchored" data-anchor-id="local-momentum-conservation">Local Momentum Conservation</h3>
+<p>linear momentum conservation if <span class="math inline">\(p = const.\)</span>, otherwise “tension” occures: <span id="eq-loclinmomentum"><span class="math display">\[\begin{split} &amp;
+p = \int F = \int \frac{d}{dt} p \Rightarrow
+\newline &amp;
+F = \dot{p} \hat{=}
+\int\limits_{\mathbb{R}^{3}} \frac{d}{dt} \left[ \left( \varrho\mathscr{E} + j \times \mathscr{B} \right) + \frac{\partial}{\partial t}\frac{1}{c^2}\mathscr{S} \right] =
+\newline &amp;
+\frac{d}{dt} \underbrace{ \left[
+    \int\limits_{\mathbb{R}^{3}} \left( \varrho\mathscr{E} + j \times \mathscr{B} \right) + \frac{1}{c^2}\mathscr{S}
+    \right] }_\text{= p momentum conserved if p = const.} =
+    \begin{cases}
+        0  \Leftrightarrow p = const. &amp;:  \text{linear Far Field} \\ \\
+        - \int\limits_{\mathbb{R}^{2}} \mathscr{T} \;df &amp;: \text{linear Near Field}
+    \end{cases}
 \end{split} \tag{3}\]</span></span></p>
-</section>
-<section id="local-angular-momentum-balance-spin" class="level2">
-<h2 class="anchored" data-anchor-id="local-angular-momentum-balance-spin">Local Angular Momentum Balance, Spin</h2>
-<p><span id="eq-localangularmomentum"><span class="math display">\[\begin{split} &amp;   
-... = 0
+<p>Momentum <span class="math inline">\(p = \int\limits_{\mathbb{R}^{3}} \left( \varrho\mathscr{E} + j \times \mathscr{B} \right) + \frac{1}{c^2}\mathscr{S}\)</span></p>
+<p>photon Spin = <span class="math inline">\(\int\limits_{\mathbb{R}^{3}} \frac{1}{c^2}\mathscr{S}\)</span></p>
+<p>angular momentum (photon Spin): <span id="eq-locangmomentum"><span class="math display">\[\begin{split} &amp;  
+D = \dot{L} \hat{=}
+...
 \end{split} \tag{4}\]</span></span></p>
 </section>
-<section id="tension" class="level2">
-<h2 class="anchored" data-anchor-id="tension">Tension</h2>
+<section id="tension-tensor" class="level3">
+<h3 class="anchored" data-anchor-id="tension-tensor">Tension Tensor</h3>
 <p><span id="eq-emtension"><span class="math display">\[\begin{split} &amp;   
 \nabla\cdot\mathscr{T} = \varepsilon_0 \left( \mathscr{E} \times \nabla\times\mathscr{E} - \mathscr{E} \nabla\cdot\mathscr{E} \right) + \frac{1}{\mu_0} \left( \mathscr{B} \nabla\times\mathscr{B} - \mathscr{B}\nabla\cdot\mathscr{B} \right)
 \end{split} \tag{5}\]</span></span></p>
@@ -124,7 +133,8 @@ p = \int F \hat{=}
 <p><span class="math inline">\(w_i\)</span> = energy densities (electric <span class="math inline">\(w_e\)</span>, magnetic <span class="math inline">\(e_m\)</span>, gravitational, etc. …), <span class="math inline">\(i \in \mathbb{N}\)</span></p>
 <p><span class="math inline">\(\mathbf{\mathscr{S}}_{w_i}\)</span> = Poynting-Vectros <span class="math inline">\(\hat{=}\)</span> energy transport densities (transfers) by fields (electric, magnetic, gravitational, etc. …) to corresponding energy densities <span class="math inline">\(w_i\)</span></p>
 <p><span class="math inline">\(\boldsymbol{j} \cdot \mathscr{E}\)</span> = energy gain provided by fields <span class="math inline">\(\mathscr{E}\)</span> and <span class="math inline">\(\mathscr{B}\)</span> through current density <span class="math inline">\(j\)</span></p>
-<p><span class="math inline">\(\mathscr{T}\)</span> = Tension Tensor; Tension <span class="math inline">\(\hat{=} \Delta\)</span>Forces = Pressure - Traction <span class="math inline">\(\hat{=}\)</span> Torsion Tension at angular momentum$</p>
+<p><span class="math inline">\(\mathscr{T}\)</span> = Tension Tensor (momentum flow density); Tension <span class="math inline">\(\hat{=} \Delta\)</span>Forces = Pressure - Traction <span class="math inline">\(\hat{=}\)</span> Torsion Tension at angular momentum$</p>
+</section>
 <section id="mechanical" class="level3">
 <h3 class="anchored" data-anchor-id="mechanical">Mechanical</h3>
 <p>…</p>

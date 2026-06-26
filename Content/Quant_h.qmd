@@ -3,11 +3,11 @@ Action Quantum, Planck Constant (Energy-Frequency-Slope)\footnote{Wirkungsquantu
 
 $$\begin{split} &
 h = 
-\tan(\alpha) = 
+\tan(\varphi) = 
 \frac{E_{kin}}{\nu_i - \nu_0} = 
 \frac{eV_{0i}}{\nu_i - \nu_0} 
 \equiv \\&
-\frac{\Delta E}{\nu_0} =
+\frac{E_1 - E_2}{\nu_0} =
 \frac{W}{\nu_0} = 
 \frac{F_{EM} \cdot x}{\nu_0} = 
 \hbar k \lambda
@@ -15,12 +15,26 @@ h =
 
 $$\begin{split} &
 \hbar = 
-\frac{\Delta E}{\omega} = 
+\frac{E_1 - E_2}{\omega} = 
 \end{split}$${#eq-quant_h-2}
 
 $$\begin{split} &
-\alpha = \angle( E_{kin}, \nu ) \qquad
-e = \textnormal{electron charge} \qquad \\&
-V_0 = \textnormal{Opposing Potential ($I=0$)} \qquad
-E_{kin}^{max} = eV_0	\qquad
-\end{split}$${#eq-quant_h-3}
+E_{kin}^{max} = 
+eV_0 = 
+e \frac{Q}{C} = 
+h(\nu - \nu_0)
+\end{split}$${#eq-quant_h-4}
+
+$$
+V_0 = \textnormal{Opposing Potential ($I=0$)}
+$$\linebreak$$
+\varphi = \angle( E_{kin}, \nu ) \qquad
+e = \textnormal{electron charge} \qquad
+Q = \textnormal{ion charge} \qquad
+$$\linebreak$$
+C = \textnormal{Capacitance} \qquad
+\nu = \frac{1}{2\pi} \frac{1}{\sqrt{LC}} \sqrt{1 - \frac{C}{L}R^2}
+$$\linebreak$$
+\Rightarrow \textnormal{Inductance } L = \frac{4\pi^2}{C} \left( \frac{e}{h}Q + \nu_0 \right)^2
+$$
+
