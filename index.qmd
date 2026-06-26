@@ -10,13 +10,14 @@ author:
     email: eugenionetweb@gmail.com
     # affiliation:
     #   name: eugenionet.github.io
-    #   url: www.eugenionet.github.io/physecon
+    #   url: www.eugenionet.github.io/potentials
 
 date: today
 
 keywords:
   - Physics
   - Economy
+  - Potential
 
 copyright: 
   holder: Author
@@ -33,7 +34,7 @@ nocite: |
 
 # https://quarto.org/docs/authoring/front-matter.html#abstract
 abstract: |
-    An exploratory attempt ...
+    Distllation and exploratory attempt ...
     Interconnection network between movement, force, momentum, energy, and work.
     Describing systems with Lagrangian and Hamltonian when constraints and starting conditions exist.
     Modeling systems and optimisation with constraints and conditions.
@@ -62,53 +63,9 @@ abstract: |
 \ -->
 
 
-# Introduction {#sec-introduction}
+# Potentials {#sec-potentials}
 
-{{< include Content/intro.qmd >}}
-\
-\
-
-
-# Motion and State Change {#sec-motion}
-
-{{< include Content/motion.qmd >}}
-\
-\
-
-# Work and Energy {#sec-workenergy}
-
-{{< include Content/work-energy.qmd >}}
-\
-\
-
-# Constrains and Conditions {#sec-constraints}
-
-{{< include Content/constraints.qmd >}}
-\
-\
-
-# Determinism and Uncertainity {#sec-determinism}
-
-{{< include Content/determinism.qmd >}}
-\
-\
-
-
-# Ex-ante Framing and Post-ante Optimization {#sec-optimization}
-
-{{< include Content/optimization.qmd >}}
-\
-\
-
-# Productiviy and Value {#sec-productivityvalue}
-
-{{< include Content/econom.qmd >}}
-\
-\
-
-# Hypothesis and Conjecture {#sec-hypothesis}
-
-{{< include Content/hypothesis.qmd >}}
+{{< include Content/Potentials.qmd >}}
 \
 \
 
