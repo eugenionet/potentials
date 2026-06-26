@@ -3,21 +3,20 @@ title: Physics Concepts as Indicative Framework to Model Systems of Economies Ex
 
 # draft: true 
 
-subtitle: Coincise Notes and Conjectures Explorations of Natural Laws as Approach to Preliminarly Structure Economies - A Distillation of Corroboration of Mathematical Models
+subtitle: Coincise Notes and Conjectures Explorations of Natural Laws as Approach to Preliminarly Structure Economies
 
 author:
   - name: Eugenio Net
     email: eugenionetweb@gmail.com
     # affiliation:
     #   name: eugenionet.github.io
-    #   url: www.eugenionet.github.io/potentials
+    #   url: www.eugenionet.github.io/physecon
 
 date: today
 
 keywords:
   - Physics
-  - Energy
-  - Potential
+  - Economy
 
 copyright: 
   holder: Author
@@ -56,10 +55,70 @@ abstract: |
 \
 
 
+<!-- # Abstract {#sec-abstract}
+
+{{< include Content/abstract.qmd >}}
+\
+\ -->
 
 
-# POTENTIALS {#sec-potential}
+# Introduction {#sec-introduction}
 
-{{< include C:/Users/erine/Desktop/Physics-Explorations/GitHub-Physics/Potentials/Content/Potentials.qmd >}}
+{{< include Content/intro.qmd >}}
 \
 \
+
+
+# Motion and State Change {#sec-motion}
+
+{{< include Content/motion.qmd >}}
+\
+\
+
+# Work and Energy {#sec-workenergy}
+
+{{< include Content/work-energy.qmd >}}
+\
+\
+
+# Constrains and Conditions {#sec-constraints}
+
+{{< include Content/constraints.qmd >}}
+\
+\
+
+# Determinism and Uncertainity {#sec-determinism}
+
+{{< include Content/determinism.qmd >}}
+\
+\
+
+
+# Ex-ante Framing and Post-ante Optimization {#sec-optimization}
+
+{{< include Content/optimization.qmd >}}
+\
+\
+
+# Productiviy and Value {#sec-productivityvalue}
+
+{{< include Content/econom.qmd >}}
+\
+\
+
+# Hypothesis and Conjecture {#sec-hypothesis}
+
+{{< include Content/hypothesis.qmd >}}
+\
+\
+
+
+# Acronyms
+
+{{< include Content/acronyms.qmd >}}
+\
+\
+
+
+{{< include Content/prefooter.qmd >}}
+___

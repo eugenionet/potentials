@@ -65,15 +65,122 @@ website:
             href: dummy.qmd
           - text: "Inquiries on Nature"
             href: dummy.qmd
-          - text: "On Inertia, Multipoles, and Potentials"
-            href: dummy.qmd            
       - section: "Explorations"
         contents:
+          - text: "Periodicity"
+            href: Content/2pi.qmd
+          - text: "Lightspeed, Matter and Vacuum"
+            href: Content/lightspeed.qmd
+          - text: "Refraction and Matter"
+            href: Content/refraction.qmd
+          - text: "Metric"
+            href: Content/metric.qmd
+          - text: "Finestructure"
+            href: Content/finestructure.qmd
+          - text: "Potential"
+            href: Content/Potential.qmd
+          - text: "Electric Field"
+            href: Content/Field-E_Electric.qmd    
+          - text: "Magnetic Field"
+            href: Content/Field-B_Magnetic.qmd
+          - text: "Wavelength"
+            href: Content/Wavelength.qmd
+          - text: "Frequency"
+            href: Content/Frequency.qmd
+          - text: "Phase"
+            href: Content/Phase.qmd
+          - text: "Phaseshift"
+            href: Content/Phaseshift.qmd
+          - text: "Period"
+            href: Content/Period.qmd
+          - text: "Energy"
+            href: Content/Energy_1.qmd
+          - text: "Momentum"
+            href: Content/Momentum.qmd
+          - text: "Inertia"
+            href: Content/Inertia.qmd
+          - text: "Force"
+            href: Content/Force.qmd
+          - text: "Coupling"
+            href: Content/Coupling.qmd
+          - text: "Power"
+            href: Content/Power.qmd
+          - text: "Action"
+            href: Content/Action.qmd
+          - text: "Probability"
+            href: Content/Probability.qmd
+          - text: "Radiation"
+            href: Content/Radiation.qmd
+          - text: "Reflection and Transmission"
+            href: Content/Reflection-Transmission.qmd
+          - text: "Sharpness"
+            href: Content/Sharpness.qmd
+          - text: "Intensity"
+            href: Content/Intensity.qmd
+          - text: "Solid Angle"
+            href: Content/SolidAngle.qmd
+          - text: "Radiation Power"
+            href: Content/Radiation_Power.qmd
+          - text: "Resolutkion Optical"
+            href: Content/Resolution-opt.qmd
+          - text: "Luminosity"
+            href: Content/Luminosity.qmd
+          - text: "Visibility"
+            href: Content/Visibility.qmd
+          - text: "Magnification"
+            href: Content/Magnification.qmd
+          - text: "Radiation Creation"
+            href: Content/Radiation_Creation.qmd
+          - text: "Radiation Detection"
+            href: Content/Radiation_Detection.qmd
+          - text: $\beta$-Decay
+            href: Content/Beta-decay.qmd
+          - text: "D-Field Exitation"
+            href: Content/Field-D_Exitation.qmd
+          - text: "H-Field Exitation"
+            href: Content/Field-H_Exitation.qmd
+          - text: "Orientations"
+            href: Content/Orientations.qmd
+          - text: "Particle"
+            href: Content/Particle.qmd
+          - text: "Reversible Processes"
+            href: Content/Reversible-Process.qmd
+          - text: "Invariance and Symmetry"
+            href: Content/Invariance-Symmetry.qmd
+          - text: "Static, Kinetic, Dynamic"
+            href: dummy.qmd
+          - text: "Lagrange-Hamilton"
+            href: dummy.qmd
+          - text: "Space Time Matter"
+            href: dummy.qmd
+          - text: "Degrees of Freedom"
+            href: dummy.qmd
+          - text: "Movement & State"
+            href: dummy.qmd
+          - text: "Restrictions & Constraints, Boundries & Limitations"
+            href: dummy.qmd
+          - text: "Equilibrium & Laborsystem"
+            href: dummy.qmd
+          - text: "Work & Energy, Information"
+            href: dummy.qmd
+          - text: "Force and Momenta"
+            href: dummy.qmd
+          - text: "Entropy & Enthalpy"
+            href: dummy.qmd
+          - text: "Symmetry & Conservation"
+            href: dummy.qmd
+          - text: "Reversability"
+            href: dummy.qmd
+          - text: "Refraction & Medium"
+            href: dummy.qmd
+          - text: "Action & Path"
+            href: dummy.qmd
           - text: "Potentials"
-            href: C:/Users/erine/Desktop/Physics-Explorations/GitHub-Physics/Potentials/Potentials.qmd
-          - text: "Operators"
-            href: C:/Users/erine/Desktop/Physics-Explorations/GitHub-Physics/PhysEcon/Content/Operators.qmd
-      - section: "Resources"
+            href: dummy.qmd
+          - text: "Renormalization"
+            href: dummy.qmd
+          - text: "Continum & Quantum"
+            href: dummy.qmd
       - section: "Resources"
         href: dummy.qmd
         contents:
