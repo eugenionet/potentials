@@ -432,10 +432,83 @@ c \sqrt{\varepsilon\mu}
 <p><span id="eq-energbal"><span class="math display">\[\begin{split} &amp;   
 \frac{\partial}{\partial t} \sum w_i+ \mathbf{\nabla} \cdot \sum \mathbf{\mathscr{S}}_{w_i} + \boldsymbol{j} \cdot \mathscr{E} = 0
 \end{split} \tag{27}\]</span></span></p>
-<p>Abbreviations:4</p>
+<p><span class="math display">\[
+E = E_{kin} + E_{pot} = \sqrt{ \left( pc \right)^2 + \left( mc^2 \right)^2 } \stackrel{\text{vacuum}}{=} pc = \hbar\omega
+\]</span></p>
+</section>
+<section id="local-force-balance" class="level2">
+<h2 class="anchored" data-anchor-id="local-force-balance">Local Force Balance</h2>
+<p><span id="eq-localforce"><span class="math display">\[\begin{split} &amp;
+\dot{p} = F \hat{=}
+\newline &amp;
+\underbrace{
+\varrho\mathscr{E} + j \times \mathscr{B}
+}_\text{charge force}
++
+\underbrace{
+\frac{\partial}{\partial t}\frac{1}{c^2}\mathscr{S}
+}_\text{field force}
++
+\underbrace{
+\nabla \cdot \mathscr{T}
+}_\text{tension force}
+= 0
+\end{split} \tag{28}\]</span></span></p>
+<section id="stress-tensor-tension-force" class="level3">
+<h3 class="anchored" data-anchor-id="stress-tensor-tension-force">Stress Tensor (Tension Force)</h3>
+<p>Stres Tensor quantifies tension <span class="math inline">\(\hat{=} \Delta\)</span> Forces = Pressure - Traction <span class="math inline">\(\hat{=}\)</span> “torsion tension” at angular momentum</p>
+<p><span id="eq-tension"><span class="math display">\[\begin{split} &amp;   
+\nabla\cdot\mathscr{T} = \varepsilon_0 \left( \mathscr{E} \times \nabla\times\mathscr{E} - \mathscr{E} \nabla\cdot\mathscr{E} \right) + \frac{1}{\mu_0} \left( \mathscr{B} \nabla\times\mathscr{B} - \mathscr{B}\nabla\cdot\mathscr{B} \right)
+\end{split} \tag{29}\]</span></span></p>
+<p><span id="eq-stresstensor"><span class="math display">\[\begin{split} &amp;   
+\mathscr{T} \hat{=} \mathscr{T}_{ik} =
+\delta_{ik} \left( \frac{1}{2}\varepsilon_0\mathscr{E}^2 + \frac{1}{2}\frac{1}{\mu_0}\mathscr{B}^2 \right)
+- \varepsilon_0\mathscr{E}_i\mathscr{E}_k
+- \frac{1}{\mu_0}\mathscr{B}_i\mathscr{B}_k
+\end{split} \tag{30}\]</span></span></p>
+<p><span class="math inline">\(\mathscr{E}\)</span> and <span class="math inline">\(\mathscr{B}\)</span> fields of spacial confined charge and current density distribution, far field, static: <span class="math inline">\(\mathscr{T}\sim \frac{1}{r^4}\)</span> <span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(\int_{\mathbb{R}^3}\mathscr{T}d^3r = \int_{\infty}\mathscr{T}df = 0\)</span></p>
+</section>
+<section id="momentum-conservation-and-local-tension" class="level3">
+<h3 class="anchored" data-anchor-id="momentum-conservation-and-local-tension">Momentum Conservation and Local Tension</h3>
+<p>linear momentum conservation if <span class="math inline">\(p = const.\)</span>, otherwise “tension” occures:</p>
+<p><span class="math display">\[
+p = \int F = \int \frac{d}{dt} p = \sqrt{\frac{1}{c^2} \left( E^2 - \left( mc \right)^2 \right)} \stackrel{\text{vacuum}}{=} \frac{E}{c} = \frac{2\pi}{c^2}h\nu
+\]</span></p>
+<p><span class="math inline">\(p = const.\)</span>, linear, vacuum, Far Field:</p>
+<p><span id="eq-farlinmomentum"><span class="math display">\[\begin{split} &amp;
+F = \dot{p} \hat{=}
+\int\limits_{\mathbb{R}^{3}} \frac{d}{dt} \left[ \underbrace{\left( \varrho\mathscr{E} + j \times \mathscr{B} \right)}_\text{charge force density} + \underbrace{\frac{\partial}{\partial t}\frac{1}{c^2}\mathscr{S}}_\text{field force density} \right] =
+\newline &amp;
+\frac{d}{dt} \underbrace{ \left[\underbrace{
+    \int\limits_{\mathbb{R}^{3}} \left( \varrho\mathscr{E} + j \times \mathscr{B} \right)}_\text{charge momentum} + \underbrace{\frac{1}{c^2}\mathscr{S}
+    }_\text{field momentum}\right] }_\text{= p momentum conserved if p = const.}
+    = 0
+\end{split} \tag{31}\]</span></span></p>
+<p><span class="math inline">\(p \neq const.\)</span>, local <span class="math inline">\(\in \mathbb{R}^2 \ll \mathbb{R}^3 = \infty\)</span>, linear, vacuum, Near Field <span class="math inline">\(\Leftrightarrow \exists -\mathscr{T}\)</span> as tension compensation flux:</p>
+<p><span id="eq-nearlinmomentum"><span class="math display">\[\begin{split} &amp;
+F = \dot{p} \hat{=}
+\int\limits_{local} \frac{d}{dt} \left[ \underbrace{\left( \varrho\mathscr{E} + j \times \mathscr{B} \right)}_\text{charge force density} + \underbrace{\frac{\partial}{\partial t}\frac{1}{c^2}\mathscr{S}}_\text{field force density} \right] =
+\newline &amp;
+\frac{d}{dt} \underbrace{ \left[\underbrace{
+    \int\limits_{local} \left( \varrho\mathscr{E} + j \times \mathscr{B} \right)}_\text{charge momentum} + \underbrace{\frac{1}{c^2}\mathscr{S}
+    }_\text{field momentum}\right] }_{= p \neq const., \;\exists\; -\mathscr{T} \;\text{local tension}}
+    \stackrel{local}{=}
+    - \int\limits_{\mathbb{R}^{2}} \textbf{n} \cdot \mathscr{T} \underbrace{\;df}_\text{"skin"}
+\end{split} \tag{32}\]</span></span></p>
+<p>Momentum <span class="math inline">\(p = \int\limits_{\mathbb{R}^{3}} \left( \varrho\mathscr{E} + j \times \mathscr{B} \right) + \frac{1}{c^2}\mathscr{S}\)</span></p>
+<p>photon Spin = <span class="math inline">\(\int\limits_{\mathbb{R}^{3}} \frac{1}{c^2}\mathscr{S}\)</span></p>
+<p>angular momentum (photon Spin): <span id="eq-locangmomentum"><span class="math display">\[\begin{split} &amp;  
+D = \dot{L} \hat{=}
+...
+\end{split} \tag{33}\]</span></span></p>
+</section>
+<section id="abbreviations-1" class="level3">
+<h3 class="anchored" data-anchor-id="abbreviations-1">Abbreviations:</h3>
 <p><span class="math inline">\(w_i\)</span> = energy densities (electric <span class="math inline">\(w_e\)</span>, magnetic <span class="math inline">\(e_m\)</span>, gravitational, etc. …), <span class="math inline">\(i \in \mathbb{N}\)</span></p>
 <p><span class="math inline">\(\mathbf{\mathscr{S}}_{w_i}\)</span> = Poynting-Vectros <span class="math inline">\(\hat{=}\)</span> energy transport densities (transfers) by fields (electric, magnetic, gravitational, etc. …) to corresponding energy densities <span class="math inline">\(w_i\)</span></p>
 <p><span class="math inline">\(\boldsymbol{j} \cdot \mathscr{E}\)</span> = energy gain provided by fields <span class="math inline">\(\mathscr{E}\)</span> and <span class="math inline">\(\mathscr{B}\)</span> through current density <span class="math inline">\(j\)</span></p>
+<p><span class="math inline">\(\mathscr{T}\)</span> = Stress Tensor, (tension, momentum flow density)</p>
+</section>
 <section id="mechanical" class="level3">
 <h3 class="anchored" data-anchor-id="mechanical">Mechanical</h3>
 <p>…</p>
@@ -445,7 +518,7 @@ c \sqrt{\varepsilon\mu}
 <p>charge conservation:</p>
 <p><span id="eq-continuity"><span class="math display">\[\begin{split} &amp;   
 \frac{\partial}{\partial t}\varrho + \nabla \cdot j = 0
-\end{split} \tag{28}\]</span></span></p>
+\end{split} \tag{34}\]</span></span></p>
 <p><span class="math inline">\(\varrho = \sigma\delta =\)</span> charge density in interior</p>
 <p><span class="math inline">\(\sigma =\)</span> charge density at border (skin)</p>
 <p><span class="math inline">\(\delta =\)</span> Dirac delta-function</p>
@@ -461,35 +534,29 @@ c \sqrt{\varepsilon\mu}
 \newline &amp;
 \stackrel{\textnormal{low frequency}}{=}
 \frac{1}{2}\frac{d}{dt} \left( LI^2 \right) + \frac{1}{2}\frac{d}{dt} \left( \frac{Q^2}{C} \right) + \left( RI^2 - VI \right) = 0
-\end{split} \tag{29}\]</span></span></p>
-<p>Abreviations: <span class="math display">\[
-\Delta \cdot \coloneqq \textnormal{ div grad = Laplacian}
-\]</span><span class="math display">\[  
-J = \textnormal{"ignition of inhomogenity,cause"} \quad
-j = \textnormal{Current density} \quad
-\varrho = \textnormal{Charge density}
-\]</span><span class="math display">\[  
-V = \textnormal{Potentialdifference} \quad  
-I = \textnormal{Current} \quad
-R = \textnormal{Resistance} \quad
-\]</span><span class="math display">\[  
-L = \textnormal{Inductance} \qquad  
-C = \textnormal{Capacitance} \qquad
-Q = c\textnormal{harge (ion)} \qquad
-\Psi = LI = \textnormal{mag. Flux}
-\]</span><span class="math display">\[
-\mathscr{S} = \mathscr{E} \times \mathscr{H} = \textnormal{Poynting-Vector, radiation intensity}
-\]</span><span class="math display">\[
-D_S = \int \left( \mathbf{\nabla} \cdot \mathbf{\mathscr{S}} \right) \, dr = \int \textnormal{div}(\mathscr{E} \times \mathscr{H}) \, dr = \textnormal{dissipation engergy lost from radiation} \approx \textnormal{0 for low frequencies } \omega
-\]</span><span class="math display">\[
-d = \sqrt{\frac{1}{\mu \sigma} \frac{2}{\omega}} = \textnormal{skin depth (surface) of conductor} \qquad
-r = \frac{d}{\sqrt{2i}}\rho = \frac{d}{1+i}\rho = \textnormal{radius (extension) of conductor}
-\]</span><span class="math display">\[
-\rho = kr = \textnormal{"radius of curvature $k$"}
-\]</span><span class="math display">\[
-\mu = \textnormal{permeability of conductor}    \qquad
-\sigma = \textnormal{conductivity of conductor (dielectricum)} \qquad
-\]</span></p>
+\end{split} \tag{35}\]</span></span></p>
+</section>
+<section id="abbreviations-2" class="level3">
+<h3 class="anchored" data-anchor-id="abbreviations-2">Abbreviations:</h3>
+<p><span class="math inline">\(\textbf{n} =\)</span> surface normal vector (orthongoal on skin)</p>
+<p><span class="math inline">\(\Delta \cdot \coloneqq\)</span> div grad = Laplacian</p>
+<p><span class="math inline">\(J =\)</span> “ignition of inhomogenity,cause”</p>
+<p><span class="math inline">\(j =\)</span> Current density</p>
+<p><span class="math inline">\(\varrho =\)</span> Charge density</p>
+<p><span class="math inline">\(V =\)</span> Potentialdifference</p>
+<p><span class="math inline">\(I =\)</span> Current</p>
+<p><span class="math inline">\(R =\)</span> Resistance</p>
+<p><span class="math inline">\(L =\)</span> Inductance</p>
+<p><span class="math inline">\(C =\)</span> Capacitance</p>
+<p><span class="math inline">\(Q =\)</span> charge (ion)</p>
+<p><span class="math inline">\(\Psi = LI =\)</span> magn. Flux</p>
+<p><span class="math inline">\(\mathscr{S} = \mathscr{E} \times \mathscr{H} =\)</span> Poynting-Vector, radiation intensity</p>
+<p><span class="math inline">\(D_S = \int \left( \mathbf{\nabla} \cdot \mathbf{\mathscr{S}} \right) \, dr = \int \textnormal{div}(\mathscr{E} \times \mathscr{H}) \, dr =\)</span> dissipation engergy lost from radiation <span class="math inline">\(\approx 0\)</span> for low frequencies <span class="math inline">\(\omega\)</span></p>
+<p><span class="math inline">\(d = \sqrt{\frac{1}{\mu \sigma} \frac{2}{\omega}} =\)</span> skin depth (surface) of conductor</p>
+<p><span class="math inline">\(r = \frac{d}{\sqrt{2i}}\rho = \frac{d}{1+i}\rho =\)</span> radius (extension) of conductor</p>
+<p><span class="math inline">\(\rho = kr =\)</span> “radius of curvature <span class="math inline">\(k\)</span>”</p>
+<p><span class="math inline">\(\mu =\)</span> permeability of conductor</p>
+<p><span class="math inline">\(\sigma =\)</span> conductivity of conductor (dielectricum)</p>
 </section>
 <section id="thermal" class="level3">
 <h3 class="anchored" data-anchor-id="thermal">Thermal</h3>
@@ -508,13 +575,13 @@ U_1 - U_2 =
 r \mathscr{E} =
 \dot{\Psi} + R I + \frac{I}{C}t =
 L \dot{I} + R I + \frac{Q}{C}
-\end{split} \tag{30}\]</span></span></p>
+\end{split} \tag{36}\]</span></span></p>
 <p><br>
 </p>
 </section>
 <section id="low-frequency" class="level2">
 <h2 class="anchored" data-anchor-id="low-frequency">Low Frequency</h2>
-<p><span id="eq-lowfreq-cond"><span class="math display">\[\begin{split} &amp; \omega \ll \frac{1}{\mu \sigma} \frac{2}{r^2} \iff r \ll d \iff \rho \ll 1 \end{split} \tag{31}\]</span></span> <span class="math display">\[
+<p><span id="eq-lowfreq-cond"><span class="math display">\[\begin{split} &amp; \omega \ll \frac{1}{\mu \sigma} \frac{2}{r^2} \iff r \ll d \iff \rho \ll 1 \end{split} \tag{37}\]</span></span> <span class="math display">\[
 L \approx const.    \qquad
 C \approx const.    \qquad
 D_S \approx 0
@@ -522,7 +589,7 @@ D_S \approx 0
 </section>
 <section id="high-frequency" class="level2">
 <h2 class="anchored" data-anchor-id="high-frequency">High Frequency</h2>
-<p><span id="eq-highfreq-cond"><span class="math display">\[\begin{split} &amp; \omega \gg \frac{1}{\mu \sigma} \frac{2}{r^2} \iff r \gg d \iff \rho \gg 1 \end{split} \tag{32}\]</span></span> <span class="math display">\[
+<p><span id="eq-highfreq-cond"><span class="math display">\[\begin{split} &amp; \omega \gg \frac{1}{\mu \sigma} \frac{2}{r^2} \iff r \gg d \iff \rho \gg 1 \end{split} \tag{38}\]</span></span> <span class="math display">\[
 L(t) \neq const.    \qquad
 C(t) \neq const.   \qquad
 \textnormal{for Dipol: } D_S \propto \omega^4 \gg 0
@@ -617,17 +684,17 @@ h =
 \frac{W}{\nu_0} =
 \frac{F_{EM} \cdot x}{\nu_0} =
 \hbar k \lambda
-\end{split} \tag{33}\]</span></span></p>
+\end{split} \tag{39}\]</span></span></p>
 <p><span id="eq-quant_h-2"><span class="math display">\[\begin{split} &amp;
 \hbar =
 \frac{E_1 - E_2}{\omega} =
-\end{split} \tag{34}\]</span></span></p>
+\end{split} \tag{40}\]</span></span></p>
 <p><span id="eq-quant_h-4"><span class="math display">\[\begin{split} &amp;
 E_{kin}^{max} =
 eV_0 =
 e \frac{Q}{C} =
 h(\nu - \nu_0)
-\end{split} \tag{35}\]</span></span></p>
+\end{split} \tag{41}\]</span></span></p>
 <p><span class="math display">\[
 V_0 = \textnormal{Opposing Potential ($I=0$)}
 \]</span><span class="math display">\[
@@ -678,7 +745,7 @@ C = \textnormal{Capacitance} \qquad
 \frac{\hbar}{2m} \vec{k}^2  =
 \frac{\hbar}{2m} \Delta\Psi(\vec{r},t) =
 i \frac{\partial\Psi(\vec{r},t)}{\partial t}
-\end{split} \tag{36}\]</span></span></p>
+\end{split} \tag{42}\]</span></span></p>
 <p><span id="eq-refractionindex-1"><span class="math display">\[\begin{split} &amp;
 \nu =
 \frac{E}{h} =
@@ -686,24 +753,24 @@ i \frac{\partial\Psi(\vec{r},t)}{\partial t}
 \frac{c^2}{v} \frac{1}{\lambda} =
 \frac{\omega}{k} \frac{1}{\lambda} =
 \frac{\omega}{2\pi}
-\end{split} \tag{37}\]</span></span></p>
+\end{split} \tag{43}\]</span></span></p>
 <p><span id="eq-refractionindex-2"><span class="math display">\[\begin{split} &amp;
 \nu_i =
 \frac{eV_{0i}}{h} + \nu_0 =
 \frac{E_{kin}}{\hbar} \omega\mathcal{T} + \nu_0
-\end{split} \tag{38}\]</span></span></p>
+\end{split} \tag{44}\]</span></span></p>
 <p><span id="eq-electroncharge"><span class="math display">\[\begin{split} &amp;
 e = \textnormal{electron charge}
 \qquad
 V_0 = \textnormal{Opposing Potential ($I=0$)}
 \\
 \textnormal{Energy Level: } i = [1,n] \in \mathbb{N}
-\end{split} \tag{39}\]</span></span></p>
+\end{split} \tag{45}\]</span></span></p>
 <p><span id="eq-energy_kin_max"><span class="math display">\[\begin{split} &amp;
 E_{kin}^{max} =
 eV_0 =
 h(\nu - \nu_0)
-\end{split} \tag{40}\]</span></span></p>
+\end{split} \tag{46}\]</span></span></p>
 </section>
 <section id="frequency-contextual-causes" class="level3">
 <h3 class="anchored" data-anchor-id="frequency-contextual-causes">Frequency contextual Causes</h3>
@@ -712,7 +779,7 @@ h(\nu - \nu_0)
 \frac{v}{r} =
 \omega =
 \frac{\lambda}{t}
-\end{split} \tag{41}\]</span></span></p>
+\end{split} \tag{47}\]</span></span></p>
 <section id="rest-state-of-source-charge" class="level4">
 <h4 class="anchored" data-anchor-id="rest-state-of-source-charge">Rest state of source charge</h4>
 <p>Statics localization of charge. Only spacial demependeny, no time dependency.</p>
