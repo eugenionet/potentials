@@ -28,7 +28,7 @@ license: "CC BY"
 bibliography: references.bib  
 csl: diabetologia.csl
 
-nocite: |
+ocite: |
   @*  
 
 
