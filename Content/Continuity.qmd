@@ -5,7 +5,7 @@ $$\begin{split} &
 \frac{\partial}{\partial t}\varrho + \nabla \cdot j = 0
 \end{split}$${#eq-continuity} 
 
-$\varrho = \sigma\delta =$ charge density in interior
+$\varrho = \sigma\delta = \varepsilon_0 \nabla\cdot \mathscr{E} =$ charge density in interior
 
 $\sigma =$ charge density at border (skin)
 

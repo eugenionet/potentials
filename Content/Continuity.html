@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>energy-balance</title>
+<title>continuity</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,18 +23,18 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="energy-balance_files/libs/clipboard/clipboard.min.js"></script>
-<script src="energy-balance_files/libs/quarto-html/quarto.js" type="module"></script>
-<script src="energy-balance_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="energy-balance_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="energy-balance_files/libs/quarto-html/popper.min.js"></script>
-<script src="energy-balance_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="energy-balance_files/libs/quarto-html/anchor.min.js"></script>
-<link href="energy-balance_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="energy-balance_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="energy-balance_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="energy-balance_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="energy-balance_files/libs/bootstrap/bootstrap-9e3ffae467580fdb927a41352e75a2e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="Continuity_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Continuity_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="Continuity_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="Continuity_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="Continuity_files/libs/quarto-html/popper.min.js"></script>
+<script src="Continuity_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Continuity_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Continuity_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Continuity_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Continuity_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Continuity_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Continuity_files/libs/bootstrap/bootstrap-9e3ffae467580fdb927a41352e75a2e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -77,248 +77,13 @@ window.Quarto = {
 
 
 
-<section id="electromagnectic-energy-exchange" class="level1">
-<h1>Electromagnectic Energy Exchange</h1>
 <p>charge conservation:</p>
 <p><span id="eq-continuity"><span class="math display">\[\begin{split} &amp;   
 \frac{\partial}{\partial t}\varrho + \nabla \cdot j = 0
 \end{split} \tag{1}\]</span></span></p>
-<p><span class="math inline">\(\varrho = \sigma\delta = \varepsilon_0 \nabla\cdot \mathscr{E} =\)</span> charge density in interior</p>
+<p><span class="math inline">\(\varrho = \sigma\delta = \varepsilon_0 \nabla\cdot \mathscr{E}\)</span> charge density in interior</p>
 <p><span class="math inline">\(\sigma =\)</span> charge density at border (skin)</p>
 <p><span class="math inline">\(\delta =\)</span> Dirac delta-function</p>
-<p><span class="math inline">\(\boldsymbol{j} = \sigma \left( \mathscr{E} + v \times \mathscr{B} \right) = \nabla \times \mathscr{H} - \frac{\partial}{\partial t}\mathscr{D} = \frac{1}{\mu_0}\nabla\times\mathscr{B} - \varepsilon_0\frac{\partial}{\partial t}\mathscr{E}  \hat{=}\)</span> elecectric current density</p>
-<p><span class="math inline">\(\boldsymbol{j} \cdot \mathscr{E} \hat{=}\)</span> energy gain by fields <span class="math inline">\(\mathscr{E}\)</span> and <span class="math inline">\(\mathscr{B}\)</span> through current density <span class="math inline">\(j\)</span></p>
-<p><span class="math inline">\(\mathscr{S} = \mathscr{E} \times \mathscr{H} \hat{=}\)</span> energy transport density (Intensity = <span class="math inline">\(\left| \bar{\mathscr{S}} \right|\)</span>)</p>
-<p>Energy conservation for (large extended) conductive medium:</p>
-<p><span id="eq-energyconserv-1"><span class="math display">\[\begin{split} &amp;   
-\int    \left(
-\frac{\partial}{\partial t} \left( w_e + w_m \right) + \mathbf{\nabla} \cdot \mathbf{\mathscr{S}} + \boldsymbol{j} \cdot \mathscr{E}
-\right) \, dr
-= \frac{d}{dt}W_e + \frac{d}{dt}W_m + D_S + \int \left( \boldsymbol{j} \cdot \mathscr{E} \right) \, dr
-\newline &amp;
-\stackrel{\textnormal{low frequency}}{=}
-\frac{1}{2}\frac{d}{dt} \left( LI^2 \right) + \frac{1}{2}\frac{d}{dt} \left( \frac{Q^2}{C} \right) + \left( RI^2 - VI \right) = 0
-\end{split} \tag{2}\]</span></span></p>
-<section id="energy-balance" class="level2">
-<h2 class="anchored" data-anchor-id="energy-balance">Energy Balance</h2>
-<p>Electro-Magnetic Energy: <span id="eq-emenergy"><span class="math display">\[\begin{split} &amp;   
-E = E_{kin} + E_{pot} = \sqrt{ \left( pc \right)^2 + \left( mc^2 \right)^2 }
-\stackrel{\text{vacuum}}{=} pc = \hbar\omega
-\newline &amp;
-= \text{chargeenergy + fieldenergy + transportenergy}
-\end{split} \tag{3}\]</span></span></p>
-<p>Charge Energy: <span id="eq-chargeenergy"><span class="math display">\[\begin{split} &amp;
-\underbrace{  
-    j \cdot \mathscr{E}
-}_\text{charge energy} =
-- \left(
-\underbrace{
-    \frac{\partial}{\partial t} \sum w_i
-}_\text{field energy}  
-+
-\underbrace{
-    \nabla\cdot\mathscr{S}
-    }_\text{transfer energy}
-\right) =
-\mathscr{E} \cdot \nabla\times\mathscr{A} - \mathscr{E} \cdot \frac{\partial}{\partial t}\mathscr{D}
-\end{split} \tag{4}\]</span></span></p>
-<p>Field Energy: <span id="eq-fieldenergy"><span class="math display">\[\begin{split} &amp;   
-\frac{\partial}{\partial t} \sum w_i = \frac{\partial}{\partial t} \left( w_e + w_m \right) = \frac{\partial}{\partial t} w
-\end{split} \tag{5}\]</span></span></p>
-<p>Transfer Energy: <span id="eq-transferenergy"><span class="math display">\[\begin{split} &amp;   
-\nabla \cdot \mathscr{S} = ...
-\end{split} \tag{6}\]</span></span></p>
-<p>Local Energy Conservation:</p>
-<p>Force <span class="math inline">\(F = q \left( \mathscr{E} + v \times \mathscr{B} \right)\)</span></p>
-<p>Work <span class="math inline">\(W = \Delta E = Fr = pv = const.\)</span></p>
-<p>Power <span class="math inline">\(\frac{d}{dt}W = 0\)</span></p>
-<p><span id="eq-energbal"><span class="math display">\[\begin{split} &amp;
-\overbrace{
-\underbrace{
-    \boldsymbol{j} \cdot \mathscr{E}
-}_\text{charge energy}
-+
-\underbrace{
-    \frac{\partial}{\partial t} \sum w_i
-}_\text{field energy}
-}^\text{= const.}
-+
-\underbrace{
-    \mathbf{\nabla} \cdot \sum \mathbf{\mathscr{S}}_{w_i}
-}_\text{transfer energy}
-\stackrel{alternatives}{=}
-\newline &amp;
-\boldsymbol{j} \cdot \mathscr{E}
-+
-\frac{\partial}{\partial t}\left( \frac{1}{2}\varepsilon_0\mathscr{E}^2 + \frac{1}{2}\frac{1}{\mu_0}\mathscr{A}\cdot\nabla\times\mathscr{B} \right) +
-\frac{1}{\mu_0}\nabla\cdot\left( \mathscr{E}\times\mathscr{B} + \frac{1}{2}\frac{\partial}{\partial t}\left( \mathscr{A}\times\mathscr{B} \right) \right) =
-\newline &amp;
-... \text{alternatives according fields} ...
-\newline &amp;
-= 0
-\end{split} \tag{7}\]</span></span></p>
-<section id="energy-density-flux-pyointing-vector" class="level3">
-<h3 class="anchored" data-anchor-id="energy-density-flux-pyointing-vector">Energy Density Flux: Pyointing-Vector</h3>
-<p><span class="math display">\[
-\mathscr{S}
-\stackrel{vacuum}{=}
-\mathscr{E} \times \mathscr{B}
-\stackrel{matter}{=}
-\mathscr{E} \times \mathscr{H}
-\]</span></p>
-<p><span class="math display">\[
-\frac{d}{dt} \left(
-\underbrace{
-    \int_{\mathbb{R}^3} j \cdot \mathscr{E}
-}_\text{charge energy} +
-\underbrace{
-    \int_{\mathbb{R}^3} \frac{\partial}{\partial t} \sum w_i
-}_\text{field energy}  
-\right) =
-\underbrace{
-    - \int_{\mathbb{R}^2} \mathscr{S}
-}_\text{transported energy density}
-\]</span></p>
-</section>
-</section>
-<section id="local-force-balance" class="level2">
-<h2 class="anchored" data-anchor-id="local-force-balance">Local Force Balance</h2>
-<p>Electro-Magnetic Force: <span id="eq-emforce"><span class="math display">\[\begin{split} &amp;   
-\dot{p} = F = q \left( \mathscr{E} + v \times \mathscr{B} \right)
-\newline &amp;
-= \text{chargeforce + fieldforce + stresstension}
-\end{split} \tag{8}\]</span></span></p>
-<p>Charge Force: <span id="eq-chargeforde"><span class="math display">\[\begin{split} &amp;   
-... = \varrho\mathscr{E} + j \times \mathscr{B}
-\end{split} \tag{9}\]</span></span></p>
-<p>Field Force: <span id="eq-fieldforce"><span class="math display">\[\begin{split} &amp;   
-... = \frac{\partial}{\partial t}\frac{1}{c^2}\mathscr{S}
-\end{split} \tag{10}\]</span></span></p>
-<p>Tension Force: <span id="eq-tension"><span class="math display">\[\begin{split} &amp;   
-\nabla\cdot\mathscr{T} = \varepsilon_0 \left( \mathscr{E} \times \nabla\times\mathscr{E} - \mathscr{E} \nabla\cdot\mathscr{E} \right) + \frac{1}{\mu_0} \left( \mathscr{B} \nabla\times\mathscr{B} - \mathscr{B}\nabla\cdot\mathscr{B} \right)
-\end{split} \tag{11}\]</span></span></p>
-<p>Local Momentum Conservation:</p>
-<p>Force <span class="math inline">\(F = q \left( \mathscr{E} + v \times \mathscr{B} \right) = \frac{d}{dt}p = 0\)</span></p>
-<p>Momentum <span class="math inline">\(p = const.\)</span></p>
-<p><span id="eq-localmomentumconserv"><span class="math display">\[\begin{split} &amp;
-\overbrace{
-\underbrace{
-\varrho\mathscr{E} + j \times \mathscr{B}
-}_\text{charge force}
-+
-\underbrace{
-\frac{\partial}{\partial t}\frac{1}{c^2}\mathscr{S}
-}_\text{field force}
-}^\text{field force}
-+
-\underbrace{
-\nabla \cdot \mathscr{T}
-}_\text{tension force}
-= 0
-\end{split} \tag{12}\]</span></span></p>
-<section id="tension-force-stress-tensor" class="level3">
-<h3 class="anchored" data-anchor-id="tension-force-stress-tensor">Tension Force: Stress-Tensor</h3>
-<p>Stress Tensor quantifies tension <span class="math inline">\(\hat{=} \Delta\)</span> Forces = Pressure - Traction <span class="math inline">\(\hat{=}\)</span> “torsion tension” at angular momentum</p>
-<p><span id="eq-stresstensor"><span class="math display">\[\begin{split} &amp;   
-\mathscr{T} \hat{=} \mathscr{T}_{ik} =
-\delta_{ik} \left( \frac{1}{2}\varepsilon_0\mathscr{E}^2 + \frac{1}{2}\frac{1}{\mu_0}\mathscr{B}^2 \right)
-- \varepsilon_0\mathscr{E}_i\mathscr{E}_k
-- \frac{1}{\mu_0}\mathscr{B}_i\mathscr{B}_k
-\end{split} \tag{13}\]</span></span></p>
-<p><span class="math inline">\(\mathscr{E}\)</span> and <span class="math inline">\(\mathscr{B}\)</span> fields of spacial confined charge and current density distribution, far field, static: <span class="math inline">\(\mathscr{T}\sim \frac{1}{r^4}\)</span> <span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(\int_{\mathbb{R}^3}\mathscr{T}d^3r = \int_{\infty}\mathscr{T}df = 0\)</span></p>
-<p><span class="math display">\[
-F = \dot{p} =
-\frac{d}{dt} \underbrace{ \left[\underbrace{
-    \int\limits_{local} \left( \varrho\mathscr{E} + j \times \mathscr{B} \right)}_\text{charge momentum} + \underbrace{\frac{1}{c^2}\mathscr{S}
-    }_\text{field momentum}\right] }_{= p \neq const., \;\exists\; -\mathscr{T} \;\text{local tension}}
-    \stackrel{local}{=}
-    - \int\limits_{\mathbb{R}^{2}} \textbf{n} \cdot \mathscr{T} \underbrace{\;df}_\text{"skin"}
-\]</span></p>
-</section>
-</section>
-<section id="momentum-balance" class="level2">
-<h2 class="anchored" data-anchor-id="momentum-balance">Momentum Balance</h2>
-<p>Momentum Conservation and Local Tension: linear momentum conservation if <span class="math inline">\(p = const.\)</span>, otherwise “tension” occures:</p>
-<p><span class="math display">\[
-p = \int F = \int \frac{d}{dt} p = \sqrt{\frac{1}{c^2} \left( E^2 - \left( mc \right)^2 \right)} \stackrel{\text{vacuum}}{=} \frac{E}{c} = \frac{2\pi}{c^2}h\nu
-\]</span></p>
-<p><span class="math inline">\(p = const.\)</span>, linear, vacuum, Far Field:</p>
-<p><span id="eq-farlinmomentum"><span class="math display">\[\begin{split} &amp;
-F = \dot{p} \hat{=}
-\int\limits_{\mathbb{R}^{3}} \frac{d}{dt} \left[ \underbrace{\left( \varrho\mathscr{E} + j \times \mathscr{B} \right)}_\text{charge force density} + \underbrace{\frac{\partial}{\partial t}\frac{1}{c^2}\mathscr{S}}_\text{field force density} \right] =
-\newline &amp;
-\frac{d}{dt} \underbrace{ \left[\underbrace{
-    \int\limits_{\mathbb{R}^{3}} \left( \varrho\mathscr{E} + j \times \mathscr{B} \right)}_\text{charge momentum} + \underbrace{\frac{1}{c^2}\mathscr{S}
-    }_\text{field momentum}\right] }_\text{= p momentum conserved if p = const.}
-    = 0
-\end{split} \tag{14}\]</span></span></p>
-<p><span class="math inline">\(p \neq const.\)</span>, local <span class="math inline">\(\in \mathbb{R}^2 \ll \mathbb{R}^3 = \infty\)</span>, linear, vacuum, Near Field <span class="math inline">\(\Leftrightarrow \exists -\mathscr{T}\)</span> as tension compensation flux:</p>
-<p><span id="eq-nearlinmomentum"><span class="math display">\[\begin{split} &amp;
-F = \dot{p} \hat{=}
-\int\limits_{local} \frac{d}{dt} \left[ \underbrace{\left( \varrho\mathscr{E} + j \times \mathscr{B} \right)}_\text{charge force density} + \underbrace{\frac{\partial}{\partial t}\frac{1}{c^2}\mathscr{S}}_\text{field force density} \right] =
-\newline &amp;
-\frac{d}{dt} \underbrace{ \left[\underbrace{
-    \int\limits_{local} \left( \varrho\mathscr{E} + j \times \mathscr{B} \right)}_\text{charge momentum} + \underbrace{\frac{1}{c^2}\mathscr{S}
-    }_\text{field momentum}\right] }_{= p \neq const., \;\exists\; -\mathscr{T} \;\text{local tension}}
-    \stackrel{local}{=}
-    - \int\limits_{\mathbb{R}^{2}} \textbf{n} \cdot \mathscr{T} \underbrace{\;df}_\text{"skin"}
-\end{split} \tag{15}\]</span></span></p>
-<p>Momentum <span class="math inline">\(p = \int\limits_{\mathbb{R}^{3}} \left( \varrho\mathscr{E} + j \times \mathscr{B} \right) + \frac{1}{c^2}\mathscr{S}\)</span></p>
-<p>photon Spin = <span class="math inline">\(\int\limits_{\mathbb{R}^{3}} \frac{1}{c^2}\mathscr{S}\)</span></p>
-<p>angular momentum (photon Spin): <span id="eq-locangmomentum"><span class="math display">\[\begin{split} &amp;  
-D = \dot{L} \hat{=}
-...
-\end{split} \tag{16}\]</span></span></p>
-</section>
-<section id="abbreviations" class="level2">
-<h2 class="anchored" data-anchor-id="abbreviations">Abbreviations:</h2>
-<p><span class="math inline">\(w_i\)</span> = energy densities (electric <span class="math inline">\(w_e\)</span>, magnetic <span class="math inline">\(e_m\)</span>, gravitational, etc. …), <span class="math inline">\(i \in \mathbb{N}\)</span></p>
-<p><span class="math inline">\(\mathbf{\mathscr{S}}_{w_i}\)</span> = Poynting-Vectros <span class="math inline">\(\hat{=}\)</span> energy transport densities (transfers) by fields (electric, magnetic, gravitational, etc. …) to corresponding energy densities <span class="math inline">\(w_i\)</span></p>
-<p><span class="math inline">\(\boldsymbol{j} \cdot \mathscr{E}\)</span> = energy gain provided by fields <span class="math inline">\(\mathscr{E}\)</span> and <span class="math inline">\(\mathscr{B}\)</span> through current density <span class="math inline">\(j\)</span></p>
-<p><span class="math inline">\(\mathscr{T}\)</span> = Stress Tensor, (tension, momentum flow density)</p>
-<p><span class="math inline">\(\textbf{n} =\)</span> surface normal vector (orthongoal on skin)</p>
-<p><span class="math inline">\(\Delta \cdot \coloneqq\)</span> div grad = Laplacian</p>
-<p><span class="math inline">\(J =\)</span> “ignition of inhomogenity,cause”</p>
-<p><span class="math inline">\(j =\)</span> Current density</p>
-<p><span class="math inline">\(\varrho =\)</span> Charge density</p>
-<p><span class="math inline">\(V =\)</span> Potentialdifference</p>
-<p><span class="math inline">\(I =\)</span> Current</p>
-<p><span class="math inline">\(R =\)</span> Resistance</p>
-<p><span class="math inline">\(L =\)</span> Inductance</p>
-<p><span class="math inline">\(C =\)</span> Capacitance</p>
-<p><span class="math inline">\(Q =\)</span> charge (ion)</p>
-<p><span class="math inline">\(\Psi = LI =\)</span> magn. Flux</p>
-<p><span class="math inline">\(\mathscr{S} = \mathscr{E} \times \mathscr{H} =\)</span> Poynting-Vector, radiation intensity</p>
-<p><span class="math inline">\(D_S = \int \left( \mathbf{\nabla} \cdot \mathbf{\mathscr{S}} \right) \, dr = \int \textnormal{div}(\mathscr{E} \times \mathscr{H}) \, dr =\)</span> dissipation engergy lost from radiation <span class="math inline">\(\approx 0\)</span> for low frequencies <span class="math inline">\(\omega\)</span></p>
-<p><span class="math inline">\(d = \sqrt{\frac{1}{\mu \sigma} \frac{2}{\omega}} =\)</span> skin depth (surface) of conductor</p>
-<p><span class="math inline">\(r = \frac{d}{\sqrt{2i}}\rho = \frac{d}{1+i}\rho =\)</span> radius (extension) of conductor</p>
-<p><span class="math inline">\(\rho = kr =\)</span> “radius of curvature <span class="math inline">\(k\)</span>”</p>
-<p><span class="math inline">\(\mu =\)</span> permeability of conductor</p>
-<p><span class="math inline">\(\sigma =\)</span> conductivity of conductor (dielectricum)</p>
-</section>
-</section>
-<section id="mechanical-energy-exchange" class="level1">
-<h1>Mechanical Energy Exchange</h1>
-<p>…</p>
-</section>
-<section id="thermal-energy-exchange" class="level1">
-<h1>Thermal Energy Exchange</h1>
-<p>…</p>
-</section>
-<section id="gravitational-energy-exchange" class="level1">
-<h1>Gravitational Energy Exchange</h1>
-<p>…</p>
-</section>
-<section id="fields-for-energy-exchange" class="level1">
-<h1>Fields for Energy Exchange</h1>
-<p>Fields:</p>
-<ul>
-<li><p>Electric: <span class="math inline">\(\mathscr{E}\)</span>, <span class="math inline">\(\mathscr{D}\)</span>, <span class="math inline">\(\mathscr{P}\)</span>, <span class="math inline">\(\mathscr{\Phi_e}\)</span></p></li>
-<li><p>Magnetic: <span class="math inline">\(\mathscr{B}\)</span>, <span class="math inline">\(\mathscr{H}\)</span>, <span class="math inline">\(\mathscr{M}\)</span>, <span class="math inline">\(\mathscr{A}\)</span>, <span class="math inline">\(\mathscr{\Phi_m}\)</span></p></li>
-<li><p>Thermal (skalar): <span class="math inline">\(T\)</span></p></li>
-<li><p>Gravitational: <span class="math inline">\(G\)</span></p></li>
-</ul>
-</section>
 
 </main>
 <!-- /main column -->

@@ -1,19 +1,163 @@
+# Electromagnectic Energy Exchange
+
+{{< include C:/Users/erine/Desktop/Physics-Explorations/GitHub-Physics/PhysEcon/Content/Continuity.qmd >}}
+
+$\boldsymbol{j} = \sigma \left( \mathscr{E} + v \times \mathscr{B} \right) = \nabla \times \mathscr{H} - \frac{\partial}{\partial t}\mathscr{D} = \frac{1}{\mu_0}\nabla\times\mathscr{B} - \varepsilon_0\frac{\partial}{\partial t}\mathscr{E}  \hat{=}$ elecectric current density
+
+$\boldsymbol{j} \cdot \mathscr{E} \hat{=}$ energy gain by fields $\mathscr{E}$ and $\mathscr{B}$ through current density $j$
+
+$\mathscr{S} = \mathscr{E} \times \mathscr{H} \hat{=}$ energy transport density (Intensity = $\left| \bar{\mathscr{S}} \right|$)
+
+
+Energy conservation for (large extended) conductive medium:
+
+$$\begin{split} &   
+\int    \left(
+\frac{\partial}{\partial t} \left( w_e + w_m \right) + \mathbf{\nabla} \cdot \mathbf{\mathscr{S}} + \boldsymbol{j} \cdot \mathscr{E} 
+\right) \, dr
+= \frac{d}{dt}W_e + \frac{d}{dt}W_m + D_S + \int \left( \boldsymbol{j} \cdot \mathscr{E} \right) \, dr 
+\newline & 
+\stackrel{\textnormal{low frequency}}{=}
+\frac{1}{2}\frac{d}{dt} \left( LI^2 \right) + \frac{1}{2}\frac{d}{dt} \left( \frac{Q^2}{C} \right) + \left( RI^2 - VI \right) = 0
+\end{split}$${#eq-energyconserv-1} 
+
+
 
 ## Energy Balance
+
+Electro-Magnetic Energy:
 $$\begin{split} &   
-\frac{\partial}{\partial t} \sum w_i+ \mathbf{\nabla} \cdot \sum \mathbf{\mathscr{S}}_{w_i} + \boldsymbol{j} \cdot \mathscr{E} = 0 
+E = E_{kin} + E_{pot} = \sqrt{ \left( pc \right)^2 + \left( mc^2 \right)^2 } 
+\stackrel{\text{vacuum}}{=} pc = \hbar\omega
+\newline &
+= \text{chargeenergy + fieldenergy + transportenergy}
+\end{split}$${#eq-emenergy}
+
+Charge Energy:
+$$\begin{split} &
+\underbrace{  
+    j \cdot \mathscr{E} 
+}_\text{charge energy} =
+- \left( 
+\underbrace{
+    \frac{\partial}{\partial t} \sum w_i
+}_\text{field energy}  
++ 
+\underbrace{
+    \nabla\cdot\mathscr{S}
+    }_\text{transfer energy} 
+\right) =
+\mathscr{E} \cdot \nabla\times\mathscr{A} - \mathscr{E} \cdot \frac{\partial}{\partial t}\mathscr{D}
+\end{split}$${#eq-chargeenergy} 
+
+
+Field Energy:
+$$\begin{split} &   
+\frac{\partial}{\partial t} \sum w_i = \frac{\partial}{\partial t} \left( w_e + w_m \right) = \frac{\partial}{\partial t} w
+\end{split}$${#eq-fieldenergy} 
+
+
+Transfer Energy:
+$$\begin{split} &   
+\nabla \cdot \mathscr{S} = ...
+\end{split}$${#eq-transferenergy} 
+
+
+Local Energy Conservation: 
+
+Force $F = q \left( \mathscr{E} + v \times \mathscr{B} \right)$
+
+Work $W = \Delta E = Fr = pv = const.$
+
+Power $\frac{d}{dt}W = 0$
+
+$$\begin{split} &
+\overbrace{
+\underbrace{
+    \boldsymbol{j} \cdot \mathscr{E} 
+}_\text{charge energy}
++ 
+\underbrace{
+    \frac{\partial}{\partial t} \sum w_i 
+}_\text{field energy}
+}^\text{= const.}
++ 
+\underbrace{
+    \mathbf{\nabla} \cdot \sum \mathbf{\mathscr{S}}_{w_i} 
+}_\text{transfer energy}
+\stackrel{alternatives}{=}
+\newline &
+\boldsymbol{j} \cdot \mathscr{E} 
++ 
+\frac{\partial}{\partial t}\left( \frac{1}{2}\varepsilon_0\mathscr{E}^2 + \frac{1}{2}\frac{1}{\mu_0}\mathscr{A}\cdot\nabla\times\mathscr{B} \right) + 
+\frac{1}{\mu_0}\nabla\cdot\left( \mathscr{E}\times\mathscr{B} + \frac{1}{2}\frac{\partial}{\partial t}\left( \mathscr{A}\times\mathscr{B} \right) \right) =
+\newline &
+... \text{alternatives according fields} ...
+\newline &
+= 0 
 \end{split}$${#eq-energbal} 
 
+
+
+### Energy Density Flux: Pyointing-Vector
+
 $$
-E = E_{kin} + E_{pot} = \sqrt{ \left( pc \right)^2 + \left( mc^2 \right)^2 } \stackrel{\text{vacuum}}{=} pc = \hbar\omega
+\mathscr{S} 
+\stackrel{vacuum}{=}
+\mathscr{E} \times \mathscr{B}
+\stackrel{matter}{=}
+\mathscr{E} \times \mathscr{H}
+$$
+
+
+$$
+\frac{d}{dt} \left( 
+\underbrace{
+    \int_{\mathbb{R}^3} j \cdot \mathscr{E} 
+}_\text{charge energy} + 
+\underbrace{
+    \int_{\mathbb{R}^3} \frac{\partial}{\partial t} \sum w_i 
+}_\text{field energy}  
+\right) = 
+\underbrace{
+    - \int_{\mathbb{R}^2} \mathscr{S}
+}_\text{transported energy density}
 $$
 
 
 ## Local Force Balance
 
-$$\begin{split} &
-\dot{p} = F \hat{=}
+Electro-Magnetic Force:
+$$\begin{split} &   
+\dot{p} = F = q \left( \mathscr{E} + v \times \mathscr{B} \right) 
 \newline &
+= \text{chargeforce + fieldforce + stresstension}
+\end{split}$${#eq-emforce} 
+
+Charge Force:
+$$\begin{split} &   
+... = \varrho\mathscr{E} + j \times \mathscr{B}
+\end{split}$${#eq-chargeforde} 
+
+Field Force:
+$$\begin{split} &   
+... = \frac{\partial}{\partial t}\frac{1}{c^2}\mathscr{S}
+\end{split}$${#eq-fieldforce} 
+
+Tension Force:
+$$\begin{split} &   
+\nabla\cdot\mathscr{T} = \varepsilon_0 \left( \mathscr{E} \times \nabla\times\mathscr{E} - \mathscr{E} \nabla\cdot\mathscr{E} \right) + \frac{1}{\mu_0} \left( \mathscr{B} \nabla\times\mathscr{B} - \mathscr{B}\nabla\cdot\mathscr{B} \right)
+\end{split}$${#eq-tension}
+
+
+Local Momentum Conservation: 
+
+Force $F = q \left( \mathscr{E} + v \times \mathscr{B} \right) = \frac{d}{dt}p = 0$
+
+Momentum $p = const.$
+
+$$\begin{split} &
+\overbrace{ 
 \underbrace{
 \varrho\mathscr{E} + j \times \mathscr{B} 
 }_\text{charge force}
@@ -21,22 +165,19 @@ $$\begin{split} &
 \underbrace{
 \frac{\partial}{\partial t}\frac{1}{c^2}\mathscr{S}
 }_\text{field force}
+}^\text{field force}
 +
 \underbrace{
 \nabla \cdot \mathscr{T}
 }_\text{tension force}
 = 0 
-\end{split}$${#eq-localforce}
+\end{split}$${#eq-localmomentumconserv} 
 
 
 
-### Stress Tensor (Tension Force)
+### Tension Force: Stress-Tensor
 
-Stres Tensor quantifies tension $\hat{=} \Delta$ Forces = Pressure - Traction $\hat{=}$ "torsion tension" at angular momentum
-
-$$\begin{split} &   
-\nabla\cdot\mathscr{T} = \varepsilon_0 \left( \mathscr{E} \times \nabla\times\mathscr{E} - \mathscr{E} \nabla\cdot\mathscr{E} \right) + \frac{1}{\mu_0} \left( \mathscr{B} \nabla\times\mathscr{B} - \mathscr{B}\nabla\cdot\mathscr{B} \right)
-\end{split}$${#eq-tension}
+Stress Tensor quantifies tension $\hat{=} \Delta$ Forces = Pressure - Traction $\hat{=}$ "torsion tension" at angular momentum
 
 $$\begin{split} &   
 \mathscr{T} \hat{=} \mathscr{T}_{ik} = 
@@ -50,10 +191,20 @@ $\mathscr{T}\sim \frac{1}{r^4}$
 $\Leftrightarrow$
 $\int_{\mathbb{R}^3}\mathscr{T}d^3r = \int_{\infty}\mathscr{T}df = 0$
 
+$$
+F = \dot{p} = 
+\frac{d}{dt} \underbrace{ \left[\underbrace{
+    \int\limits_{local} \left( \varrho\mathscr{E} + j \times \mathscr{B} \right)}_\text{charge momentum} + \underbrace{\frac{1}{c^2}\mathscr{S} 
+    }_\text{field momentum}\right] }_{= p \neq const., \;\exists\; -\mathscr{T} \;\text{local tension}}
+    \stackrel{local}{=}
+    - \int\limits_{\mathbb{R}^{2}} \textbf{n} \cdot \mathscr{T} \underbrace{\;df}_\text{"skin"}
+$$
 
-### Momentum Conservation and Local Tension
 
-linear momentum conservation if $p = const.$, otherwise "tension" occures:
+
+## Momentum Balance
+
+Momentum Conservation and Local Tension: linear momentum conservation if $p = const.$, otherwise "tension" occures:
 
 $$
 p = \int F = \int \frac{d}{dt} p = \sqrt{\frac{1}{c^2} \left( E^2 - \left( mc \right)^2 \right)} \stackrel{\text{vacuum}}{=} \frac{E}{c} = \frac{2\pi}{c^2}h\nu
@@ -100,7 +251,7 @@ D = \dot{L} \hat{=}
 
 
 
-### Abbreviations:
+## Abbreviations:
 
 $w_i$ = energy densities (electric $w_e$, magnetic $e_m$, gravitational, etc. ...), $i \in \mathbb{N}$
 
@@ -109,38 +260,6 @@ $\mathbf{\mathscr{S}}_{w_i}$ = Poynting-Vectros $\hat{=}$ energy transport densi
 $\boldsymbol{j} \cdot \mathscr{E}$ = energy gain provided by fields $\mathscr{E}$ and $\mathscr{B}$ through current density $j$
 
 $\mathscr{T}$ = Stress Tensor, (tension, momentum flow density)
-
-
-
-### Mechanical
-...
-
-### Electromagnectic energy transfer
-
-{{< include C:/Users/erine/Desktop/Physics-Explorations/GitHub-Physics/PhysEcon/Content/Continuity.qmd >}}
-
-$\boldsymbol{j} = \sigma \left( \mathscr{E} + v \times \mathscr{B} \right) = \nabla \times \mathscr{H} - \frac{\partial}{\partial t}\mathscr{D} \hat{=}$ elecectric current density
-
-$\boldsymbol{j} \cdot \mathscr{E} \hat{=}$ energy gain by fields $\mathscr{E}$ and $\mathscr{B}$ through current density $j$
-
-$\mathscr{S} = \mathscr{E} \times \mathscr{H} \hat{=}$ energy transport density (Intensity = $\left| \bar{\mathscr{S}} \right|$)
-
-
-Energy conservation for (large extended) conductive medium:
-
-$$\begin{split} &   
-\int    \left(
-\frac{\partial}{\partial t} \left( w_e + w_m \right) + \mathbf{\nabla} \cdot \mathbf{\mathscr{S}} + \boldsymbol{j} \cdot \mathscr{E} 
-\right) \, dr
-= \frac{d}{dt}W_e + \frac{d}{dt}W_m + D_S + \int \left( \boldsymbol{j} \cdot \mathscr{E} \right) \, dr 
-\newline & 
-\stackrel{\textnormal{low frequency}}{=}
-\frac{1}{2}\frac{d}{dt} \left( LI^2 \right) + \frac{1}{2}\frac{d}{dt} \left( \frac{Q^2}{C} \right) + \left( RI^2 - VI \right) = 0
-\end{split}$${#eq-energyconserv-1} 
-
-
-
-### Abbreviations:
 
 $\textbf{n} =$ surface normal vector (orthongoal on skin)
 
@@ -181,10 +300,30 @@ $\mu =$ permeability of conductor
 $\sigma =$ conductivity of conductor (dielectricum)
 
 
-### Thermal
+
+# Mechanical Energy Exchange
 ...
 
 
-### Gravitational
+# Thermal Energy Exchange
 ...
+
+
+# Gravitational Energy Exchange
+...
+
+
+
+# Fields for Energy Exchange
+
+Fields:
+
+- Electric: $\mathscr{E}$, $\mathscr{D}$, $\mathscr{P}$, $\mathscr{\Phi_e}$
+
+- Magnetic: $\mathscr{B}$, $\mathscr{H}$, $\mathscr{M}$, $\mathscr{A}$, $\mathscr{\Phi_m}$
+
+- Thermal (skalar): $T$
+
+- Gravitational: $G$
+
 
